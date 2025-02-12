@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfibogcelpl73"
-path="res://.godot/imported/front.png-0a3e87f38a3a64d24c48235b3229882c.ctex"
+uid="uid://ny53wqshk0n0"
+path="res://.godot/imported/Untitled_design-removebg-preview.png-2d72d202dd90e6efadd1e101380ae082.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game assets/Assets/Version C/layers/front.png"
-dest_files=["res://.godot/imported/front.png-0a3e87f38a3a64d24c48235b3229882c.ctex"]
+source_file="res://game assets/Untitled_design-removebg-preview.png"
+dest_files=["res://.godot/imported/Untitled_design-removebg-preview.png-2d72d202dd90e6efadd1e101380ae082.ctex"]
 
 [params]
 

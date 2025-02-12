@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://okb2q4c6yu0j"]
+[gd_scene load_steps=8 format=3 uid="uid://okb2q4c6yu0j"]
 
 [ext_resource type="Script" path="res://scripts/home.gd" id="1_6c28v"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_uf74s"]
 [ext_resource type="Texture2D" uid="uid://cy7vvagj2eicl" path="res://game assets/pngtree-pixel-art-play-button-png-image_14902519-removebg-preview.png" id="3_vjmxj"]
 [ext_resource type="Texture2D" uid="uid://cplw3mhvjts8w" path="res://game assets/pixel-art-settings-button-with-gear-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="4_wk7je"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="5_roer8"]
+[ext_resource type="Texture2D" uid="uid://ny53wqshk0n0" path="res://game assets/Untitled_design-removebg-preview.png" id="6_ik501"]
+[ext_resource type="Texture2D" uid="uid://cjktkm0w33441" path="res://game assets/Untitled_design__1_-removebg-preview.png" id="7_tw84q"]
 
 [node name="home" type="Node2D"]
 script = ExtResource("1_6c28v")
@@ -38,5 +40,25 @@ texture_normal = ExtResource("5_roer8")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="avatar" type="TextureButton" parent="."]
+offset_left = 322.0
+offset_top = 303.0
+offset_right = 506.0
+offset_bottom = 458.0
+texture_normal = ExtResource("6_ik501")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 512.0
+offset_top = 444.0
+offset_right = 661.0
+offset_bottom = 550.0
+texture_normal = ExtResource("7_tw84q")
+ignore_texture_size = true
+stretch_mode = 5
+
 [connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="avatar" to="." method="_on_avatar_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

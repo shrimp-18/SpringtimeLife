@@ -7,3 +7,11 @@ func _on_quit_pressed():
 
 func _on_playb_pressed():
 	get_tree().change_scene_to_file("res://game.tscn")
+
+
+func _on_avatar_pressed():
+	get_tree().change_scene_to_file("res://scenes/avatarscn.tscn")
+
+
+func _on_texture_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/store.tscn")

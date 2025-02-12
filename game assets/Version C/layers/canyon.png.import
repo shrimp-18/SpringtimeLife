@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btp854xrgqwn3"
-path="res://.godot/imported/far-mountains.png-03eabdc85a3770a24ec8148ac1ad660e.ctex"
+uid="uid://ged54hlcqlox"
+path="res://.godot/imported/canyon.png-d1e5d7e171e67de363f745afc0705521.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game assets/Assets/Version C/layers/far-mountains.png"
-dest_files=["res://.godot/imported/far-mountains.png-03eabdc85a3770a24ec8148ac1ad660e.ctex"]
+source_file="res://game assets/Version C/layers/canyon.png"
+dest_files=["res://.godot/imported/canyon.png-d1e5d7e171e67de363f745afc0705521.ctex"]
 
 [params]
 
