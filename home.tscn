@@ -30,9 +30,9 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="quit" type="TextureButton" parent="."]
-offset_left = 1089.0
+offset_left = 1090.0
 offset_top = -7.0
-offset_right = 1143.0
+offset_right = 1144.0
 offset_bottom = 63.0
 texture_normal = ExtResource("5_itduk")
 ignore_texture_size = true

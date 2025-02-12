@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpbj0bystna4g"]
+
+[ext_resource type="Script" path="res://settings.gd" id="1_w7t71"]
+[ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://Parallax Background/parallax_background.tscn" id="2_5gagh"]
+[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="3_vyq0l"]
+
+[node name="settings" type="Node2D"]
+script = ExtResource("1_w7t71")
+
+[node name="BG" parent="." instance=ExtResource("2_5gagh")]
+
+[node name="quit" type="TextureButton" parent="BG"]
+offset_left = 1090.0
+offset_top = -7.0
+offset_right = 1144.0
+offset_bottom = 63.0
+texture_normal = ExtResource("3_vyq0l")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="BG/quit" to="." method="_on_quit_pressed"]
