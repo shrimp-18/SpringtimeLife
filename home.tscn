@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://okb2q4c6yu0j"]
+
+[ext_resource type="Texture2D" uid="uid://cy7vvagj2eicl" path="res://pngtree-pixel-art-play-button-png-image_14902519-removebg-preview.png" id="1_e2a4o"]
+[ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://Parallax Background/parallax_background.tscn" id="1_flic4"]
+[ext_resource type="Script" path="res://home.gd" id="1_fqplo"]
+[ext_resource type="Texture2D" uid="uid://cplw3mhvjts8w" path="res://pixel-art-settings-button-with-gear-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="2_clj7p"]
+[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="5_itduk"]
+
+[node name="home" type="Node2D"]
+script = ExtResource("1_fqplo")
+
+[node name="BG" parent="." instance=ExtResource("1_flic4")]
+
+[node name="playb" type="TextureButton" parent="."]
+offset_left = 464.0
+offset_top = 248.0
+offset_right = 701.0
+offset_bottom = 479.0
+texture_normal = ExtResource("1_e2a4o")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="settings" type="TextureButton" parent="."]
+offset_left = 681.0
+offset_top = 342.0
+offset_right = 795.0
+offset_bottom = 423.0
+texture_normal = ExtResource("2_clj7p")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="quit" type="TextureButton" parent="."]
+offset_left = 1089.0
+offset_top = -7.0
+offset_right = 1143.0
+offset_bottom = 63.0
+texture_normal = ExtResource("5_itduk")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
