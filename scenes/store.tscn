@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://co2xp4iwrtdg8"]
+
+[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="1_sxm5j"]
+[ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_ylbr8"]
+
+[node name="store" type="Node2D"]
+
+[node name="quit" type="TextureButton" parent="."]
+offset_left = 1090.0
+offset_top = -7.0
+offset_right = 1144.0
+offset_bottom = 63.0
+texture_normal = ExtResource("1_sxm5j")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BG" parent="." instance=ExtResource("2_ylbr8")]
+
+[connection signal="pressed" from="quit" to="BG" method="_on_quit_pressed"]
