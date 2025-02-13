@@ -1,8 +1,13 @@
 extends CharacterBody2D
 
-const maxspeed=1000
-const accln=1500
-const friction=600
+@onready var anim=get_node("AnimatedSprite2D")
+
+func ready():
+	anim.play("fairy3")
+
+const maxspeed=800
+const accln=1000
+const friction=800
 
 var input=Vector2.ZERO
 
@@ -26,7 +31,9 @@ func player_movement(delta):
 	else:
 		velocity+=(input*accln*delta)
 		velocity=velocity.limit_length(maxspeed)
-		
+
+
+ 
 	move_and_slide()
 
  
