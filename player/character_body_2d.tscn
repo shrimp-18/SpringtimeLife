@@ -99,20 +99,20 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ks570"]
-radius = 36.0
-height = 190.0
+radius = 23.0
+height = 136.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_7ok0a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(258, 174)
-scale = Vector2(0.708615, 0.653868)
+position = Vector2(174.266, 99.382)
+scale = Vector2(0.383434, 0.345529)
 sprite_frames = SubResource("SpriteFrames_5usm0")
-animation = &"fairy3"
-frame_progress = 0.313592
+animation = &"fairyy1"
+frame_progress = 0.632058
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(258, 188)
+position = Vector2(181, 103)
 scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_ks570")
