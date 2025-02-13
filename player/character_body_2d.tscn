@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://db6m1sfd8rk84"]
+[gd_scene load_steps=3 format=3 uid="uid://db6m1sfd8rk84"]
+
+[ext_resource type="Texture2D" uid="uid://c4rdeckvr5eq6" path="res://game assets/images-removebg-preview.png" id="1_01vn0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ks570"]
+radius = 25.0
+height = 100.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(380.5, 136.5)
+scale = Vector2(0.834746, 0.799065)
+texture = ExtResource("1_01vn0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(389, 136)
+shape = SubResource("CapsuleShape2D_ks570")

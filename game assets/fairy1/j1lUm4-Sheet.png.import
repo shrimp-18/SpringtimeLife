@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oi063a5pg7m1"
-path="res://.godot/imported/Untitled_design-removebg-preview.png-28e4665574895191b4674af79602cb20.ctex"
+uid="uid://bak42pdajys51"
+path="res://.godot/imported/j1lUm4-Sheet.png-ecba1b4800e3daa65ee21e5440e5332a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scripts/Untitled_design-removebg-preview.png"
-dest_files=["res://.godot/imported/Untitled_design-removebg-preview.png-28e4665574895191b4674af79602cb20.ctex"]
+source_file="res://game assets/fairy1/j1lUm4-Sheet.png"
+dest_files=["res://.godot/imported/j1lUm4-Sheet.png-ecba1b4800e3daa65ee21e5440e5332a.ctex"]
 
 [params]
 
