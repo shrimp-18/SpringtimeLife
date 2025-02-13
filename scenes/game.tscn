@@ -20,5 +20,6 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_734e5")]
+position = Vector2(-70, 193)
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
