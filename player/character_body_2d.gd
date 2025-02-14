@@ -2,12 +2,12 @@ extends CharacterBody2D
 
 @onready var anim=get_node("AnimatedSprite2D")
 
-func ready():
+func _ready():
 	anim.play("fairy3")
 
 const maxspeed=800
 const accln=1000
-const friction=800
+const friction=600
 
 var input=Vector2.ZERO
 

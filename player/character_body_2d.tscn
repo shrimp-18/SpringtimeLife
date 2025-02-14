@@ -102,17 +102,15 @@ animations = [{
 radius = 23.0
 height = 136.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D"]
 script = ExtResource("1_7ok0a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(174.266, 99.382)
 scale = Vector2(0.383434, 0.345529)
 sprite_frames = SubResource("SpriteFrames_5usm0")
-animation = &"fairy2"
-frame_progress = 0.765544
+animation = &"fairyy1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(181, 103)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_ks570")

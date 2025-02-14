@@ -14,46 +14,46 @@ script = ExtResource("1_6c28v")
 [node name="BG" parent="." instance=ExtResource("2_uf74s")]
 
 [node name="playb" type="TextureButton" parent="."]
-offset_left = 464.0
-offset_top = 248.0
-offset_right = 701.0
-offset_bottom = 479.0
+offset_left = 830.0
+offset_top = 418.0
+offset_right = 1067.0
+offset_bottom = 649.0
 texture_normal = ExtResource("3_vjmxj")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="settings" type="TextureButton" parent="."]
-offset_left = 681.0
-offset_top = 342.0
-offset_right = 795.0
-offset_bottom = 423.0
+offset_left = 1073.0
+offset_top = 510.0
+offset_right = 1187.0
+offset_bottom = 591.0
 texture_normal = ExtResource("4_wk7je")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="quit" type="TextureButton" parent="."]
-offset_left = 1090.0
-offset_top = -7.0
-offset_right = 1144.0
-offset_bottom = 63.0
+offset_left = 1852.0
+offset_top = 27.0
+offset_right = 1906.0
+offset_bottom = 97.0
 texture_normal = ExtResource("5_roer8")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="avatar" type="TextureButton" parent="."]
-offset_left = 322.0
-offset_top = 303.0
-offset_right = 506.0
-offset_bottom = 458.0
+offset_left = 682.0
+offset_top = 475.0
+offset_right = 866.0
+offset_bottom = 630.0
 texture_normal = ExtResource("6_ik501")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 512.0
-offset_top = 444.0
-offset_right = 661.0
-offset_bottom = 550.0
+offset_left = 874.0
+offset_top = 630.0
+offset_right = 1023.0
+offset_bottom = 736.0
 texture_normal = ExtResource("7_tw84q")
 ignore_texture_size = true
 stretch_mode = 5
