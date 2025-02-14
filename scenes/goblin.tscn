@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dd1ffo82smdj2" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="3_lvjyt"]
 [ext_resource type="Texture2D" uid="uid://cvsg82pvk7ch5" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="4_mfwwq"]
 
-[sub_resource type="GDScript" id="GDScript_gvojx"]
-resource_name = "goblinscript"
+[sub_resource type="GDScript" id="GDScript_jmq15"]
+resource_name = "goblin"
 script/source = "extends CharacterBody2D
 
 
@@ -219,20 +219,20 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onirg"]
-radius = 32.0
-height = 124.0
+radius = 27.0
+height = 76.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = SubResource("GDScript_gvojx")
+script = SubResource("GDScript_jmq15")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(223, 153)
 scale = Vector2(2.91333, 2.74667)
 sprite_frames = SubResource("SpriteFrames_30b6e")
-animation = &"fly"
-frame_progress = 0.481375
+animation = &"hit"
+frame_progress = 0.77093
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(199, 158)
+position = Vector2(202, 157)
 shape = SubResource("CapsuleShape2D_onirg")
