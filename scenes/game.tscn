@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://q7irwsqi3cf5"]
+[gd_scene load_steps=8 format=3 uid="uid://q7irwsqi3cf5"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_scoie"]
+[ext_resource type="PackedScene" uid="uid://wb3j2j5v1xce" path="res://scenes/enemy_spawner.tscn" id="2_dotc4"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_fawas"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="3_u3my8"]
-[ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://player/character_body_2d.tscn" id="4_734e5"]
+[ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="4_734e5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
 size = Vector2(2353, 162.5)
@@ -52,5 +53,7 @@ offset_left = -8.0
 offset_top = 1088.0
 offset_right = 2288.0
 offset_bottom = 1128.0
+
+[node name="enemy spawner" parent="." instance=ExtResource("2_dotc4")]
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

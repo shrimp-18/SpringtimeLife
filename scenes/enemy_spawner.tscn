@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://wb3j2j5v1xce"]
+
+[sub_resource type="GDScript" id="GDScript_ao4n7"]
+resource_name = "enemyspawner"
+script/source = "extends Node2D
+
+@onready var game= get_node(\"/root/game\")
+
+var goblinscn :=preload(\"res://scenes/goblin.tscn\")
+var spawnpts:= []
+
+func _ready():
+	for i in get_children():
+		if i is Marker2D:
+			spawnpts.append(i)
+
+
+func _on_timer_timeout():
+	var spawn=spawnpts[randi()%spawnpts.size()]
+	var goblin=goblinscn.instantiate()
+	goblin.position=spawn.position
+	game.add_child(goblin)
+"
+
+[node name="enemy spawner" type="Node2D"]
+script = SubResource("GDScript_ao4n7")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(1664, 64)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(1656, 280)
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(1712, 408)
+
+[node name="Marker2D4" type="Marker2D" parent="."]
+position = Vector2(1696, 600)
+
+[node name="Marker2D5" type="Marker2D" parent="."]
+position = Vector2(1680, 144)
+
+[node name="Marker2D6" type="Marker2D" parent="."]
+position = Vector2(1648, 496)
+
+[node name="Marker2D7" type="Marker2D" parent="."]
+position = Vector2(1632, 688)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

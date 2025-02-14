@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cfa4sn45ib4yb"]
 
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="1_oxjvi"]
-[ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://player/character_body_2d.tscn" id="2_e6h7k"]
+[ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="2_e6h7k"]
 
 [node name="camera" type="Node2D"]
 
