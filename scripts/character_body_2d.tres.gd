@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var anim=get_node("AnimatedSprite2D")
 
 func _ready():
-	anim.play("fairy3")
+	anim.play("fairy2")
 
 const maxspeed=800
 const accln=1000
