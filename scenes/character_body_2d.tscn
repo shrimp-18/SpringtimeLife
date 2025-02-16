@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://db6m1sfd8rk84"]
 
-[ext_resource type="Script" path="res://scenes/character_body_2d.gd" id="1_4apfe"]
+[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_4apfe"]
 [ext_resource type="Texture2D" uid="uid://bak42pdajys51" path="res://game assets/fairy1/j1lUm4-Sheet.png" id="2_f6djb"]
 [ext_resource type="Texture2D" uid="uid://cpj5ook3d2y58" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000426-removebg-preview.png" id="3_6hchh"]
 [ext_resource type="Texture2D" uid="uid://cail7lq2rngxr" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000500-removebg-preview.png" id="4_el8xk"]

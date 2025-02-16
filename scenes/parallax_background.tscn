@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bohhxkodeluj1"]
 
 [ext_resource type="Texture2D" uid="uid://cipm4qawsq0jx" path="res://game assets/Parallax Background/1-sky.png" id="1_i2fu3"]
-[ext_resource type="Script" path="res://scenes/parallax_layer.gd" id="1_jy1v3"]
+[ext_resource type="Script" path="res://scripts/parallax_layer.gd" id="1_jy1v3"]
 [ext_resource type="Texture2D" uid="uid://bwn0apioxykn5" path="res://game assets/Parallax Background/2-clouds.png" id="3_qn4tr"]
 [ext_resource type="Texture2D" uid="uid://bh2noks8gejuu" path="res://game assets/Parallax Background/4-trees.png" id="5_xcu52"]
 [ext_resource type="Texture2D" uid="uid://c0dxitx4f1dpi" path="res://game assets/Parallax Background/5-bushes.png" id="6_oxe7v"]

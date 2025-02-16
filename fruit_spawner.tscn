@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://ditlm5ij3cfct"]
+
+[ext_resource type="Script" path="res://fruit_spawner.gd" id="1_erkcu"]
+
+[node name="fruit spawner" type="Node2D"]
+script = ExtResource("1_erkcu")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(1336, 72)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(1344, 208)
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(1344, 376)
+
+[node name="Marker2D4" type="Marker2D" parent="."]
+position = Vector2(1352, 512)
+
+[node name="Marker2D5" type="Marker2D" parent="."]
+position = Vector2(1344, 648)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
