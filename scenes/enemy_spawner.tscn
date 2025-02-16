@@ -28,6 +28,9 @@ script = SubResource("GDScript_ao4n7")
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(1664, 64)
 
+[node name="Marker2D8" type="Marker2D" parent="."]
+position = Vector2(1632, 16)
+
 [node name="Marker2D2" type="Marker2D" parent="."]
 position = Vector2(1656, 280)
 
@@ -47,7 +50,7 @@ position = Vector2(1648, 496)
 position = Vector2(1632, 688)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 0.5
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
