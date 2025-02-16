@@ -219,20 +219,20 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onirg"]
-radius = 43.0
-height = 86.0
+radius = 22.0
+height = 48.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = SubResource("GDScript_jmq15")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(223, 153)
-scale = Vector2(2.91333, 2.74667)
+position = Vector2(160.25, 94.9999)
+scale = Vector2(2.07666, 1.97334)
 sprite_frames = SubResource("SpriteFrames_30b6e")
 animation = &"fly"
 frame_progress = 0.819434
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(209, 157)
+position = Vector2(148, 100)
 shape = SubResource("CapsuleShape2D_onirg")
