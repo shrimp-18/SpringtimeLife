@@ -6,22 +6,97 @@
 script = ExtResource("1_erkcu")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(1336, 72)
+position = Vector2(1528, 72)
 
 [node name="Marker2D2" type="Marker2D" parent="."]
-position = Vector2(1344, 208)
+position = Vector2(1536, 256)
 
 [node name="Marker2D3" type="Marker2D" parent="."]
-position = Vector2(1344, 376)
+position = Vector2(1536, 448)
 
 [node name="Marker2D4" type="Marker2D" parent="."]
-position = Vector2(1352, 512)
+position = Vector2(1536, 640)
 
 [node name="Marker2D5" type="Marker2D" parent="."]
-position = Vector2(1344, 648)
+position = Vector2(1536, 840)
+
+[node name="Marker2D6" type="Marker2D" parent="."]
+position = Vector2(1274, 74)
+
+[node name="Marker2D7" type="Marker2D" parent="."]
+position = Vector2(1282, 258)
+
+[node name="Marker2D8" type="Marker2D" parent="."]
+position = Vector2(1282, 450)
+
+[node name="Marker2D9" type="Marker2D" parent="."]
+position = Vector2(1282, 642)
+
+[node name="Marker2D10" type="Marker2D" parent="."]
+position = Vector2(1282, 842)
+
+[node name="Marker2D11" type="Marker2D" parent="."]
+position = Vector2(1018, 66)
+
+[node name="Marker2D12" type="Marker2D" parent="."]
+position = Vector2(1026, 250)
+
+[node name="Marker2D13" type="Marker2D" parent="."]
+position = Vector2(1026, 442)
+
+[node name="Marker2D14" type="Marker2D" parent="."]
+position = Vector2(1026, 634)
+
+[node name="Marker2D15" type="Marker2D" parent="."]
+position = Vector2(1026, 834)
+
+[node name="Marker2D16" type="Marker2D" parent="."]
+position = Vector2(770, 58)
+
+[node name="Marker2D17" type="Marker2D" parent="."]
+position = Vector2(778, 242)
+
+[node name="Marker2D18" type="Marker2D" parent="."]
+position = Vector2(778, 434)
+
+[node name="Marker2D19" type="Marker2D" parent="."]
+position = Vector2(778, 626)
+
+[node name="Marker2D20" type="Marker2D" parent="."]
+position = Vector2(778, 826)
+
+[node name="Marker2D21" type="Marker2D" parent="."]
+position = Vector2(498, 66)
+
+[node name="Marker2D22" type="Marker2D" parent="."]
+position = Vector2(506, 250)
+
+[node name="Marker2D23" type="Marker2D" parent="."]
+position = Vector2(506, 442)
+
+[node name="Marker2D24" type="Marker2D" parent="."]
+position = Vector2(506, 634)
+
+[node name="Marker2D25" type="Marker2D" parent="."]
+position = Vector2(506, 834)
+
+[node name="Marker2D26" type="Marker2D" parent="."]
+position = Vector2(242, 66)
+
+[node name="Marker2D27" type="Marker2D" parent="."]
+position = Vector2(250, 250)
+
+[node name="Marker2D28" type="Marker2D" parent="."]
+position = Vector2(250, 442)
+
+[node name="Marker2D29" type="Marker2D" parent="."]
+position = Vector2(250, 634)
+
+[node name="Marker2D30" type="Marker2D" parent="."]
+position = Vector2(250, 834)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 5.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
