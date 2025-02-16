@@ -1,57 +1,55 @@
 [gd_scene load_steps=7 format=3 uid="uid://bohhxkodeluj1"]
 
-[ext_resource type="Script" path="res://scripts/BG.gd" id="1_11kuf"]
 [ext_resource type="Texture2D" uid="uid://cipm4qawsq0jx" path="res://game assets/Parallax Background/1-sky.png" id="1_i2fu3"]
+[ext_resource type="Script" path="res://scenes/parallax_layer.gd" id="1_jy1v3"]
 [ext_resource type="Texture2D" uid="uid://bwn0apioxykn5" path="res://game assets/Parallax Background/2-clouds.png" id="3_qn4tr"]
 [ext_resource type="Texture2D" uid="uid://bh8k8bd5aijor" path="res://game assets/Parallax Background/3-hills.png" id="4_lq2iw"]
 [ext_resource type="Texture2D" uid="uid://bh2noks8gejuu" path="res://game assets/Parallax Background/4-trees.png" id="5_xcu52"]
 [ext_resource type="Texture2D" uid="uid://c0dxitx4f1dpi" path="res://game assets/Parallax Background/5-bushes.png" id="6_oxe7v"]
 
 [node name="BG" type="ParallaxBackground"]
-script = ExtResource("1_11kuf")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1140, 0)
+motion_mirroring = Vector2(1920, 0)
+script = ExtResource("1_jy1v3")
 
 [node name="1-sky" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(577, 548.125)
-scale = Vector2(0.6, 1.01088)
 texture = ExtResource("1_i2fu3")
+centered = false
 metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1145, 0)
+motion_mirroring = Vector2(1920, 0)
+script = ExtResource("1_jy1v3")
 
 [node name="2-clouds" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(580, 440)
-scale = Vector2(0.600781, 0.724537)
 texture = ExtResource("3_qn4tr")
+centered = false
 metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1145, 0)
+motion_mirroring = Vector2(1920, 0)
+script = ExtResource("1_jy1v3")
 
 [node name="3-hills" type="Sprite2D" parent="ParallaxLayer3"]
-position = Vector2(574.375, 717.313)
-scale = Vector2(0.598307, 0.676505)
 texture = ExtResource("4_lq2iw")
+centered = false
 metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1145, 0)
+motion_mirroring = Vector2(1920, 0)
+script = ExtResource("1_jy1v3")
 
 [node name="4-trees" type="Sprite2D" parent="ParallaxLayer4"]
-position = Vector2(578, 737)
-scale = Vector2(0.599479, 0.590046)
 texture = ExtResource("5_xcu52")
+centered = false
 metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1145, 0)
-metadata/_edit_lock_ = true
+motion_mirroring = Vector2(1920, 0)
+script = ExtResource("1_jy1v3")
 
 [node name="5-bushes" type="Sprite2D" parent="ParallaxLayer5"]
-position = Vector2(575.25, 716.25)
-scale = Vector2(0.601302, 0.676389)
 texture = ExtResource("6_oxe7v")
+centered = false
 metadata/_edit_lock_ = true
