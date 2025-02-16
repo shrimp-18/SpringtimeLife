@@ -1,5 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://db6m1sfd8rk84"]
 
+[ext_resource type="Script" path="res://scenes/character_body_2d.gd" id="1_4apfe"]
 [ext_resource type="Texture2D" uid="uid://bak42pdajys51" path="res://game assets/fairy1/j1lUm4-Sheet.png" id="2_f6djb"]
 [ext_resource type="Texture2D" uid="uid://cpj5ook3d2y58" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000426-removebg-preview.png" id="3_6hchh"]
 [ext_resource type="Texture2D" uid="uid://cail7lq2rngxr" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000500-removebg-preview.png" id="4_el8xk"]
@@ -8,47 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cf671tmsml136" path="res://game assets/fairy1/Screenshot_2025-02-13_234629-removebg-preview.png" id="7_esd0f"]
 [ext_resource type="Texture2D" uid="uid://cnrkle1hohmht" path="res://game assets/Screenshot_2025-02-13_235121-removebg-preview.png" id="8_t4ekd"]
 [ext_resource type="Texture2D" uid="uid://b2sodv83k6dcr" path="res://game assets/fairy1/Screenshot_2025-02-13_235147-removebg-preview.png" id="9_f08li"]
-
-[sub_resource type="GDScript" id="GDScript_lk67g"]
-script/source = "extends CharacterBody2D
-@onready var anim=get_node(\"AnimatedSprite2D\")
-
-func _ready():
-	anim.play(\"fairy3\")
-
-const maxspeed=800
-const accln=1000
-const friction=600
-
-var input=Vector2.ZERO
-
-func _physics_process(delta):
-	
-	
-	player_movement(delta)
-
-func get_input():
-	input.x= int(Input.is_action_pressed(\"ui_right\"))-int(Input.is_action_pressed(\"ui_left\"))
-	input.y= int(Input.is_action_pressed(\"ui_down\"))-int(Input.is_action_pressed(\"ui_up\"))
-	return input.normalized()
-
-func player_movement(delta):
-	input=get_input()
-	
-	if input == Vector2.ZERO:
-		if velocity.length() > (friction*delta):
-			velocity -= velocity.normalized() * (friction*delta)
-		
-		else:
-			velocity= Vector2.ZERO
-	else:
-		velocity+=(input*accln*delta)
-		velocity=velocity.limit_length(maxspeed)
-
-
- 
-	move_and_slide()
-"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nhs45"]
 atlas = ExtResource("2_f6djb")
@@ -143,7 +103,7 @@ radius = 23.0
 height = 100.0
 
 [node name="player" type="CharacterBody2D"]
-script = SubResource("GDScript_lk67g")
+script = ExtResource("1_4apfe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(146.574, 78.5548)
