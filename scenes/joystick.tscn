@@ -9,21 +9,20 @@
 script = ExtResource("1_jkm8i")
 
 [node name="ring" type="Sprite2D" parent="."]
-position = Vector2(96, 96)
 scale = Vector2(0.69697, 0.69697)
 texture = ExtResource("2_vl6e2")
 
 [node name="knob" type="Sprite2D" parent="."]
-position = Vector2(96, 88)
-scale = Vector2(0.212121, 0.19697)
+scale = Vector2(0.310606, 0.276515)
 texture = ExtResource("3_gcmxa")
 script = ExtResource("4_p5eli")
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
-offset_top = 8.0
-offset_right = 192.0
-offset_bottom = 184.0
+offset_left = -96.0
+offset_top = -88.0
+offset_right = 96.0
+offset_bottom = 88.0
 
 [connection signal="button_down" from="Button" to="knob" method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="knob" method="_on_button_button_up"]

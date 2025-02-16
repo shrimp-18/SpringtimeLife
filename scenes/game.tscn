@@ -17,7 +17,7 @@ size = Vector2(98, 1218)
 script = ExtResource("1_scoie")
 
 [node name="joystick" parent="." instance=ExtResource("6_g7kye")]
-position = Vector2(1632, 760)
+position = Vector2(1800, 856)
 
 [node name="quit" type="TextureButton" parent="."]
 offset_left = 1831.0
@@ -31,7 +31,7 @@ stretch_mode = 5
 [node name="BG" parent="." instance=ExtResource("2_fawas")]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_734e5")]
-position = Vector2(-70, 193)
+position = Vector2(-64, 200)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(8, -8)
