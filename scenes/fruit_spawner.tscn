@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ditlm5ij3cfct"]
 
-[ext_resource type="Script" path="res://fruit_spawner.gd" id="1_erkcu"]
+[ext_resource type="Script" path="res://scripts/fruit_spawner.gd" id="1_erkcu"]
 
 [node name="fruit spawner" type="Node2D"]
 script = ExtResource("1_erkcu")
