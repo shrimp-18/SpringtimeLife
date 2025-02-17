@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bifdgnytnhi7w"]
+[gd_scene load_steps=34 format=3 uid="uid://bifdgnytnhi7w"]
 
 [ext_resource type="Texture2D" uid="uid://yu0xrumqgceh" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="1_qcotg"]
 [ext_resource type="Texture2D" uid="uid://b8cd5d63xp4cs" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="2_vebgn"]
@@ -8,15 +8,26 @@
 [sub_resource type="GDScript" id="GDScript_jmq15"]
 resource_name = "goblin"
 script/source = "extends CharacterBody2D
-
+@onready var anim=get_node(\"AnimatedSprite2D\")
 
 const speed=300
 var direction: Vector2
 
+func _ready():
+	anim.play(\"fly\")
 
 func _process(delta):
 	if true:
 		position.x-=speed*delta
+		
+		
+
+
+
+
+func _on_area_2_ddeath_body_entered(body):
+	if body.name==\"player\":
+		print(\"kill\")
 	
 "
 
@@ -222,6 +233,10 @@ animations = [{
 radius = 22.0
 height = 48.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yk8hv"]
+radius = 45.0
+height = 94.0
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = SubResource("GDScript_jmq15")
 
@@ -236,3 +251,11 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(148, 100)
 shape = SubResource("CapsuleShape2D_onirg")
+
+[node name="Area2Ddeath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Ddeath"]
+position = Vector2(151, 86)
+shape = SubResource("CapsuleShape2D_yk8hv")
+
+[connection signal="body_entered" from="Area2Ddeath" to="." method="_on_area_2_ddeath_body_entered"]

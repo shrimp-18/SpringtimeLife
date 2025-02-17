@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://cmfanj2a35w4h"]
+[gd_scene load_steps=15 format=3 uid="uid://cmfanj2a35w4h"]
 
+[ext_resource type="Script" path="res://scenes/coin.gd" id="1_2wukp"]
 [ext_resource type="Texture2D" uid="uid://cpj1f04pj73x0" path="res://game assets/Coin/Coin_Animated.png" id="1_wfoxp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ur7fl"]
@@ -76,7 +77,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_npdls")
 }],
 "loop": true,
-"name": &"default",
+"name": &"coin",
 "speed": 5.0
 }]
 
@@ -85,12 +86,13 @@ radius = 24.0
 height = 48.0
 
 [node name="coin" type="CharacterBody2D"]
+script = ExtResource("1_2wukp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(256, 72)
 scale = Vector2(-4.5, -4.4375)
 sprite_frames = SubResource("SpriteFrames_agoe1")
-frame_progress = 0.78625
+animation = &"coin"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(256, 72)

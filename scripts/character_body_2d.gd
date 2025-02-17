@@ -46,3 +46,7 @@ func player_movement(delta):
 
  
 	move_and_slide()
+
+
+
+	
