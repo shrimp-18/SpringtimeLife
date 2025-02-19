@@ -7,7 +7,7 @@ var speed=150
 
 
 func _ready():
-	anim.play("fairy2")
+	anim.play("fairyy1")
 
 const maxspeed=10000
 const accln=10000
