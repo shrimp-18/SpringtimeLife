@@ -1,90 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcxx7ill464rg"]
+[gd_scene load_steps=4 format=3 uid="uid://dcxx7ill464rg"]
 
-[ext_resource type="Texture2D" uid="uid://bpfdej7egvfyq" path="res://game assets/Assets/next.png" id="1_6r1g7"]
+[ext_resource type="Texture2D" uid="uid://b2sodv83k6dcr" path="res://game assets/fairy1/Screenshot_2025-02-13_235147-removebg-preview.png" id="1_gr5tc"]
+[ext_resource type="Texture2D" uid="uid://dq3r4p2g3y6m1" path="res://game assets/Assets/image-removebg-preview (1).png" id="2_8ltms"]
+[ext_resource type="Texture2D" uid="uid://0u8agte1sat3" path="res://game assets/Assets/image-removebg-preview.png" id="3_ia83u"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jw8vh"]
-
-[node name="carouselplayer" type="Control"]
-custom_minimum_size = Vector2(500, 280)
-layout_mode = 3
-anchors_preset = 0
-offset_right = 500.0
-offset_bottom = 200.0
-
-[node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 1
+[node name="ScrollContainer" type="ScrollContainer"]
+custom_minimum_size = Vector2(1920, 1080)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 776.0
+offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-texture = ExtResource("1_6r1g7")
-stretch_mode = 5
-flip_h = true
+size_flags_stretch_ratio = 0.0
+theme_override_constants/margin_left = 1920
+theme_override_constants/margin_right = 1920
 
-[node name="previous button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/TextureRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_jw8vh")
-
-[node name="TextureRect2" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MarginContainer"]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-texture = ExtResource("1_6r1g7")
+theme_override_constants/separation = 100
+
+[node name="CardMenu1" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_gr5tc")
 stretch_mode = 5
 
-[node name="next button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/TextureRect2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_jw8vh")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_jw8vh")
-
-[node name="hero select" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="CardMenu2" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("2_8ltms")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CardMenu3" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_ia83u")
+expand_mode = 2
+stretch_mode = 5
