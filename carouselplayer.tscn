@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcxx7ill464rg"]
+[gd_scene load_steps=5 format=3 uid="uid://dcxx7ill464rg"]
 
+[ext_resource type="Script" path="res://scrollcontainer.gd" id="1_515nw"]
 [ext_resource type="Texture2D" uid="uid://b2sodv83k6dcr" path="res://game assets/fairy1/Screenshot_2025-02-13_235147-removebg-preview.png" id="1_gr5tc"]
 [ext_resource type="Texture2D" uid="uid://dq3r4p2g3y6m1" path="res://game assets/Assets/image-removebg-preview (1).png" id="2_8ltms"]
 [ext_resource type="Texture2D" uid="uid://0u8agte1sat3" path="res://game assets/Assets/image-removebg-preview.png" id="3_ia83u"]
 
 [node name="ScrollContainer" type="ScrollContainer"]
+clip_contents = false
 custom_minimum_size = Vector2(1920, 1080)
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,25 +16,31 @@ offset_right = 776.0
 offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_515nw")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
+mouse_filter = 2
 theme_override_constants/margin_left = 1920
 theme_override_constants/margin_right = 1920
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MarginContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+size_flags_stretch_ratio = 0.0
+mouse_filter = 2
 theme_override_constants/separation = 100
 
 [node name="CardMenu1" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("1_gr5tc")
 stretch_mode = 5
 
@@ -47,3 +55,5 @@ layout_mode = 2
 texture = ExtResource("3_ia83u")
 expand_mode = 2
 stretch_mode = 5
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
