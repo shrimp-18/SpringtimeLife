@@ -89,11 +89,13 @@ height = 48.0
 script = ExtResource("1_2wukp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(256, 72)
 scale = Vector2(-4.5, -4.4375)
 sprite_frames = SubResource("SpriteFrames_agoe1")
 animation = &"coin"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(256, 72)
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_40ps6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

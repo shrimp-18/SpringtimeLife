@@ -1,54 +1,54 @@
-[gd_scene load_steps=23 format=3 uid="uid://db6m1sfd8rk84"]
+[gd_scene load_steps=23 format=3 uid="uid://bw7gmece5ho1f"]
 
-[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_4apfe"]
-[ext_resource type="Texture2D" uid="uid://bak42pdajys51" path="res://game assets/fairy1/j1lUm4-Sheet.png" id="2_f6djb"]
-[ext_resource type="Texture2D" uid="uid://cpj5ook3d2y58" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000426-removebg-preview.png" id="3_6hchh"]
-[ext_resource type="Texture2D" uid="uid://cail7lq2rngxr" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000500-removebg-preview.png" id="4_el8xk"]
-[ext_resource type="Texture2D" uid="uid://bmskbmd7qbxle" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000533-removebg-preview.png" id="5_jfrqy"]
-[ext_resource type="Texture2D" uid="uid://bkhpq5rhy8dna" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000555-removebg-preview.png" id="6_oytmm"]
-[ext_resource type="Texture2D" uid="uid://cf671tmsml136" path="res://game assets/fairy1/Screenshot_2025-02-13_234629-removebg-preview.png" id="7_esd0f"]
-[ext_resource type="Texture2D" uid="uid://cnrkle1hohmht" path="res://game assets/Screenshot_2025-02-13_235121-removebg-preview.png" id="8_t4ekd"]
-[ext_resource type="Texture2D" uid="uid://b2sodv83k6dcr" path="res://game assets/fairy1/Screenshot_2025-02-13_235147-removebg-preview.png" id="9_f08li"]
-[ext_resource type="PackedScene" uid="uid://2u60yfhka64a" path="res://scenes/healthbar.tscn" id="10_8u04y"]
+[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_we1e1"]
+[ext_resource type="Texture2D" uid="uid://bak42pdajys51" path="res://game assets/fairy1/j1lUm4-Sheet.png" id="2_oqjgo"]
+[ext_resource type="Texture2D" uid="uid://cpj5ook3d2y58" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000426-removebg-preview.png" id="3_c3tvy"]
+[ext_resource type="Texture2D" uid="uid://cail7lq2rngxr" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000500-removebg-preview.png" id="4_d0tmm"]
+[ext_resource type="Texture2D" uid="uid://bmskbmd7qbxle" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000533-removebg-preview.png" id="5_t0qi1"]
+[ext_resource type="Texture2D" uid="uid://bkhpq5rhy8dna" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000555-removebg-preview.png" id="6_yk2dj"]
+[ext_resource type="Texture2D" uid="uid://cf671tmsml136" path="res://game assets/fairy1/Screenshot_2025-02-13_234629-removebg-preview.png" id="7_lijr6"]
+[ext_resource type="Texture2D" uid="uid://cnrkle1hohmht" path="res://game assets/Screenshot_2025-02-13_235121-removebg-preview.png" id="8_mf2vj"]
+[ext_resource type="Texture2D" uid="uid://b2sodv83k6dcr" path="res://game assets/fairy1/Screenshot_2025-02-13_235147-removebg-preview.png" id="9_l1wo7"]
+[ext_resource type="PackedScene" uid="uid://2u60yfhka64a" path="res://scenes/healthbar.tscn" id="10_2jb5g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nhs45"]
-atlas = ExtResource("2_f6djb")
+atlas = ExtResource("2_oqjgo")
 region = Rect2(0, 0, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8dk01"]
-atlas = ExtResource("2_f6djb")
+atlas = ExtResource("2_oqjgo")
 region = Rect2(350, 0, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8gxn4"]
-atlas = ExtResource("2_f6djb")
+atlas = ExtResource("2_oqjgo")
 region = Rect2(700, 0, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bn38q"]
-atlas = ExtResource("3_6hchh")
+atlas = ExtResource("3_c3tvy")
 region = Rect2(0, 0, 517, 482)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0r38k"]
-atlas = ExtResource("4_el8xk")
+atlas = ExtResource("4_d0tmm")
 region = Rect2(0, 0, 516, 483)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_twqnc"]
-atlas = ExtResource("5_jfrqy")
+atlas = ExtResource("5_t0qi1")
 region = Rect2(0, 0, 516, 484)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivkkj"]
-atlas = ExtResource("6_oytmm")
+atlas = ExtResource("6_yk2dj")
 region = Rect2(0, 0, 515, 484)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2tf04"]
-atlas = ExtResource("7_esd0f")
+atlas = ExtResource("7_lijr6")
 region = Rect2(0, 0, 493, 506)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1oah4"]
-atlas = ExtResource("8_t4ekd")
+atlas = ExtResource("8_mf2vj")
 region = Rect2(0, 0, 503, 496)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0o4s5"]
-atlas = ExtResource("9_f08li")
+atlas = ExtResource("9_l1wo7")
 region = Rect2(0, 0, 536, 466)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5usm0"]
@@ -104,7 +104,7 @@ radius = 23.0
 height = 100.0
 
 [node name="player" type="CharacterBody2D"]
-script = ExtResource("1_4apfe")
+script = ExtResource("1_we1e1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(146.574, 78.5548)
@@ -116,7 +116,7 @@ animation = &"fairyy1"
 position = Vector2(141, 83)
 shape = SubResource("CapsuleShape2D_ks570")
 
-[node name="healthbar" parent="." instance=ExtResource("10_8u04y")]
+[node name="healthbar" parent="." instance=ExtResource("10_2jb5g")]
 offset_left = 98.0
 offset_top = 155.0
 offset_right = 206.0
