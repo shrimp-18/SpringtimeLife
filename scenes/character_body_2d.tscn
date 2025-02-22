@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://db6m1sfd8rk84"]
+[gd_scene load_steps=23 format=3 uid="uid://db6m1sfd8rk84"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_4apfe"]
 [ext_resource type="Texture2D" uid="uid://bak42pdajys51" path="res://game assets/fairy1/j1lUm4-Sheet.png" id="2_f6djb"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cf671tmsml136" path="res://game assets/fairy1/Screenshot_2025-02-13_234629-removebg-preview.png" id="7_esd0f"]
 [ext_resource type="Texture2D" uid="uid://cnrkle1hohmht" path="res://game assets/Screenshot_2025-02-13_235121-removebg-preview.png" id="8_t4ekd"]
 [ext_resource type="Texture2D" uid="uid://b2sodv83k6dcr" path="res://game assets/fairy1/Screenshot_2025-02-13_235147-removebg-preview.png" id="9_f08li"]
+[ext_resource type="PackedScene" uid="uid://2u60yfhka64a" path="res://healthbar.tscn" id="10_8u04y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nhs45"]
 atlas = ExtResource("2_f6djb")
@@ -114,3 +115,10 @@ animation = &"fairyy1"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(141, 83)
 shape = SubResource("CapsuleShape2D_ks570")
+
+[node name="healthbar" parent="." instance=ExtResource("10_8u04y")]
+offset_left = 98.0
+offset_top = 155.0
+offset_right = 206.0
+offset_bottom = 183.0
+value = 100.0

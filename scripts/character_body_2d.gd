@@ -5,12 +5,14 @@ extends CharacterBody2D
 var health=100
 var health_max=100
 var health_min=0
-
+var attack_type :String
+var current_attack :bool
 var speed=150
 
 
 func _ready():
 	anim.play("fairyy1")
+
 
 const maxspeed=10000
 const accln=10000
