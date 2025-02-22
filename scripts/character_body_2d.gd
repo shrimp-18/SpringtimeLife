@@ -2,7 +2,10 @@ extends CharacterBody2D
 @onready var anim=get_node("AnimatedSprite2D")
 @onready var joystick:= $"../joystick"
 
-var health=4
+var health=100
+var health_max=100
+var health_min=0
+
 var speed=150
 
 

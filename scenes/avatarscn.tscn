@@ -39,3 +39,4 @@ texture_normal = ExtResource("5_cdlce")
 stretch_mode = 5
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
