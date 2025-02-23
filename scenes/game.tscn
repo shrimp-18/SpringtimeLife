@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://q7irwsqi3cf5"]
+[gd_scene load_steps=24 format=3 uid="uid://q7irwsqi3cf5"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_scoie"]
 [ext_resource type="PackedScene" uid="uid://wb3j2j5v1xce" path="res://scenes/enemy_spawner.tscn" id="2_dotc4"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://cl174lix04qcf" path="res://game assets/health/health4.png" id="13_fh4tu"]
 [ext_resource type="PackedScene" uid="uid://dm2jxipdat3gc" path="res://scenes/coin_spawner.tscn" id="14_kea7e"]
 [ext_resource type="PackedScene" uid="uid://cv7fyfcon0873" path="res://scenes/coin_ui.tscn" id="15_rwulu"]
-[ext_resource type="PackedScene" uid="uid://i7ucv6j3n8hl" path="res://scenes/fruit_ui.tscn" id="16_7jqm3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
 size = Vector2(2353, 162.5)
@@ -132,19 +131,12 @@ position = Vector2(128, 928)
 scale = Vector2(1.375, 1.59375)
 sprite_frames = SubResource("SpriteFrames_db35p")
 animation = &"health"
-frame = 2
-frame_progress = 0.953402
+frame_progress = 0.723999
 
 [node name="coin_spawner" parent="." instance=ExtResource("14_kea7e")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CoinUI" parent="CanvasLayer" instance=ExtResource("15_rwulu")]
-
-[node name="FruitUI" parent="CanvasLayer" instance=ExtResource("16_7jqm3")]
-offset_left = -3.0
-offset_top = 41.0
-offset_right = 37.0
-offset_bottom = 81.0
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
