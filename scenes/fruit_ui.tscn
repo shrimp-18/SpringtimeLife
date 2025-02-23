@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bj7pfgehxn78w"]
+[gd_scene load_steps=3 format=3 uid="uid://i7ucv6j3n8hl"]
 
 [ext_resource type="Script" path="res://scenes/fruit_ui.gd" id="1_s4o4o"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/apple.png" id="2_tm8kf"]
