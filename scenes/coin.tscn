@@ -85,16 +85,17 @@ animations = [{
 radius = 24.0
 height = 48.0
 
-[node name="coin" type="Area2D"]
+[node name="coin" type="CharacterBody2D"]
 script = ExtResource("1_2wukp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-rotation = -3.14159
-scale = Vector2(4.5, 4.4375)
+scale = Vector2(-4.5, -4.4375)
 sprite_frames = SubResource("SpriteFrames_agoe1")
 animation = &"coin"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_40ps6")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
