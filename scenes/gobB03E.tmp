@@ -1,10 +1,35 @@
 [gd_scene load_steps=34 format=3 uid="uid://bifdgnytnhi7w"]
 
-[ext_resource type="Script" path="res://scripts/goblin.gd" id="1_f6ihx"]
 [ext_resource type="Texture2D" uid="uid://yu0xrumqgceh" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="1_qcotg"]
 [ext_resource type="Texture2D" uid="uid://b8cd5d63xp4cs" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="2_vebgn"]
 [ext_resource type="Texture2D" uid="uid://dd1ffo82smdj2" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="3_lvjyt"]
 [ext_resource type="Texture2D" uid="uid://cvsg82pvk7ch5" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="4_mfwwq"]
+
+[sub_resource type="GDScript" id="GDScript_jmq15"]
+resource_name = "goblin"
+script/source = "extends CharacterBody2D
+@onready var anim=get_node(\"AnimatedSprite2D\")
+
+const speed=300
+var direction: Vector2
+
+func _ready():
+	anim.play(\"fly\")
+
+func _process(delta):
+	if true:
+		position.x-=speed*delta
+		
+		
+
+
+
+
+func _on_goblinn_body_entered(body: Node2D) -> void:
+	if body is Player:
+		GameController.health_depleted(value)
+		self.queue_free()
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsro7"]
 atlas = ExtResource("1_qcotg")
@@ -201,36 +226,36 @@ animations = [{
 }],
 "loop": true,
 "name": &"hit",
-"speed": 9.0
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onirg"]
-radius = 36.0
-height = 80.0
+radius = 22.0
+height = 48.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yk8hv"]
-radius = 62.0
-height = 124.0
+radius = 45.0
+height = 94.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_f6ihx")
+script = SubResource("GDScript_jmq15")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(163.25, 103.5)
-scale = Vector2(2.11666, 2.08667)
+position = Vector2(160.25, 94.9999)
+scale = Vector2(2.07666, 1.97334)
 sprite_frames = SubResource("SpriteFrames_30b6e")
-animation = &"hit"
-frame_progress = 0.977367
+animation = &"fly"
+frame_progress = 0.819434
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(155, 100)
+position = Vector2(148, 100)
 shape = SubResource("CapsuleShape2D_onirg")
 
 [node name="goblinn" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="goblinn"]
-position = Vector2(158, 101)
+position = Vector2(151, 86)
 shape = SubResource("CapsuleShape2D_yk8hv")
 
 [connection signal="body_entered" from="goblinn" to="." method="_on_goblinn_body_entered"]

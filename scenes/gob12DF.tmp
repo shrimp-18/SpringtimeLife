@@ -1,6 +1,6 @@
 [gd_scene load_steps=34 format=3 uid="uid://bifdgnytnhi7w"]
 
-[ext_resource type="Script" path="res://scripts/goblin.gd" id="1_f6ihx"]
+[ext_resource type="Script" path="res://scenes/goblin.gd" id="1_3ximw"]
 [ext_resource type="Texture2D" uid="uid://yu0xrumqgceh" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="1_qcotg"]
 [ext_resource type="Texture2D" uid="uid://b8cd5d63xp4cs" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="2_vebgn"]
 [ext_resource type="Texture2D" uid="uid://dd1ffo82smdj2" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="3_lvjyt"]
@@ -213,14 +213,14 @@ radius = 62.0
 height = 124.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_f6ihx")
+script = ExtResource("1_3ximw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(163.25, 103.5)
 scale = Vector2(2.11666, 2.08667)
 sprite_frames = SubResource("SpriteFrames_30b6e")
 animation = &"hit"
-frame_progress = 0.977367
+frame_progress = 0.852278
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

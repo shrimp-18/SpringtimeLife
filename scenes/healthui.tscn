@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3 uid="uid://dglm1f84e6v3l"]
+
+[ext_resource type="Script" path="res://scripts/healthui.gd" id="1_i7bt0"]
+[ext_resource type="Texture2D" uid="uid://dg1tbqu2ju53m" path="res://game assets/health/health.png" id="1_x653t"]
+[ext_resource type="Texture2D" uid="uid://dvgohsbrhgtsj" path="res://game assets/health/healh1.png" id="3_6b8iy"]
+[ext_resource type="Texture2D" uid="uid://cpmlq3gmu13rh" path="res://game assets/health/health5.png" id="4_awlmk"]
+[ext_resource type="Texture2D" uid="uid://dmnyftcv0iiq0" path="res://game assets/health/health3.png" id="5_jduba"]
+[ext_resource type="Texture2D" uid="uid://cl174lix04qcf" path="res://game assets/health/health4.png" id="6_ahaak"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkyi2"]
+atlas = ExtResource("1_x653t")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebfq3"]
+atlas = ExtResource("3_6b8iy")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84v7m"]
+atlas = ExtResource("4_awlmk")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o5dl"]
+atlas = ExtResource("5_jduba")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlrp0"]
+atlas = ExtResource("6_ahaak")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_su6wn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkyi2")
+}],
+"loop": true,
+"name": &"health",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebfq3")
+}],
+"loop": true,
+"name": &"health1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84v7m")
+}],
+"loop": true,
+"name": &"health2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6o5dl")
+}],
+"loop": true,
+"name": &"health3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlrp0")
+}],
+"loop": true,
+"name": &"health4",
+"speed": 5.0
+}]
+
+[node name="health" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i7bt0")
+
+[node name="healthanim" type="AnimatedSprite2D" parent="."]
+position = Vector2(112, 904)
+scale = Vector2(1.375, 1.25)
+sprite_frames = SubResource("SpriteFrames_su6wn")
+animation = &"health"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 880.0
+offset_right = 276.0
+offset_bottom = 935.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "100"

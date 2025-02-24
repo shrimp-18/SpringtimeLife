@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dm2jxipdat3gc" path="res://scenes/coin_spawner.tscn" id="14_kea7e"]
 [ext_resource type="PackedScene" uid="uid://cv7fyfcon0873" path="res://scenes/coin_ui.tscn" id="15_rwulu"]
 [ext_resource type="PackedScene" uid="uid://b61yq0rbx6ehd" path="res://scenes/fruit_ui.tscn" id="16_8usug"]
-[ext_resource type="PackedScene" uid="uid://dglm1f84e6v3l" path="res://scenes/healthui.tscn" id="17_eiekw"]
+[ext_resource type="PackedScene" uid="uid://dglm1f84e6v3l" path="res://healthui.tscn" id="17_eiekw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
 size = Vector2(2353, 162.5)
