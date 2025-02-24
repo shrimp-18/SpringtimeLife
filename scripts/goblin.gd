@@ -24,6 +24,9 @@ func _on_goblinn_body_entered(body: Node2D) -> void:
 
 		
 		GameController.health_depleted(value)
+		
 		await get_tree().create_timer(1).timeout
+		
 		self.queue_free()
+		
 		

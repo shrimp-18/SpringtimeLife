@@ -59,9 +59,9 @@ func player_movement(delta):
 
 func _on_player_body_entered(body: Node2D) -> void:
 	if body is Goblin:
-		anim.play("blast")
+		anim.play("fairyhurt")
 		
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(2).timeout
 		anim.play("fairyy1")
 		
 		

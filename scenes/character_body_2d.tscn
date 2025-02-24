@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://db6m1sfd8rk84"]
+[gd_scene load_steps=40 format=3 uid="uid://db6m1sfd8rk84"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_4apfe"]
 [ext_resource type="Texture2D" uid="uid://bak42pdajys51" path="res://game assets/fairy1/j1lUm4-Sheet.png" id="2_f6djb"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bmskbmd7qbxle" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000533-removebg-preview.png" id="5_jfrqy"]
 [ext_resource type="Texture2D" uid="uid://bkhpq5rhy8dna" path="res://game assets/Assets/fairy2/Screenshot_2025-02-14_000555-removebg-preview.png" id="6_oytmm"]
 [ext_resource type="Texture2D" uid="uid://cf671tmsml136" path="res://game assets/fairy1/Screenshot_2025-02-13_234629-removebg-preview.png" id="7_esd0f"]
+[ext_resource type="Texture2D" uid="uid://b7406upugk6x6" path="res://game assets/hurtfairy.png" id="8_kjmhf"]
 [ext_resource type="Texture2D" uid="uid://cnrkle1hohmht" path="res://game assets/Screenshot_2025-02-13_235121-removebg-preview.png" id="8_t4ekd"]
 [ext_resource type="Texture2D" uid="uid://b2sodv83k6dcr" path="res://game assets/fairy1/Screenshot_2025-02-13_235147-removebg-preview.png" id="9_f08li"]
 [ext_resource type="PackedScene" uid="uid://2u60yfhka64a" path="res://scenes/healthbar.tscn" id="10_8u04y"]
@@ -83,6 +84,18 @@ region = Rect2(0, 0, 516, 484)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivkkj"]
 atlas = ExtResource("6_oytmm")
 region = Rect2(0, 0, 515, 484)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3b3k"]
+atlas = ExtResource("8_kjmhf")
+region = Rect2(0, 0, 636, 556)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1q74"]
+atlas = ExtResource("8_t4ekd")
+region = Rect2(0, 0, 503, 496)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs5pv"]
+atlas = ExtResource("8_kjmhf")
+region = Rect2(0, 0, 636, 556)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2tf04"]
 atlas = ExtResource("7_esd0f")
@@ -169,6 +182,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_u3b3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1q74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cs5pv")
+}],
+"loop": true,
+"name": &"fairyhurt",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_2tf04")
 }, {
 "duration": 1.0,
@@ -194,10 +221,11 @@ height = 144.0
 script = ExtResource("1_4apfe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(146.574, 78.5548)
-scale = Vector2(0.276309, 0.259109)
+position = Vector2(160, 88)
+scale = Vector2(0.224604, 0.21906)
 sprite_frames = SubResource("SpriteFrames_5usm0")
-animation = &"blast"
+animation = &"fairyhurt"
+frame_progress = 0.751624
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(160, 80)
