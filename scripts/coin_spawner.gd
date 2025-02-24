@@ -13,9 +13,6 @@ func _ready():
 			spawnpts.append(i)
 
 
-
-	
-
 func _on_timer_timeout():
 	var spawn=spawnpts[randi()%spawnpts.size()]
 	var coin_spawner=coinscn.instantiate()

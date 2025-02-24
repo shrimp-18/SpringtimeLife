@@ -1,19 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4hh5odx3fy6b"]
 
-[ext_resource type="Script" path="res://scripts/collectable_fruit.gd" id="1_urtmd"]
+[ext_resource type="Script" path="res://scripts/collectable_fruit.gd" id="1_pn48e"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/apple.png" id="2_f0f1r"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bawmn"]
-radius = 20.025
+[sub_resource type="CircleShape2D" id="CircleShape2D_ui418"]
+radius = 17.72
 
-[node name="collectable fruit" type="CharacterBody2D"]
-script = ExtResource("1_urtmd")
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_pn48e")
 
-[node name="Apple" type="Sprite2D" parent="."]
-position = Vector2(33.75, 34)
-scale = Vector2(0.535156, 0.515625)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, 0)
+scale = Vector2(0.460938, 0.484375)
 texture = ExtResource("2_f0f1r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(38, 36)
-shape = SubResource("CircleShape2D_bawmn")
+position = Vector2(-2, 3)
+shape = SubResource("CircleShape2D_ui418")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
