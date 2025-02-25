@@ -4,7 +4,7 @@ class_name Goblin extends CharacterBody2D
 
 @export var value:int=25
 
-const speed=300
+const speed=500
 var direction: Vector2
 
 func _ready():

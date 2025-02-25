@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cjktkm0w33441" path="res://game assets/Untitled_design__1_-removebg-preview.png" id="7_tw84q"]
 
 [node name="home" type="Node2D"]
+position = Vector2(0, 15)
 script = ExtResource("1_6c28v")
 
 [node name="BG" parent="." instance=ExtResource("2_uf74s")]
