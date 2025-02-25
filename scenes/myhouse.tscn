@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvx205n21jt18"]
+
+[ext_resource type="Texture2D" uid="uid://8jc11xjyhduy" path="res://game assets/bgg.png" id="1_btjc2"]
+[ext_resource type="Script" path="res://scripts/myhouse.gd" id="1_x0fc8"]
+[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="2_jeks1"]
+[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/Untitled_design__2_-removebg-preview.png" id="4_m2vpm"]
+
+[node name="myhouse" type="Node2D"]
+script = ExtResource("1_x0fc8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(962, 550)
+texture = ExtResource("1_btjc2")
+
+[node name="quit" type="TextureButton" parent="."]
+offset_left = 1852.0
+offset_top = 27.0
+offset_right = 1906.0
+offset_bottom = 97.0
+texture_normal = ExtResource("2_jeks1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1833.0
+offset_top = 94.0
+offset_right = 1923.0
+offset_bottom = 168.0
+texture_normal = ExtResource("4_m2vpm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

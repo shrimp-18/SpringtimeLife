@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="4_734e5"]
 [ext_resource type="PackedScene" uid="uid://6jul5lslq26x" path="res://scenes/joystick.tscn" id="6_g7kye"]
 [ext_resource type="PackedScene" uid="uid://ditlm5ij3cfct" path="res://scenes/fruit_spawner.tscn" id="7_l6sbr"]
-[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://scenes/Untitled_design__2_-removebg-preview.png" id="12_nvvyg"]
+[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/Untitled_design__2_-removebg-preview.png" id="12_nvvyg"]
 [ext_resource type="PackedScene" uid="uid://dm2jxipdat3gc" path="res://scenes/coin_spawner.tscn" id="14_kea7e"]
 [ext_resource type="PackedScene" uid="uid://cv7fyfcon0873" path="res://scenes/coin_ui.tscn" id="15_rwulu"]
 [ext_resource type="PackedScene" uid="uid://b61yq0rbx6ehd" path="res://scenes/fruit_ui.tscn" id="16_8usug"]

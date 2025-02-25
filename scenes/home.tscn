@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://okb2q4c6yu0j"]
+[gd_scene load_steps=9 format=3 uid="uid://okb2q4c6yu0j"]
 
 [ext_resource type="Script" path="res://scripts/home.gd" id="1_6c28v"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_uf74s"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="5_roer8"]
 [ext_resource type="Texture2D" uid="uid://ny53wqshk0n0" path="res://game assets/Untitled_design-removebg-preview.png" id="6_ik501"]
 [ext_resource type="Texture2D" uid="uid://cjktkm0w33441" path="res://game assets/Untitled_design__1_-removebg-preview.png" id="7_tw84q"]
+[ext_resource type="Texture2D" uid="uid://obagys13v8rn" path="res://game assets/house.png" id="8_fow47"]
 
 [node name="home" type="Node2D"]
 position = Vector2(0, 15)
@@ -50,7 +51,7 @@ texture_normal = ExtResource("6_ik501")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="store" type="TextureButton" parent="."]
 offset_left = 874.0
 offset_top = 630.0
 offset_right = 1023.0
@@ -59,7 +60,17 @@ texture_normal = ExtResource("7_tw84q")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="house" type="TextureButton" parent="."]
+offset_left = 1613.0
+offset_top = 574.0
+offset_right = 1721.0
+offset_bottom = 681.0
+texture_normal = ExtResource("8_fow47")
+ignore_texture_size = true
+stretch_mode = 5
+
 [connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="avatar" to="." method="_on_avatar_pressed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="store" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="house" to="." method="_on_house_pressed"]
