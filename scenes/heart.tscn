@@ -1,16 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkipok0bayqxu"]
+[gd_scene load_steps=4 format=3 uid="uid://dkipok0bayqxu"]
 
-[ext_resource type="Texture2D" uid="uid://0d408id85px8" path="res://game assets/heart.png" id="1_eqj0c"]
+[ext_resource type="Script" path="res://scripts/heart.gd" id="1_ng0pi"]
+[ext_resource type="Texture2D" uid="uid://0d408id85px8" path="res://game assets/heart.png" id="2_shubf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_peouy"]
 radius = 28.1603
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_ng0pi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 1)
 scale = Vector2(0.433594, 0.429688)
-texture = ExtResource("1_eqj0c")
+texture = ExtResource("2_shubf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -3)
