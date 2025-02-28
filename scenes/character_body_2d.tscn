@@ -224,8 +224,7 @@ script = ExtResource("1_4apfe")
 position = Vector2(160, 88)
 scale = Vector2(0.224604, 0.21906)
 sprite_frames = SubResource("SpriteFrames_5usm0")
-animation = &"fairyhurt"
-frame_progress = 0.751624
+animation = &"fairyy1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(160, 80)

@@ -23,38 +23,38 @@ texture = ExtResource("1_k8d3w")
 motion_mirroring = Vector2(1145, 0)
 
 [node name="Far-mountains" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(573.969, 288.844)
-scale = Vector2(3.59395, 2.93464)
+position = Vector2(576, 430.844)
+scale = Vector2(3.58125, 4.11797)
 texture = ExtResource("2_nnu7u")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1145, 0)
 
 [node name="Middle-mountains" type="Sprite2D" parent="ParallaxLayer3"]
-position = Vector2(573.438, 450.313)
-scale = Vector2(3.59102, 3.34427)
+position = Vector2(576.782, 552.844)
+scale = Vector2(3.60489, 4.56797)
 texture = ExtResource("3_oowye")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1145, 0)
 
 [node name="Far-trees" type="Sprite2D" parent="ParallaxLayer4"]
-position = Vector2(575, 245)
-scale = Vector2(3.58906, 2.90729)
+position = Vector2(574.125, 414.063)
+scale = Vector2(3.59453, 4.31614)
 texture = ExtResource("4_wbhl1")
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(895, 0)
 
 [node name="Myst" type="Sprite2D" parent="ParallaxLayer5"]
-position = Vector2(460, 269)
-scale = Vector2(2.87656, 2.77708)
+position = Vector2(425.125, 475.875)
+scale = Vector2(3.09453, 4.50104)
 texture = ExtResource("5_0tihg")
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(890, 0)
 
 [node name="Near-trees" type="Sprite2D" parent="ParallaxLayer6"]
-position = Vector2(447, 384)
-scale = Vector2(2.79063, 2.1875)
+position = Vector2(509, 640)
+scale = Vector2(3.21407, 3.15208)
 texture = ExtResource("6_o86vv")
