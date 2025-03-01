@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://db6m1sfd8rk84"]
+[gd_scene load_steps=52 format=3 uid="uid://db6m1sfd8rk84"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_4apfe"]
 [ext_resource type="Texture2D" uid="uid://bak42pdajys51" path="res://game assets/fairy1/j1lUm4-Sheet.png" id="2_f6djb"]
@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://cbcsopkak6p87" path="res://game assets/pixie/pixie1.png" id="12_nsw22"]
 [ext_resource type="Texture2D" uid="uid://etue0xfj2wdf" path="res://game assets/pixie/pixie2.png" id="13_mka0h"]
 [ext_resource type="Texture2D" uid="uid://dnhp6tolpdpl8" path="res://game assets/pixie/pixie3.png" id="14_1gefu"]
+[ext_resource type="Texture2D" uid="uid://dsn4moyn2qn23" path="res://game assets/pixiehurt/pixiehurt1.png" id="15_6xe4p"]
+[ext_resource type="Texture2D" uid="uid://030jm04bwu8b" path="res://game assets/pixiehurt/pixiehurt2.png" id="16_yw62k"]
+[ext_resource type="Texture2D" uid="uid://c14j8ghp4veid" path="res://game assets/pixiehurt/pixiehurt3.png" id="17_othvf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x58uy"]
 atlas = ExtResource("2_id4aa")
@@ -122,6 +125,18 @@ region = Rect2(0, 0, 64, 75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3efsg"]
 atlas = ExtResource("14_1gefu")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1jhr"]
+atlas = ExtResource("15_6xe4p")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxbsg"]
+atlas = ExtResource("16_yw62k")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp2ug"]
+atlas = ExtResource("17_othvf")
 region = Rect2(0, 0, 64, 75)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5usm0"]
@@ -236,6 +251,20 @@ animations = [{
 "loop": true,
 "name": &"pixie",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1jhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxbsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp2ug")
+}],
+"loop": true,
+"name": &"pixiehurt",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ks570"]
@@ -253,8 +282,8 @@ script = ExtResource("1_4apfe")
 position = Vector2(152, 88)
 scale = Vector2(1.3623, 1.38953)
 sprite_frames = SubResource("SpriteFrames_5usm0")
-animation = &"pixie"
-frame_progress = 0.810205
+animation = &"pixiehurt"
+frame_progress = 0.774307
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(160, 80)
