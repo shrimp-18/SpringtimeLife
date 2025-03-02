@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dof2kig7tfqpe"]
+[gd_scene load_steps=27 format=3 uid="uid://dof2kig7tfqpe"]
 
 [ext_resource type="Script" path="res://scripts/portal.gd" id="1_c0p68"]
 [ext_resource type="Texture2D" uid="uid://bsn478y2ki18k" path="res://game assets/vortex/vortex1.png" id="2_kb86o"]
@@ -52,6 +52,18 @@ region = Rect2(0, 0, 64, 50)
 atlas = ExtResource("11_w1mrt")
 region = Rect2(0, 0, 64, 50)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_oshsg"]
+atlas = ExtResource("8_xwo4v")
+region = Rect2(0, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6v82"]
+atlas = ExtResource("6_262h0")
+region = Rect2(0, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxmo7"]
+atlas = ExtResource("4_8ji66")
+region = Rect2(0, 0, 64, 50)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_dsx0f"]
 animations = [{
 "frames": [{
@@ -84,15 +96,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ut4tv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oshsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6v82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxmo7")
 }],
 "loop": true,
 "name": &"portal",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lpsri"]
 radius = 5.33333
-height = 14.2222
+height = 17.7778
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_c0p68")
@@ -101,7 +122,7 @@ script = ExtResource("1_c0p68")
 scale = Vector2(4, 4.5)
 sprite_frames = SubResource("SpriteFrames_dsx0f")
 animation = &"portal"
-frame_progress = 0.553874
+frame_progress = 0.0479056
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 0)

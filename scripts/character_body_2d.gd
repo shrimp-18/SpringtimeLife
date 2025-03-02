@@ -8,11 +8,13 @@ var health_min=0
 var attack_type :String
 var current_attack :bool
 var speed=400
-
+const speedd=100
 
 
 func _ready():
 	anim.play("pixie")
+
+
 
 
 const maxspeed=10000

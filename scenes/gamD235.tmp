@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://q7irwsqi3cf5"]
+[gd_scene load_steps=16 format=3 uid="uid://q7irwsqi3cf5"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_scoie"]
 [ext_resource type="PackedScene" uid="uid://wb3j2j5v1xce" path="res://scenes/enemy_spawner.tscn" id="2_dotc4"]
@@ -10,8 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/Untitled_design__2_-removebg-preview.png" id="12_nvvyg"]
 [ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://portalspaawner.tscn" id="13_ljoya"]
 [ext_resource type="PackedScene" uid="uid://dm2jxipdat3gc" path="res://scenes/coin_spawner.tscn" id="14_kea7e"]
-[ext_resource type="PackedScene" uid="uid://dtbd6xmkcej2v" path="res://stopwatch.tscn" id="14_th4kv"]
-[ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://stopwatchh.tscn" id="15_eboa4"]
 [ext_resource type="PackedScene" uid="uid://cv7fyfcon0873" path="res://scenes/coin_ui.tscn" id="15_rwulu"]
 [ext_resource type="PackedScene" uid="uid://b61yq0rbx6ehd" path="res://scenes/fruit_ui.tscn" id="16_8usug"]
 [ext_resource type="PackedScene" uid="uid://dglm1f84e6v3l" path="res://scenes/healthui.tscn" id="17_eiekw"]
@@ -24,8 +22,6 @@ size = Vector2(98, 1218)
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_scoie")
-
-[node name="portalspaawner2" parent="." instance=ExtResource("13_ljoya")]
 
 [node name="fruit spawner" parent="." instance=ExtResource("7_l6sbr")]
 
@@ -92,9 +88,12 @@ texture_normal = ExtResource("12_nvvyg")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="stopwatch" parent="." instance=ExtResource("14_th4kv")]
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
 
-[node name="stopwatchh" parent="." instance=ExtResource("15_eboa4")]
+[node name="portalspaawner" parent="." instance=ExtResource("13_ljoya")]
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

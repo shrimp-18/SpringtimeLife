@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn71hrgntcwpu"]
+
+[ext_resource type="Script" path="res://stopwatchh.gd" id="1_64rsn"]
+
+[node name="stopwatchh" type="Control" node_paths=PackedStringArray("stopwatch_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64rsn")
+stopwatch_label = NodePath("Label")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1648.0
+offset_top = 16.0
+offset_right = 1936.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "00:00:000"

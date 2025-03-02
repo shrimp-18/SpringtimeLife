@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjqwbox3mc1p5"]
+
+[ext_resource type="Script" path="res://portalspaawner.gd" id="1_4u0yf"]
+
+[node name="portalspaawner" type="Node2D"]
+script = ExtResource("1_4u0yf")
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(1728, 520)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
