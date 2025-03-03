@@ -26,6 +26,7 @@ size = Vector2(98, 1218)
 script = ExtResource("1_scoie")
 
 [node name="portalspaawner2" parent="." instance=ExtResource("13_ljoya")]
+y_sort_enabled = true
 
 [node name="fruit spawner" parent="." instance=ExtResource("7_l6sbr")]
 
@@ -44,6 +45,8 @@ stretch_mode = 5
 [node name="BG" parent="." instance=ExtResource("2_fawas")]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_734e5")]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(-64, 200)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
