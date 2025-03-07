@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcxx7ill464rg"]
+[gd_scene load_steps=6 format=3 uid="uid://fe1vplvhdjfe"]
 
-[ext_resource type="Script" path="res://scripts/scrollcontainer.gd" id="1_515nw"]
-[ext_resource type="Texture2D" uid="uid://o6l1wkglv3hq" path="res://game assets/pixie1/pixie1.png" id="2_4hdwh"]
-[ext_resource type="Texture2D" uid="uid://jm1i8u2n7cb3" path="res://game assets/pixie2/pixie2-Recovered1.png" id="3_jmj7t"]
-[ext_resource type="Texture2D" uid="uid://cym4lt6jhhhpk" path="res://game assets/pixie3/pixie3-1.png" id="4_xy7de"]
-[ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="5_rspgl"]
+[ext_resource type="Script" path="res://scripts/scrollcontainer.gd" id="1_vxmlg"]
+[ext_resource type="Texture2D" uid="uid://o6l1wkglv3hq" path="res://game assets/pixie1/pixie1.png" id="2_8bw72"]
+[ext_resource type="Texture2D" uid="uid://jm1i8u2n7cb3" path="res://game assets/pixie2/pixie2-Recovered1.png" id="3_3sh8p"]
+[ext_resource type="Texture2D" uid="uid://cym4lt6jhhhpk" path="res://game assets/pixie3/pixie3-1.png" id="4_mmvrb"]
+[ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="5_m1y64"]
 
 [node name="ScrollContainer" type="ScrollContainer"]
 clip_contents = false
@@ -17,7 +17,7 @@ offset_right = 776.0
 offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_515nw")
+script = ExtResource("1_vxmlg")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 2
@@ -42,22 +42,22 @@ theme_override_constants/separation = 100
 [node name="CardMenu1" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("2_4hdwh")
+texture = ExtResource("2_8bw72")
 expand_mode = 2
 stretch_mode = 5
 
 [node name="CardMenu2" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_jmj7t")
+texture = ExtResource("3_3sh8p")
 expand_mode = 2
 stretch_mode = 5
 
 [node name="CardMenu3" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_xy7de")
+texture = ExtResource("4_mmvrb")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="BG" parent="." instance=ExtResource("5_rspgl")]
+[node name="BG" parent="." instance=ExtResource("5_m1y64")]
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
