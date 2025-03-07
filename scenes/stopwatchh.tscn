@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cn71hrgntcwpu"]
 
-[ext_resource type="Script" path="res://stopwatchh.gd" id="1_64rsn"]
+[ext_resource type="Script" path="res://scripts/stopwatchh.gd" id="1_64rsn"]
 
 [node name="stopwatchh" type="Control" node_paths=PackedStringArray("stopwatch_label")]
 layout_mode = 3

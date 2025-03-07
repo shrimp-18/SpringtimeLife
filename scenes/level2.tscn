@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_ctwev"]
 [ext_resource type="PackedScene" uid="uid://ditlm5ij3cfct" path="res://scenes/fruit_spawner.tscn" id="2_34p3x"]
-[ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://portalspaawner.tscn" id="2_upu0j"]
+[ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_upu0j"]
 [ext_resource type="PackedScene" uid="uid://6jul5lslq26x" path="res://scenes/joystick.tscn" id="3_v1smt"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="4_vvi20"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="5_7ac34"]
@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://b61yq0rbx6ehd" path="res://scenes/fruit_ui.tscn" id="10_wotll"]
 [ext_resource type="PackedScene" uid="uid://dglm1f84e6v3l" path="res://scenes/healthui.tscn" id="11_12xfd"]
 [ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/Untitled_design__2_-removebg-preview.png" id="12_5rlwd"]
-[ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://stopwatchh.tscn" id="13_kfogt"]
-[ext_resource type="PackedScene" uid="uid://dtbd6xmkcej2v" path="res://stopwatch.tscn" id="14_ex3dn"]
+[ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://scenes/stopwatchh.tscn" id="13_kfogt"]
+[ext_resource type="PackedScene" uid="uid://dtbd6xmkcej2v" path="res://scenes/stopwatch.tscn" id="14_ex3dn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
 size = Vector2(2353, 162.5)
