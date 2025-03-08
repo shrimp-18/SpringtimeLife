@@ -18,6 +18,9 @@ offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vxmlg")
+card_scale = null
+card_current_scale = null
+scroll_duration = null
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 2
@@ -61,3 +64,4 @@ stretch_mode = 5
 [node name="BG" parent="." instance=ExtResource("5_m1y64")]
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="focus_entered" from="CenterContainer/MarginContainer/HBoxContainer/CardMenu1" to="." method="_on_card_menu_1_focus_entered"]

@@ -66,3 +66,7 @@ func _on_gui_input(event: InputEvent):
 			scroll_tween.stop()
 		else:
 			scroll()
+
+
+func _on_card_menu_1_focus_entered() -> void:
+	
