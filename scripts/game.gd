@@ -1,7 +1,7 @@
 extends Node2D
 
-var save_path="user://variable.save"
-@export var total_coins
+var save_path = "res://variable.save"
+
 
 var1=total_coins
 
@@ -15,10 +15,19 @@ func _on_texture_button_pressed() -> void:
 func save():
 	var file= FileAccess.open(save_path,FileAccess.WRITE)
 	file.store_var(total_coins)
-	file.store_var(GameController.coin_collected(value))
+	file.store_var(total_fruits)
 	
 func load_date():
 	if FileAccess.file_exists(save_path):
 		var file=FileAccess.open(save_path,FileAccess.READ)
-		GameController.fruit_collected(value)=file.get_var(GameController.fruit_collected(value))\
+		total_coins=file.get_var(total_coins)
+		total_fruits=file.get_var(total_fruits)
+	else:
+		print("no data saved...")
+		total_coins=0
+		total_fruits=0
 		
+
+
+func _on_texture_button_2_pressed() -> void:
+	save()
