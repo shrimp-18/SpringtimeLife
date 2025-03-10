@@ -1,6 +1,6 @@
 extends Control
 
-@onready var fruit_label = $Label
+@onready var fruit_label = $FruitLabel
 
 func _ready():
 	EventController.connect("fruit_collected", on_fruit_collected)
