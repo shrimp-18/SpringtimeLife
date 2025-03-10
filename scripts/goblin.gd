@@ -15,6 +15,9 @@ func _process(delta):
 		position.x-=speed*delta
 		
 		
+func health_depleted(value):
+	print("Health depleted by:", value)
+	# Add any other logic you want here
 
 
 

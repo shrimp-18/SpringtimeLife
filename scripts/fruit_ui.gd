@@ -1,8 +1,9 @@
 extends Control
-@onready var label=$Label
+
+@onready var fruit_label = $Label
 
 func _ready():
-	EventController.connect("fruit_collected",on_event_coin_collected)
+	EventController.connect("fruit_collected", on_fruit_collected)
 
-func on_event_coin_collected(value:int):
-	label.text=str(value)
+func on_fruit_collected(value: int):
+	fruit_label.text = str(value)
