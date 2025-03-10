@@ -30,6 +30,8 @@ func load_data():
 		print("Coins:", total_coins)
 		print("Fruits:", total_fruits)
 		print("Health:", total_health)
+		EventController.emit_signal("coin_collected", total_coins)
+		EventController.emit_signal("fruit_collected", total_fruits)
 	else:
 		print("No save file found, starting fresh.")
 
