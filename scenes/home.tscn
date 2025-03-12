@@ -3,12 +3,14 @@
 [ext_resource type="Script" path="res://scripts/home.gd" id="1_6c28v"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_uf74s"]
 [ext_resource type="PackedScene" uid="uid://cki2i60nl3kxs" path="res://scenes/parallax_background_1.tscn" id="3_if2c2"]
-[ext_resource type="Texture2D" uid="uid://cy7vvagj2eicl" path="res://game assets/pngtree-pixel-art-play-button-png-image_14902519-removebg-preview.png" id="3_vjmxj"]
 [ext_resource type="Texture2D" uid="uid://cplw3mhvjts8w" path="res://game assets/pixel-art-settings-button-with-gear-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="4_wk7je"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="5_roer8"]
 [ext_resource type="Texture2D" uid="uid://ny53wqshk0n0" path="res://game assets/Untitled_design-removebg-preview.png" id="6_ik501"]
 [ext_resource type="Texture2D" uid="uid://cjktkm0w33441" path="res://game assets/Untitled_design__1_-removebg-preview.png" id="7_tw84q"]
 [ext_resource type="Texture2D" uid="uid://obagys13v8rn" path="res://game assets/house.png" id="8_fow47"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mw5cr"]
+load_path = "res://.godot/imported/pngtree-pixel-art-play-button-png-image_14902519-removebg-preview.png-588ffa063ba6b5ef222ba219807e2f75.ctex"
 
 [node name="home" type="Node2D"]
 position = Vector2(0, 15)
@@ -24,7 +26,7 @@ offset_left = 830.0
 offset_top = 418.0
 offset_right = 1067.0
 offset_bottom = 649.0
-texture_normal = ExtResource("3_vjmxj")
+texture_normal = SubResource("CompressedTexture2D_mw5cr")
 ignore_texture_size = true
 stretch_mode = 5
 

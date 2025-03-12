@@ -1,14 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfa4sn45ib4yb"]
+[gd_scene load_steps=2 format=3 uid="uid://cfa4sn45ib4yb"]
 
-[ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="1_oxjvi"]
 [ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="2_e6h7k"]
 
 [node name="camera" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 325)
-
-[node name="BG" parent="." instance=ExtResource("1_oxjvi")]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_e6h7k")]
 position = Vector2(577, 325)
