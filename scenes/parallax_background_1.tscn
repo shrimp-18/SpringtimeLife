@@ -44,6 +44,7 @@ scale = Vector2(3.59453, 4.31614)
 texture = ExtResource("4_wbhl1")
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+visible = false
 motion_mirroring = Vector2(895, 0)
 
 [node name="Myst" type="Sprite2D" parent="ParallaxLayer5"]

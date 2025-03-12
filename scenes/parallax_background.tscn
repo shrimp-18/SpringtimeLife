@@ -8,32 +8,34 @@
 [node name="BG" type="ParallaxBackground"]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_scale = Vector2(0.5, 1)
+motion_scale = Vector2(0.2, 1)
 motion_mirroring = Vector2(1920, 0)
 script = ExtResource("1_jy1v3")
 
 [node name="1-sky" type="Sprite2D" parent="ParallaxLayer"]
-scale = Vector2(16.0125, 12.0222)
+position = Vector2(6, 4)
+scale = Vector2(15.6375, 11)
 texture = ExtResource("2_tnegg")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 1)
 motion_mirroring = Vector2(1920, 0)
 script = ExtResource("1_jy1v3")
 
 [node name="2-clouds" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 modulate = Color(1, 1, 1, 0.831373)
-position = Vector2(4, 30)
+position = Vector2(-6, 96)
 scale = Vector2(12.0375, 10.9556)
 texture = ExtResource("3_ftlxq")
 centered = false
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(2, 1)
 motion_mirroring = Vector2(1920, 0)
 script = ExtResource("1_jy1v3")
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
-position = Vector2(962, 390)
-scale = Vector2(12.025, 14.1556)
+position = Vector2(967, 359)
+scale = Vector2(12.1375, 14.3556)
 texture = ExtResource("5_g3en4")
