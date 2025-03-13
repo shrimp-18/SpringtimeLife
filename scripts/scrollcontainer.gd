@@ -89,6 +89,10 @@ func _on_gui_input(event: InputEvent):
 		else:
 			scroll()
 	
+
+signal player_selected(index)  # Ensure correct signal name
+
 func select_player():
 	GameController.selected_player_index = card_current_index
-	print("Selected Player:", GameController.selected_player_index) 
+	print("Selected Player:", GameController.selected_player_index)
+	emit_signal("player_selected", card_current_index)  # Use correct signal name
