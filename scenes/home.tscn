@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://okb2q4c6yu0j"]
+[gd_scene load_steps=11 format=3 uid="uid://okb2q4c6yu0j"]
 
 [ext_resource type="Script" path="res://scripts/home.gd" id="1_6c28v"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_uf74s"]
 [ext_resource type="PackedScene" uid="uid://cki2i60nl3kxs" path="res://scenes/parallax_background_1.tscn" id="3_if2c2"]
 [ext_resource type="Texture2D" uid="uid://cplw3mhvjts8w" path="res://game assets/pixel-art-settings-button-with-gear-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="4_wk7je"]
+[ext_resource type="Texture2D" uid="uid://13rjrkuejhtd" path="res://scenes/setbut.png" id="5_hswfu"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="5_roer8"]
 [ext_resource type="Texture2D" uid="uid://ny53wqshk0n0" path="res://game assets/Untitled_design-removebg-preview.png" id="6_ik501"]
 [ext_resource type="Texture2D" uid="uid://cjktkm0w33441" path="res://game assets/Untitled_design__1_-removebg-preview.png" id="7_tw84q"]
@@ -36,6 +37,7 @@ offset_top = 510.0
 offset_right = 1187.0
 offset_bottom = 591.0
 texture_normal = ExtResource("4_wk7je")
+texture_hover = ExtResource("5_hswfu")
 ignore_texture_size = true
 stretch_mode = 5
 
