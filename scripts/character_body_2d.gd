@@ -1,6 +1,8 @@
 class_name Player extends CharacterBody2D
 @onready var anim=get_node("AnimatedSprite2D")
 @onready var joystick:= $"../joystick"
+@onready var animation_player = $AnimatedSprite2D
+
 
 var health=100
 var health_max=100
@@ -13,7 +15,13 @@ const speedd=100
 
 func _ready():
 	anim.play("pixie")
-
+	match GameController.selected_player_index:
+		0:
+			anim.play("pixie")
+		1:
+			anim.play("pixie2")
+		2:
+			anim.play("pixie3")
 
 
 

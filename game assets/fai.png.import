@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://13rjrkuejhtd"
-path="res://.godot/imported/setbut.png-dcef5e187e3909088b0027a6209c1bc6.ctex"
+uid="uid://8dt8piwmxeo7"
+path="res://.godot/imported/fai.png-988d66f0581c58cbe17b686bf48b25a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/setbut.png"
-dest_files=["res://.godot/imported/setbut.png-dcef5e187e3909088b0027a6209c1bc6.ctex"]
+source_file="res://game assets/fai.png"
+dest_files=["res://.godot/imported/fai.png-988d66f0581c58cbe17b686bf48b25a1.ctex"]
 
 [params]
 
