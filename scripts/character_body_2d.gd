@@ -14,7 +14,7 @@ const speedd=100
 
 
 func _ready():
-	anim.play("pixie")
+	
 	match GameController.selected_player_index:
 		0:
 			anim.play("pixie")
@@ -73,6 +73,6 @@ func _on_player_body_entered(body: Node2D) -> void:
 		anim.play("pixiehurt")
 		
 		await get_tree().create_timer(2).timeout
-		anim.play("pixie")
+		_ready()
 		
 		

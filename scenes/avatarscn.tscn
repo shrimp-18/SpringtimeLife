@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ubtv7mdi4bu1"]
+[gd_scene load_steps=12 format=3 uid="uid://ubtv7mdi4bu1"]
 
 [ext_resource type="Script" path="res://scripts/avatarscn.gd" id="1_5i1hy"]
 [ext_resource type="PackedScene" uid="uid://dcxx7ill464rg" path="res://scenes/carouselplayer.tscn" id="1_8ve0j"]
@@ -6,8 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://s6elu7thks1p" path="res://game assets/images.png" id="2_nvbtf"]
 [ext_resource type="Texture2D" uid="uid://dv87fv5e3gktv" path="res://game assets/tick.png" id="5_cdlce"]
 [ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/Untitled_design__2_-removebg-preview.png" id="6_5id3q"]
+[ext_resource type="Texture2D" uid="uid://bsx7fiylmf1cl" path="res://scenes/tick2.png" id="6_ioa6g"]
 [ext_resource type="Texture2D" uid="uid://75x41nme7mct" path="res://game assets/male.png" id="7_fmmlf"]
 [ext_resource type="Texture2D" uid="uid://bw1p4o8ljm2mp" path="res://game assets/female.png" id="8_i14nk"]
+[ext_resource type="Texture2D" uid="uid://gmgfj28v56hr" path="res://scenes/male1.png" id="9_bkfbr"]
+[ext_resource type="Texture2D" uid="uid://d0ufrq6ypbx5q" path="res://scenes/female1.png" id="11_f0jte"]
 
 [node name="avatarscn" type="Node2D"]
 script = ExtResource("1_5i1hy")
@@ -39,6 +42,7 @@ offset_top = 811.0
 offset_right = 1051.0
 offset_bottom = 939.0
 texture_normal = ExtResource("5_cdlce")
+texture_hover = ExtResource("6_ioa6g")
 stretch_mode = 5
 
 [node name="TextureButton2" type="TextureButton" parent="."]
@@ -56,6 +60,7 @@ offset_top = 196.0
 offset_right = 874.0
 offset_bottom = 358.0
 texture_normal = ExtResource("7_fmmlf")
+texture_hover = ExtResource("9_bkfbr")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -65,6 +70,7 @@ offset_top = 205.0
 offset_right = 1125.0
 offset_bottom = 349.0
 texture_normal = ExtResource("8_i14nk")
+texture_hover = ExtResource("11_f0jte")
 ignore_texture_size = true
 stretch_mode = 5
 
