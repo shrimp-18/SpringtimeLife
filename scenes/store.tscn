@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://co2xp4iwrtdg8"]
 
 [ext_resource type="Script" path="res://scripts/store.gd" id="1_7yea7"]
-[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="1_sxm5j"]
+[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="1_sxm5j"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_ylbr8"]
-[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/Untitled_design__2_-removebg-preview.png" id="4_rqlr4"]
+[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="4_rqlr4"]
 
 [node name="store" type="Node2D"]
 script = ExtResource("1_7yea7")

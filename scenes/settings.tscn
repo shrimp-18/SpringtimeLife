@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpbj0bystna4g"]
 
 [ext_resource type="Script" path="res://scripts/settings.gd" id="1_prvrx"]
-[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="2_b47u5"]
+[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="2_b47u5"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="3_aue76"]
 
 [node name="settings" type="Node2D"]

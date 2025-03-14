@@ -13,6 +13,7 @@ script = ExtResource("1_3lv4p")
 motion_scale = Vector2(0.1, 1)
 motion_mirroring = Vector2(1920, 0)
 script = ExtResource("1_jy1v3")
+scrolling_speed = 50.0
 
 [node name="1-sky" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(6, 4)
@@ -24,6 +25,7 @@ centered = false
 motion_scale = Vector2(0.3, 1)
 motion_mirroring = Vector2(1920, 0)
 script = ExtResource("1_jy1v3")
+scrolling_speed = 90.0
 
 [node name="2-clouds" type="Sprite2D" parent="ParallaxLayer2"]
 modulate = Color(1, 1, 1, 0.831373)
@@ -35,6 +37,7 @@ centered = false
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1920, 0)
 script = ExtResource("1_jy1v3")
+scrolling_speed = 210.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
 position = Vector2(957, 362)

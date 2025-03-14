@@ -1,12 +1,24 @@
 [gd_scene load_steps=8 format=3 uid="uid://cki2i60nl3kxs"]
 
 [ext_resource type="Script" path="res://scripts/parallax_background_1.gd" id="1_hfjku"]
-[ext_resource type="Texture2D" uid="uid://bal87ort6dcnr" path="res://game assets/Assets/version B/Layers/sky.png" id="1_k8d3w"]
-[ext_resource type="Texture2D" uid="uid://bgi5wv6n1x2fv" path="res://game assets/Assets/version B/Layers/far-mountains.png" id="2_nnu7u"]
-[ext_resource type="Texture2D" uid="uid://c85xsxi2g6lon" path="res://game assets/Assets/version B/Layers/middle-mountains.png" id="3_oowye"]
-[ext_resource type="Texture2D" uid="uid://dc06sciyrlc55" path="res://game assets/Assets/version B/Layers/far-trees.png" id="4_wbhl1"]
-[ext_resource type="Texture2D" uid="uid://cmccxbhpble0i" path="res://game assets/Assets/version B/Layers/myst.png" id="5_0tihg"]
-[ext_resource type="Texture2D" uid="uid://b758aepwd2d6c" path="res://game assets/Assets/version B/Layers/near-trees.png" id="6_o86vv"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rf6ed"]
+load_path = "res://.godot/imported/sky.png-00b553b47b3ba56062ef291207312160.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sk0pe"]
+load_path = "res://.godot/imported/far-mountains.png-85f50677e5ed4704a0908badd29ede9e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hnoss"]
+load_path = "res://.godot/imported/middle-mountains.png-1d57cc735689ee345ab4b5a462e3c69d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6sx10"]
+load_path = "res://.godot/imported/far-trees.png-712138349d35c24f928761715e9b2b99.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ap3p"]
+load_path = "res://.godot/imported/myst.png-a438ce77a5c9ad93b980927e8d05483b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pbogo"]
+load_path = "res://.godot/imported/near-trees.png-d581673fef196791acce2ca174fef1da.ctex"
 
 [node name="ParallaxBackground1" type="ParallaxBackground"]
 script = ExtResource("1_hfjku")
@@ -17,7 +29,7 @@ motion_mirroring = Vector2(1145, 0)
 [node name="Sky" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(576, 320)
 scale = Vector2(3.5875, 2.64167)
-texture = ExtResource("1_k8d3w")
+texture = SubResource("CompressedTexture2D_rf6ed")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1145, 0)
@@ -25,7 +37,7 @@ motion_mirroring = Vector2(1145, 0)
 [node name="Far-mountains" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(576, 430.844)
 scale = Vector2(3.58125, 4.11797)
-texture = ExtResource("2_nnu7u")
+texture = SubResource("CompressedTexture2D_sk0pe")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1145, 0)
@@ -33,7 +45,7 @@ motion_mirroring = Vector2(1145, 0)
 [node name="Middle-mountains" type="Sprite2D" parent="ParallaxLayer3"]
 position = Vector2(576.782, 552.844)
 scale = Vector2(3.60489, 4.56797)
-texture = ExtResource("3_oowye")
+texture = SubResource("CompressedTexture2D_hnoss")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1145, 0)
@@ -41,7 +53,7 @@ motion_mirroring = Vector2(1145, 0)
 [node name="Far-trees" type="Sprite2D" parent="ParallaxLayer4"]
 position = Vector2(574.125, 414.063)
 scale = Vector2(3.59453, 4.31614)
-texture = ExtResource("4_wbhl1")
+texture = SubResource("CompressedTexture2D_6sx10")
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
 visible = false
@@ -50,7 +62,7 @@ motion_mirroring = Vector2(895, 0)
 [node name="Myst" type="Sprite2D" parent="ParallaxLayer5"]
 position = Vector2(425.125, 475.875)
 scale = Vector2(3.09453, 4.50104)
-texture = ExtResource("5_0tihg")
+texture = SubResource("CompressedTexture2D_6ap3p")
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(890, 0)
@@ -58,4 +70,4 @@ motion_mirroring = Vector2(890, 0)
 [node name="Near-trees" type="Sprite2D" parent="ParallaxLayer6"]
 position = Vector2(509, 640)
 scale = Vector2(3.21407, 3.15208)
-texture = ExtResource("6_o86vv")
+texture = SubResource("CompressedTexture2D_pbogo")

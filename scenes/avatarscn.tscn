@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://scripts/avatarscn.gd" id="1_5i1hy"]
 [ext_resource type="PackedScene" uid="uid://dcxx7ill464rg" path="res://scenes/carouselplayer.tscn" id="1_8ve0j"]
-[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="2_kkg8w"]
-[ext_resource type="Texture2D" uid="uid://s6elu7thks1p" path="res://game assets/images.png" id="2_nvbtf"]
-[ext_resource type="Texture2D" uid="uid://dv87fv5e3gktv" path="res://game assets/tick.png" id="5_cdlce"]
-[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/Untitled_design__2_-removebg-preview.png" id="6_5id3q"]
-[ext_resource type="Texture2D" uid="uid://bsx7fiylmf1cl" path="res://scenes/tick2.png" id="6_ioa6g"]
-[ext_resource type="Texture2D" uid="uid://75x41nme7mct" path="res://game assets/male.png" id="7_fmmlf"]
-[ext_resource type="Texture2D" uid="uid://bw1p4o8ljm2mp" path="res://game assets/female.png" id="8_i14nk"]
+[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="2_kkg8w"]
+[ext_resource type="Texture2D" uid="uid://s6elu7thks1p" path="res://game assets/randomassets/images.png" id="2_nvbtf"]
+[ext_resource type="Texture2D" uid="uid://dv87fv5e3gktv" path="res://game assets/randomassets/tick.png" id="5_cdlce"]
+[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="6_5id3q"]
+[ext_resource type="Texture2D" uid="uid://bsx7fiylmf1cl" path="res://game assets/randomassets/tick2.png" id="6_ioa6g"]
+[ext_resource type="Texture2D" uid="uid://75x41nme7mct" path="res://game assets/randomassets/male.png" id="7_fmmlf"]
+[ext_resource type="Texture2D" uid="uid://bw1p4o8ljm2mp" path="res://game assets/randomassets/female.png" id="8_i14nk"]
 [ext_resource type="Texture2D" uid="uid://gmgfj28v56hr" path="res://scenes/male1.png" id="9_bkfbr"]
 [ext_resource type="Texture2D" uid="uid://d0ufrq6ypbx5q" path="res://scenes/female1.png" id="11_f0jte"]
 
@@ -16,7 +16,7 @@
 script = ExtResource("1_5i1hy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.27451, 0.27451, 0.27451, 0.694118)
+modulate = Color(0.27451, 0.27451, 0.27451, 0.443137)
 position = Vector2(961.5, 527)
 scale = Vector2(6.2, 3.6)
 texture = ExtResource("2_nvbtf")

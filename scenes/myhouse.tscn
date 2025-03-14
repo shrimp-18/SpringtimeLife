@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://8jc11xjyhduy" path="res://game assets/bgg.png" id="1_btjc2"]
 [ext_resource type="Script" path="res://scripts/myhouse.gd" id="1_x0fc8"]
-[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="2_jeks1"]
-[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/Untitled_design__2_-removebg-preview.png" id="4_m2vpm"]
-[ext_resource type="Texture2D" uid="uid://bsetbjypyx8xc" path="res://game assets/Terrains_Dirt_Grass_Sand_Cliffs.png" id="5_1rcxx"]
-[ext_resource type="Texture2D" uid="uid://bcouoxlgg63bl" path="res://game assets/Complete Sunday Job Tileset.png" id="6_j3s67"]
-[ext_resource type="Texture2D" uid="uid://bparecqodofbt" path="res://game assets/grass.png" id="7_r622x"]
+[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="2_jeks1"]
+[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="4_m2vpm"]
+[ext_resource type="Texture2D" path="res://game assets/Terrains_Dirt_Grass_Sand_Cliffs.png" id="5_1rcxx"]
+[ext_resource type="Texture2D" uid="uid://bcouoxlgg63bl" path="res://game assets/randomassets/Complete Sunday Job Tileset.png" id="6_j3s67"]
+[ext_resource type="Texture2D" uid="uid://bparecqodofbt" path="res://game assets/randomassets/grass.png" id="7_r622x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fpmc8"]
 texture = ExtResource("5_1rcxx")

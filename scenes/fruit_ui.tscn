@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b61yq0rbx6ehd"]
 
 [ext_resource type="Script" path="res://scripts/fruit_ui.gd" id="1_1xfy2"]
-[ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/apple.png" id="1_cvv6i"]
+[ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="1_cvv6i"]
 
 [node name="FruitUI" type="Control"]
 layout_mode = 3
