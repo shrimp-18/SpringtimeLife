@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0ufrq6ypbx5q"
-path="res://.godot/imported/female1.png-39bef69e2648f41358a5d9c41a360747.ctex"
+uid="uid://dib1o37hsb0op"
+path="res://.godot/imported/pixie1.png-f921deea434bbcb0ed69cb3e92d7dbd4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/female1.png"
-dest_files=["res://.godot/imported/female1.png-39bef69e2648f41358a5d9c41a360747.ctex"]
+source_file="res://game assets/randomassets/malepixie1/pixie1.png"
+dest_files=["res://.godot/imported/pixie1.png-f921deea434bbcb0ed69cb3e92d7dbd4.ctex"]
 
 [params]
 

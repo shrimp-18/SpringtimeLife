@@ -4,7 +4,7 @@ var total_coins: int = 0
 var total_fruits: int = 0
 var total_health: int = 100
 var selected_player_index: int = 0
-
+var selected_player_index1: int=0
 const  save_path = "user://savegame.dat"
 
 
@@ -25,6 +25,7 @@ func load_selected_player():
 	if FileAccess.file_exists("user://selected_player.save"):
 		var file = FileAccess.open("user://selected_player.save", FileAccess.READ)
 		selected_player_index = file.get_var()
+		selected_player_index1=file.get_var()
 		file.close()
 
 #func set_player_character():

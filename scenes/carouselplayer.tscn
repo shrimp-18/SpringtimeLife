@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dcxx7ill464rg"]
 
-[ext_resource type="Script" path="res://scripts/scrollcontainer.gd" id="1_515nw"]
+[ext_resource type="Script" path="res://scenes/carouselplayerm.gd" id="1_3kgj1"]
 [ext_resource type="Texture2D" uid="uid://o6l1wkglv3hq" path="res://game assets/pixie1/pixie1.png" id="2_4hdwh"]
 [ext_resource type="Texture2D" uid="uid://jm1i8u2n7cb3" path="res://game assets/pixie2/pixie2-Recovered1.png" id="3_jmj7t"]
 [ext_resource type="Texture2D" uid="uid://cym4lt6jhhhpk" path="res://game assets/pixie3/pixie3-1.png" id="4_xy7de"]
@@ -17,7 +17,7 @@ offset_right = 776.0
 offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_515nw")
+script = ExtResource("1_3kgj1")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 2
