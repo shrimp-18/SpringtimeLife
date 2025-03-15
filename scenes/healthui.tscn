@@ -81,7 +81,7 @@ script = ExtResource("1_i7bt0")
 position = Vector2(112, 904)
 scale = Vector2(1.375, 1.25)
 sprite_frames = SubResource("SpriteFrames_su6wn")
-animation = &"health"
+animation = &"health1"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://coioe5htl6v14"]
+[gd_scene load_steps=18 format=3 uid="uid://bqg4202gtivyb"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_ctwev"]
 [ext_resource type="PackedScene" uid="uid://ditlm5ij3cfct" path="res://scenes/fruit_spawner.tscn" id="2_34p3x"]
@@ -81,10 +81,25 @@ offset_bottom = 1128.0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CoinUI" parent="CanvasLayer" instance=ExtResource("9_tmt5p")]
+anchors_preset = -1
+anchor_bottom = 0.012
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 64.0
+offset_bottom = 56.224
 
 [node name="FruitUI" parent="CanvasLayer" instance=ExtResource("10_wotll")]
+visible = false
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 48.0
 
 [node name="health" parent="CanvasLayer" instance=ExtResource("11_12xfd")]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 48.0
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 1816.0
@@ -98,6 +113,15 @@ stretch_mode = 5
 [node name="stopwatch" parent="." instance=ExtResource("14_ex3dn")]
 
 [node name="stopwatchh" parent="." instance=ExtResource("13_kfogt")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 104.0
+offset_top = 16.0
+offset_right = 164.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "/30"
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

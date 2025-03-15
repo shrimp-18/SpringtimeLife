@@ -8,4 +8,5 @@ func _ready():
 
 
 func on_coin_collected(value: int):
-	coin_label.text = str(value)
+	coin_label.text = str(GameController.total_coins)
+	

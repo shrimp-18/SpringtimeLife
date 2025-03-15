@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://okb2q4c6yu0j"]
+[gd_scene load_steps=16 format=3 uid="uid://okb2q4c6yu0j"]
 
 [ext_resource type="Script" path="res://scripts/home.gd" id="1_6c28v"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_uf74s"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://8dt8piwmxeo7" path="res://game assets/randomassets/fai.png" id="8_a1s13"]
 [ext_resource type="Texture2D" uid="uid://obagys13v8rn" path="res://game assets/house.png" id="8_fow47"]
 [ext_resource type="Texture2D" uid="uid://bco15fwrj157e" path="res://game assets/randomassets/gift.png" id="10_67od1"]
+[ext_resource type="PackedScene" uid="uid://cv7fyfcon0873" path="res://scenes/coin_ui.tscn" id="13_at220"]
+[ext_resource type="PackedScene" uid="uid://b61yq0rbx6ehd" path="res://scenes/fruit_ui.tscn" id="14_21gox"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mw5cr"]
 load_path = "res://.godot/imported/pngtree-pixel-art-play-button-png-image_14902519-removebg-preview.png-588ffa063ba6b5ef222ba219807e2f75.ctex"
@@ -82,6 +84,18 @@ offset_bottom = 681.0
 texture_normal = ExtResource("8_fow47")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="CoinUI" parent="." instance=ExtResource("13_at220")]
+offset_left = 43.0
+offset_top = 16.0
+offset_right = 83.0
+offset_bottom = 56.0
+
+[node name="FruitUI" parent="." instance=ExtResource("14_21gox")]
+offset_left = 36.0
+offset_top = 5.0
+offset_right = 76.0
+offset_bottom = 45.0
 
 [connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

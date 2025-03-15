@@ -82,10 +82,22 @@ offset_bottom = 1128.0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CoinUI" parent="CanvasLayer" instance=ExtResource("15_rwulu")]
+visible = false
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
 
 [node name="FruitUI" parent="CanvasLayer" instance=ExtResource("16_8usug")]
+visible = false
+offset_left = 8.0
+offset_right = 48.0
 
 [node name="health" parent="CanvasLayer" instance=ExtResource("17_eiekw")]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 48.0
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 1816.0

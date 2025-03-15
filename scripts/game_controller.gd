@@ -1,7 +1,7 @@
 extends Node
 
-var total_coins: int = 0
-var total_fruits: int = 0
+var total_coins: int =0
+var total_fruits: int =0
 var total_health: int = 100
 var selected_player_index: int = 0
 var selected_player_index1: int=0
