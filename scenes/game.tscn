@@ -30,6 +30,7 @@ script = ExtResource("1_scoie")
 y_sort_enabled = true
 
 [node name="fruit spawner" parent="." instance=ExtResource("7_l6sbr")]
+visible = false
 
 [node name="joystick" parent="." instance=ExtResource("6_g7kye")]
 position = Vector2(1800, 856)
@@ -78,6 +79,7 @@ offset_bottom = 1128.0
 [node name="enemy spawner" parent="." instance=ExtResource("2_dotc4")]
 
 [node name="coin_spawner" parent="." instance=ExtResource("14_kea7e")]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

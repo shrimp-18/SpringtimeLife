@@ -72,3 +72,9 @@ func health_depleted(value: int):
 	total_health -= value
 	EventController.emit_signal("health_depleted", total_health)
 	save_data()
+
+func load_coins():
+	if FileAccess.file_exists("user://coins.save"):
+		var file = FileAccess.open("user://coins.save", FileAccess.READ)
+		total_coins = file.get_var()
+		file.close()

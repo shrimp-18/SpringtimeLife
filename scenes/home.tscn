@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://8dt8piwmxeo7" path="res://game assets/randomassets/fai.png" id="8_a1s13"]
 [ext_resource type="Texture2D" uid="uid://obagys13v8rn" path="res://game assets/house.png" id="8_fow47"]
 [ext_resource type="Texture2D" uid="uid://bco15fwrj157e" path="res://game assets/randomassets/gift.png" id="10_67od1"]
-[ext_resource type="PackedScene" uid="uid://cv7fyfcon0873" path="res://scenes/coin_ui.tscn" id="13_at220"]
-[ext_resource type="PackedScene" uid="uid://b61yq0rbx6ehd" path="res://scenes/fruit_ui.tscn" id="14_21gox"]
+[ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="13_24s85"]
+[ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="14_6nrpr"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mw5cr"]
 load_path = "res://.godot/imported/pngtree-pixel-art-play-button-png-image_14902519-removebg-preview.png-588ffa063ba6b5ef222ba219807e2f75.ctex"
@@ -85,17 +85,31 @@ texture_normal = ExtResource("8_fow47")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="CoinUI" parent="." instance=ExtResource("13_at220")]
-offset_left = 43.0
-offset_top = 16.0
-offset_right = 83.0
-offset_bottom = 56.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(43, 31)
+scale = Vector2(3.75, 4)
+texture = ExtResource("13_24s85")
 
-[node name="FruitUI" parent="." instance=ExtResource("14_21gox")]
-offset_left = 36.0
-offset_top = 5.0
-offset_right = 76.0
-offset_bottom = 45.0
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(37, 97)
+scale = Vector2(0.554688, 0.554688)
+texture = ExtResource("14_6nrpr")
+
+[node name="coinlabel" type="Label" parent="."]
+offset_left = 86.0
+offset_top = 3.0
+offset_right = 154.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+
+[node name="fruit label" type="Label" parent="."]
+offset_left = 86.0
+offset_top = 69.0
+offset_right = 154.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 
 [connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
