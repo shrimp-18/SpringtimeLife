@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://brdds3ofrvlvi"]
+
+[sub_resource type="Curve" id="Curve_8k8ny"]
+min_value = 0.5
+max_value = 2.0
+_data = [Vector2(0.147059, 0.988438), 0.0, 0.0, 0, 0, Vector2(0.496732, 0.720312), 0.0, 0.0, 0, 0, Vector2(0.882353, 0.5), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_e5csk"]
+offsets = PackedFloat32Array(0, 0.316547, 0.47482, 0.758993, 0.841727)
+colors = PackedColorArray(0, 0.983334, 1, 1, 0.09, 1, 0.6815, 1, 0.8115, 0.13, 1, 1, 1, 0.13, 0.826, 1, 1, 1, 1, 1)
+
+[node name="trail" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 70
+gravity = Vector2(-1000, 0)
+initial_velocity_max = 116.56
+radial_accel_min = -50.0
+radial_accel_max = -40.0
+scale_amount_min = 0.5
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_8k8ny")
+color_ramp = SubResource("Gradient_e5csk")

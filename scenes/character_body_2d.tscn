@@ -1,7 +1,8 @@
-[gd_scene load_steps=40 format=3 uid="uid://db6m1sfd8rk84"]
+[gd_scene load_steps=41 format=3 uid="uid://db6m1sfd8rk84"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_4apfe"]
 [ext_resource type="Texture2D" uid="uid://dlotbpb55dq4v" path="res://game assets/randomassets/Free Smoke Fx  Pixel 06.png" id="2_id4aa"]
+[ext_resource type="PackedScene" uid="uid://brdds3ofrvlvi" path="res://trail.tscn" id="2_xjkfg"]
 [ext_resource type="Texture2D" uid="uid://jm1i8u2n7cb3" path="res://game assets/pixie2/pixie2-Recovered1.png" id="6_l88es"]
 [ext_resource type="Texture2D" uid="uid://0wsxnc17t3vn" path="res://game assets/pixie2/pixie2-Recovered2.png" id="7_omajp"]
 [ext_resource type="Texture2D" uid="uid://d3oynmawu1gw6" path="res://game assets/pixie2/pixie2-Recovered3.png" id="8_7kund"]
@@ -208,6 +209,9 @@ height = 144.0
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_4apfe")
 
+[node name="trail" parent="." instance=ExtResource("2_xjkfg")]
+position = Vector2(136, 88)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(152, 88)
 scale = Vector2(1.3623, 1.38953)
@@ -231,7 +235,7 @@ value = 100.0
 [node name="player" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(160, 80)
+position = Vector2(152, 80)
 shape = SubResource("CapsuleShape2D_w47mc")
 
 [connection signal="body_entered" from="player" to="." method="_on_player_body_entered"]
