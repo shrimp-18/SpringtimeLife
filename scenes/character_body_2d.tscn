@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_4apfe"]
 [ext_resource type="Texture2D" uid="uid://dlotbpb55dq4v" path="res://game assets/randomassets/Free Smoke Fx  Pixel 06.png" id="2_id4aa"]
-[ext_resource type="PackedScene" uid="uid://brdds3ofrvlvi" path="res://trail.tscn" id="2_xjkfg"]
+[ext_resource type="PackedScene" uid="uid://brdds3ofrvlvi" path="res://scenes/trail.tscn" id="2_xjkfg"]
 [ext_resource type="Texture2D" uid="uid://jm1i8u2n7cb3" path="res://game assets/pixie2/pixie2-Recovered1.png" id="6_l88es"]
 [ext_resource type="Texture2D" uid="uid://0wsxnc17t3vn" path="res://game assets/pixie2/pixie2-Recovered2.png" id="7_omajp"]
 [ext_resource type="Texture2D" uid="uid://d3oynmawu1gw6" path="res://game assets/pixie2/pixie2-Recovered3.png" id="8_7kund"]

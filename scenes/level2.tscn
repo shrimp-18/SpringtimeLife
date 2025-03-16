@@ -1,6 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://bqg4202gtivyb"]
+[gd_scene load_steps=20 format=3 uid="uid://bqg4202gtivyb"]
 
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_ctwev"]
+[ext_resource type="Script" path="res://scenes/level_2.gd" id="1_y42od"]
 [ext_resource type="PackedScene" uid="uid://ditlm5ij3cfct" path="res://scenes/fruit_spawner.tscn" id="2_34p3x"]
 [ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_upu0j"]
 [ext_resource type="PackedScene" uid="uid://6jul5lslq26x" path="res://scenes/joystick.tscn" id="3_v1smt"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="12_5rlwd"]
 [ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://scenes/stopwatchh.tscn" id="13_kfogt"]
 [ext_resource type="PackedScene" uid="uid://dtbd6xmkcej2v" path="res://scenes/stopwatch.tscn" id="14_ex3dn"]
+[ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/target.png" id="16_6lpo6"]
+[ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="17_amb31"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
 size = Vector2(2353, 162.5)
@@ -23,7 +25,7 @@ size = Vector2(2353, 162.5)
 size = Vector2(98, 1218)
 
 [node name="game" type="Node2D"]
-script = ExtResource("1_ctwev")
+script = ExtResource("1_y42od")
 
 [node name="portalspaawner2" parent="." instance=ExtResource("2_upu0j")]
 y_sort_enabled = true
@@ -87,6 +89,7 @@ offset_left = 24.0
 offset_top = 24.0
 offset_right = 64.0
 offset_bottom = 56.224
+script = null
 
 [node name="FruitUI" parent="CanvasLayer" instance=ExtResource("10_wotll")]
 visible = false
@@ -114,14 +117,38 @@ stretch_mode = 5
 
 [node name="stopwatchh" parent="." instance=ExtResource("13_kfogt")]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 104.0
-offset_top = 16.0
-offset_right = 164.0
-offset_bottom = 70.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1768, 80)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("16_6lpo6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1768, 120)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("16_6lpo6")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1656.0
+offset_top = 64.0
+offset_right = 1775.0
+offset_bottom = 113.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "/30"
+theme_override_font_sizes/font_size = 25
+text = "3 MIN"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1656.0
+offset_top = 104.0
+offset_right = 1775.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "60"
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1696, 120)
+scale = Vector2(1.68749, 1.6875)
+texture = ExtResource("17_amb31")
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

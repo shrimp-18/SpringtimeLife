@@ -9,7 +9,7 @@ var total_fruits = 0
 
 # Load data when the scene is ready
 func _ready():
-	
+	GameController.reset_level_coins()  
 	total_coins = GameController.total_coins
 	total_fruits = GameController.total_fruits
 	print(GameController)

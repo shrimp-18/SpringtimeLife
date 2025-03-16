@@ -13,7 +13,6 @@ func _on_player_selected(index):
 func _on_quit_pressed():
 	get_tree().quit()
 
-
 func _on_texture_button_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/home.tscn")
 
@@ -22,9 +21,6 @@ func _on_male_pressed() -> void:
 	
 	carouselm.visible = true
 	carousel.visible = false
-	
-	
-
 
 func _on_female_pressed() -> void:
 	carouselm.visible = false
