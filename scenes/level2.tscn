@@ -83,6 +83,7 @@ offset_bottom = 1128.0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CoinUI" parent="CanvasLayer" instance=ExtResource("9_tmt5p")]
+visible = false
 anchors_preset = -1
 anchor_bottom = 0.012
 offset_left = 24.0

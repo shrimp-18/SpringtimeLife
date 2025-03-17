@@ -13,6 +13,7 @@ func _ready():
 	load_date()
 	coin_label.text = str(GameController.total_coins)
 	fruit_label.text = str(GameController.total_fruits)
+	get_tree().get_root().find_child("CoinUi", true, false).visible = false
 
 func _on_quit_pressed():
 	get_tree().quit()
