@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://okb2q4c6yu0j"]
+[gd_scene load_steps=17 format=3 uid="uid://okb2q4c6yu0j"]
 
 [ext_resource type="Script" path="res://scripts/home.gd" id="1_6c28v"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_uf74s"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bco15fwrj157e" path="res://game assets/randomassets/gift.png" id="10_67od1"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="13_24s85"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="14_6nrpr"]
+[ext_resource type="Texture2D" uid="uid://0d408id85px8" path="res://game assets/randomassets/heart.png" id="15_rd21g"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mw5cr"]
 load_path = "res://.godot/imported/pngtree-pixel-art-play-button-png-image_14902519-removebg-preview.png-588ffa063ba6b5ef222ba219807e2f75.ctex"
@@ -111,8 +112,18 @@ offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 
+[node name="heart" type="TextureButton" parent="."]
+offset_left = 666.0
+offset_top = 252.0
+offset_right = 794.0
+offset_bottom = 380.0
+texture_normal = ExtResource("15_rd21g")
+stretch_mode = 5
+
 [connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="avatar" to="." method="_on_avatar_pressed"]
 [connection signal="pressed" from="store" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="house" to="." method="_on_house_pressed"]
+[connection signal="pressed" from="heart" to="." method="_on_heart_pressed"]
+[connection signal="pressed" from="heart" to="." method="_on_texture_button_pressed"]

@@ -47,3 +47,11 @@ func load_date():
 		print("no data saved...")
 		total_coins = 0
 		total_fruits = 0
+
+
+func _on_heart_pressed() -> void:
+	print(get_tree())
+	if get_tree():
+		get_tree().change_scene_to_file("res://scenes/beginning.tscn")
+	else:
+		print("SceneTree is null!")
