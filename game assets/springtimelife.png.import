@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq5w8lvqe33ql"
-path="res://.godot/imported/36c3dbe60763c80364d56cf2a9855a11.png-5283047e25f1873514fc22b1e4d504de.ctex"
+uid="uid://bcxkomrmjsfe2"
+path="res://.godot/imported/springtimelife.png-f72715c0ac7ee6f878300a79396e8817.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/36c3dbe60763c80364d56cf2a9855a11.png"
-dest_files=["res://.godot/imported/36c3dbe60763c80364d56cf2a9855a11.png-5283047e25f1873514fc22b1e4d504de.ctex"]
+source_file="res://game assets/springtimelife.png"
+dest_files=["res://.godot/imported/springtimelife.png-f72715c0ac7ee6f878300a79396e8817.ctex"]
 
 [params]
 

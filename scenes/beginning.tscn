@@ -1,9 +1,39 @@
-[gd_scene load_steps=12 format=3 uid="uid://b41deyth8i1ud"]
+[gd_scene load_steps=16 format=3 uid="uid://b41deyth8i1ud"]
 
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="1_eeb6o"]
-[ext_resource type="Texture2D" uid="uid://bcxkomrmjsfe2" path="res://scenes/springtimelife.png" id="2_fhs4g"]
-[ext_resource type="Texture2D" uid="uid://dq5w8lvqe33ql" path="res://scenes/36c3dbe60763c80364d56cf2a9855a11.png" id="3_eacwo"]
-[ext_resource type="Script" path="res://path_follow_2d.gd" id="4_tccd8"]
+[ext_resource type="Texture2D" uid="uid://bcxkomrmjsfe2" path="res://game assets/springtimelife.png" id="2_fhs4g"]
+[ext_resource type="Texture2D" uid="uid://b4elkdxq72n3e" path="res://game assets/lifee.png" id="3_7us7x"]
+[ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="4_e4krx"]
+[ext_resource type="Texture2D" uid="uid://cbcsopkak6p87" path="res://game assets/pixie/pixie1.png" id="5_drmce"]
+[ext_resource type="Texture2D" uid="uid://etue0xfj2wdf" path="res://game assets/pixie/pixie2.png" id="5_f7ca1"]
+[ext_resource type="Texture2D" uid="uid://dnhp6tolpdpl8" path="res://game assets/pixie/pixie3.png" id="6_cxi2n"]
+
+[sub_resource type="Animation" id="Animation_akjwd"]
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/springtime:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.966667, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1152, -184), Vector2(1152, 488)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/life:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1480, -152), Vector2(1496, 552)]
+}
 
 [sub_resource type="Animation" id="Animation_8b86o"]
 resource_name = "opening"
@@ -33,81 +63,46 @@ tracks/1/keys = {
 "values": [Vector2(1352, -120), Vector2(1352, 544)]
 }
 
-[sub_resource type="Animation" id="Animation_akjwd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D/springtime:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1152, -208)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node2D/life:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1384, -208)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qq2n6"]
 _data = {
 "RESET": SubResource("Animation_akjwd"),
 "opening": SubResource("Animation_8b86o")
 }
 
-[sub_resource type="Curve2D" id="Curve2D_notqx"]
+[sub_resource type="Curve2D" id="Curve2D_vqwir"]
 _data = {
-"points": PackedVector2Array(-32, -16, 32, 16, -128, 640, -210, 152, 210, -152, 328, 592, -116, -47.82, 116, 48, 816, 656, -290, -174, 290, 174, 1208, 728.14, -120, 158, 120, -158, 1656, 496, 90, 102, -90, -102, 1728, 120, 70, -118, -70, 118, 1280, 144, 0, 0, 0, 0, 992, 280)
+"points": PackedVector2Array(0, 0, 0, 0, -64, 752, -113, 25, 113, -25, 168, 776, -133, 84, 133, -84, 336, 664, -87, -56, 87, 56, 704, 680, -135, -29, 135, 29, 968, 912, -155, 24, 155, -24, 1344, 768, -271, 64, 271, -64, 1784, 856, 128, 109, -128, -109, 1840, 360, 111, 139, -111, -139, 1768, 104, 151, 44, -151, -44, 1440, 32, 32, -45, -32, 45, 1208, 88, 0, 0, 0, 0, 1048, 208)
 }
-point_count = 8
+point_count = 12
 
-[sub_resource type="Animation" id="Animation_uidqf"]
-resource_name = "new_animation"
-length = 6.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:progress")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4.96667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8p52"]
+atlas = ExtResource("5_drmce")
+region = Rect2(0, 0, 64, 75)
 
-[sub_resource type="Animation" id="Animation_upi0s"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:progress")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_yh6np"]
+atlas = ExtResource("5_f7ca1")
+region = Rect2(0, 0, 64, 75)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_k1uhk"]
-_data = {
-"RESET": SubResource("Animation_upi0s"),
-"new_animation": SubResource("Animation_uidqf")
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yads"]
+atlas = ExtResource("6_cxi2n")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hi5h6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8p52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yh6np")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yads")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="beginning" type="Node2D"]
 
@@ -121,28 +116,33 @@ libraries = {
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="springtime" type="Sprite2D" parent="Node2D"]
-position = Vector2(1152, -208)
-scale = Vector2(4.45313, 4.5625)
+position = Vector2(1152, -184)
+scale = Vector2(4.44531, 4.5625)
 texture = ExtResource("2_fhs4g")
 
 [node name="life" type="Sprite2D" parent="Node2D"]
-position = Vector2(1384, -208)
-scale = Vector2(1.44149, 1.82377)
-texture = ExtResource("3_eacwo")
+position = Vector2(1480, -152)
+scale = Vector2(4.20412, 4.39344)
+texture = ExtResource("3_7us7x")
 
 [node name="Path2D" type="Path2D" parent="."]
-position = Vector2(56, 0)
-curve = SubResource("Curve2D_notqx")
+curve = SubResource("Curve2D_vqwir")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-127.547, 640.219)
-rotation = 0.458805
-script = ExtResource("4_tccd8")
+position = Vector2(1048, 208)
+rotation = -0.428935
+progress = 3786.48
+rotates = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
-libraries = {
-"": SubResource("AnimationLibrary_k1uhk")
-}
-
-[node name="pixie" type="Sprite2D" parent="Path2D/PathFollow2D"]
+[node name="player" parent="Path2D/PathFollow2D" instance=ExtResource("4_e4krx")]
+position = Vector2(-100.798, -142.799)
+rotation = 0.428935
 scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+visible = false
+position = Vector2(-3.96726, -2.91729)
+rotation = 0.3735
+scale = Vector2(1.21722, 1.21322)
+sprite_frames = SubResource("SpriteFrames_hi5h6")
+frame_progress = 0.520471
