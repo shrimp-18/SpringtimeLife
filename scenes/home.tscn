@@ -125,5 +125,5 @@ stretch_mode = 5
 [connection signal="pressed" from="avatar" to="." method="_on_avatar_pressed"]
 [connection signal="pressed" from="store" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="house" to="." method="_on_house_pressed"]
-[connection signal="pressed" from="heart" to="." method="_on_heart_pressed"]
 [connection signal="pressed" from="heart" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="heart" to="." method="_on_heart_pressed"]

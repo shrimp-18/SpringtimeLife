@@ -21,6 +21,8 @@ GameController="*res://scripts/game_controller.gd"
 EventController="*res://scripts/event_controller.gd"
 AudioStreamPlayer2d="*res://scenes/audio_stream_player_2d.tscn"
 CoinUi="*res://scenes/coin_ui.tscn"
+Beginning="*res://scenes/beginning.tscn"
+CutsceneManager="*res://node.gd"
 
 [input]
 
