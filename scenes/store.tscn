@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://co2xp4iwrtdg8"]
+[gd_scene load_steps=9 format=3 uid="uid://co2xp4iwrtdg8"]
 
 [ext_resource type="Script" path="res://scripts/store.gd" id="1_7yea7"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="1_sxm5j"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_ylbr8"]
 [ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="4_rqlr4"]
+[ext_resource type="Texture2D" uid="uid://s6elu7thks1p" path="res://game assets/randomassets/images.png" id="5_6bprk"]
+[ext_resource type="PackedScene" uid="uid://31igyuknsynm" path="res://scenes/bgcarousel.tscn" id="6_xy881"]
+[ext_resource type="Texture2D" uid="uid://dv87fv5e3gktv" path="res://game assets/randomassets/tick.png" id="7_rlh5b"]
+[ext_resource type="Texture2D" uid="uid://bsx7fiylmf1cl" path="res://game assets/randomassets/tick2.png" id="8_41tu5"]
 
 [node name="store" type="Node2D"]
 script = ExtResource("1_7yea7")
@@ -17,8 +21,6 @@ texture_normal = ExtResource("1_sxm5j")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="BG" parent="." instance=ExtResource("2_ylbr8")]
-
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 1856.0
 offset_top = 80.0
@@ -28,6 +30,28 @@ texture_normal = ExtResource("4_rqlr4")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="BG" parent="." instance=ExtResource("2_ylbr8")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.278431)
+position = Vector2(960, 506)
+scale = Vector2(5.96333, 3.47444)
+texture = ExtResource("5_6bprk")
+
+[node name="ScrollContainer" parent="." instance=ExtResource("6_xy881")]
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 1922.0
+offset_bottom = 1084.0
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 841.0
+offset_top = 759.0
+offset_right = 1086.0
+offset_bottom = 887.0
+texture_normal = ExtResource("7_rlh5b")
+texture_hover = ExtResource("8_41tu5")
+stretch_mode = 5
+
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="quit" to="BG" method="_on_quit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
