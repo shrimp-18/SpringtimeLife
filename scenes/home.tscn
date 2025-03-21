@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/home.gd" id="1_6c28v"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="2_uf74s"]
-[ext_resource type="PackedScene" uid="uid://cki2i60nl3kxs" path="res://scenes/parallax_background_1.tscn" id="3_if2c2"]
+[ext_resource type="PackedScene" uid="uid://b58esg0v6ig6q" path="res://scenes/parallax_background_1.tscn" id="3_if2c2"]
 [ext_resource type="Texture2D" uid="uid://b618m337d6yes" path="res://game assets/randomassets/play.png" id="4_ubvtr"]
 [ext_resource type="Texture2D" uid="uid://cplw3mhvjts8w" path="res://game assets/randomassets/pixel-art-settings-button-with-gear-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="4_wk7je"]
 [ext_resource type="Texture2D" uid="uid://13rjrkuejhtd" path="res://game assets/randomassets/setbut.png" id="5_hswfu"]
@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://8dt8piwmxeo7" path="res://game assets/randomassets/fai.png" id="8_a1s13"]
 [ext_resource type="Texture2D" uid="uid://obagys13v8rn" path="res://game assets/house.png" id="8_fow47"]
 [ext_resource type="Texture2D" uid="uid://bco15fwrj157e" path="res://game assets/randomassets/gift.png" id="10_67od1"]
+[ext_resource type="PackedScene" uid="uid://21edthj6cftd" path="res://scenes/parallax_backgroundd.tscn" id="12_63msm"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="13_24s85"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="14_6nrpr"]
-[ext_resource type="Texture2D" uid="uid://0d408id85px8" path="res://game assets/randomassets/heart.png" id="15_rd21g"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mw5cr"]
 load_path = "res://.godot/imported/pngtree-pixel-art-play-button-png-image_14902519-removebg-preview.png-588ffa063ba6b5ef222ba219807e2f75.ctex"
@@ -24,6 +24,7 @@ position = Vector2(0, 15)
 script = ExtResource("1_6c28v")
 
 [node name="BG" parent="." instance=ExtResource("2_uf74s")]
+visible = false
 
 [node name="ParallaxBackground1" parent="." instance=ExtResource("3_if2c2")]
 visible = false
@@ -77,6 +78,8 @@ texture_hover = ExtResource("10_67od1")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="BG" parent="store" instance=ExtResource("12_63msm")]
+
 [node name="house" type="TextureButton" parent="."]
 offset_left = 1613.0
 offset_top = 574.0
@@ -112,18 +115,8 @@ offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 
-[node name="heart" type="TextureButton" parent="."]
-offset_left = 666.0
-offset_top = 252.0
-offset_right = 794.0
-offset_bottom = 380.0
-texture_normal = ExtResource("15_rd21g")
-stretch_mode = 5
-
 [connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="avatar" to="." method="_on_avatar_pressed"]
 [connection signal="pressed" from="store" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="house" to="." method="_on_house_pressed"]
-[connection signal="pressed" from="heart" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="heart" to="." method="_on_heart_pressed"]

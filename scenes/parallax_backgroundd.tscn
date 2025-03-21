@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://21edthj6cftd"]
+
+[ext_resource type="Script" path="res://scripts/parallax_background.gd" id="1_0ih47"]
+[ext_resource type="Script" path="res://scripts/parallax_layer.gd" id="2_4umuc"]
+[ext_resource type="Texture2D" uid="uid://lywu02s2ga5e" path="res://game assets/bg2/bg2/clouds1.png" id="3_ia1th"]
+[ext_resource type="Texture2D" uid="uid://hdn2swnntqo5" path="res://game assets/bg2/mid1.png" id="4_jw2vb"]
+[ext_resource type="Texture2D" uid="uid://blpqj51nwej0m" path="res://game assets/bg2/base1.png" id="5_2iw8y"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_0ih47")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1920, 0)
+script = ExtResource("2_4umuc")
+scrolling_speed = 50.0
+
+[node name="1-sky" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(6, 4)
+scale = Vector2(15.6375, 11)
+texture = ExtResource("3_ia1th")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(1920, 0)
+script = ExtResource("2_4umuc")
+scrolling_speed = 90.0
+
+[node name="2-clouds" type="Sprite2D" parent="ParallaxLayer2"]
+modulate = Color(1, 1, 1, 0.831373)
+position = Vector2(-6, 96)
+scale = Vector2(12.0375, 10.9556)
+texture = ExtResource("4_jw2vb")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+script = ExtResource("2_4umuc")
+scrolling_speed = 210.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+position = Vector2(957, 362)
+scale = Vector2(12.0125, 14.2889)
+texture = ExtResource("5_2iw8y")

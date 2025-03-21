@@ -1,6 +1,7 @@
 class_name Player extends CharacterBody2D
 @onready var anim=get_node("AnimatedSprite2D")
-@onready var joystick:= $"../joystick"
+@onready var joystick: Node2D = $"../joystick"
+
 @onready var animation_player = $AnimatedSprite2D
 
 
@@ -32,12 +33,12 @@ const friction=20
 var input=Vector2.ZERO
 
 func _physics_process(delta):
-	if(joystick.posVector!=null):
-		var direction = joystick.posVector
-		if direction:
-			velocity = direction * speed
-		else:
-			velocity = Vector2(0,0)
+	
+	var direction = joystick.posVector
+	if direction:
+		velocity = direction * speed
+	else:
+		velocity = Vector2(0,0)
 
 	move_and_slide()
 	player_movement(delta)

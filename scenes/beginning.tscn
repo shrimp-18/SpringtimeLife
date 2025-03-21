@@ -1,10 +1,10 @@
 [gd_scene load_steps=18 format=3 uid="uid://b41deyth8i1ud"]
 
-[ext_resource type="Script" path="res://scenes/beginning.gd" id="1_6uqxp"]
+[ext_resource type="Script" path="res://scripts/beginning.gd" id="1_6uqxp"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="1_eeb6o"]
 [ext_resource type="Texture2D" uid="uid://bcxkomrmjsfe2" path="res://game assets/springtimelife.png" id="2_fhs4g"]
 [ext_resource type="Texture2D" uid="uid://b4elkdxq72n3e" path="res://game assets/lifee.png" id="3_7us7x"]
-[ext_resource type="Script" path="res://scenes/path_follow_2d.gd" id="4_c27xi"]
+[ext_resource type="Script" path="res://scripts/path_follow_2d (2).gd" id="4_c27xi"]
 [ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="4_e4krx"]
 [ext_resource type="Texture2D" uid="uid://cbcsopkak6p87" path="res://game assets/pixie/pixie1.png" id="5_drmce"]
 [ext_resource type="Texture2D" uid="uid://etue0xfj2wdf" path="res://game assets/pixie/pixie2.png" id="5_f7ca1"]
@@ -133,7 +133,7 @@ texture = ExtResource("3_7us7x")
 curve = SubResource("Curve2D_vqwir")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(236.758, 750.813)
+position = Vector2(236.759, 750.813)
 rotation = -0.428935
 progress = 310.255
 rotates = false

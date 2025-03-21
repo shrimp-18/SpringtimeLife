@@ -6,7 +6,7 @@ var cutscene_scene = preload("res://scenes/beginning.tscn")
 @onready var coin_label=$coinlabel
 @onready var fruit_label=$"fruit label"
 func _ready():
-	CutsceneManager.play_cutscene()
+	
 	total_coins = GameController.total_coins
 	total_fruits = GameController.total_fruits
 	print(GameController)
