@@ -6,7 +6,7 @@ var cutscene_scene = preload("res://scenes/beginning.tscn")
 @onready var coin_label=$coinlabel
 @onready var fruit_label=$"fruit label"
 func _ready():
-	match GameController.load_selected_background():
+	match GameController.selected_background_index:
 		0:
 			GlobalParallaxBackground.visible=true
 			ParallaxBackgroundd.visible=false
