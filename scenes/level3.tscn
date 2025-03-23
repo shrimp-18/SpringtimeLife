@@ -1,0 +1,150 @@
+[gd_scene load_steps=18 format=3 uid="uid://bfats3vnfi5ls"]
+
+[ext_resource type="Script" path="res://scripts/level_2.gd" id="1_x4hkb"]
+[ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_i4dj7"]
+[ext_resource type="PackedScene" uid="uid://ditlm5ij3cfct" path="res://scenes/fruit_spawner.tscn" id="3_q3svv"]
+[ext_resource type="PackedScene" uid="uid://6jul5lslq26x" path="res://scenes/joystick.tscn" id="4_b0ri0"]
+[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="5_r2i3s"]
+[ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="6_7o8he"]
+[ext_resource type="PackedScene" uid="uid://wb3j2j5v1xce" path="res://scenes/enemy_spawner.tscn" id="7_pcrvf"]
+[ext_resource type="PackedScene" uid="uid://cv7fyfcon0873" path="res://scenes/coin_ui.tscn" id="9_b2tif"]
+[ext_resource type="PackedScene" uid="uid://b61yq0rbx6ehd" path="res://scenes/fruit_ui.tscn" id="10_es2e6"]
+[ext_resource type="PackedScene" uid="uid://dglm1f84e6v3l" path="res://scenes/healthui.tscn" id="11_6rkgs"]
+[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="12_6abby"]
+[ext_resource type="PackedScene" uid="uid://dtbd6xmkcej2v" path="res://scenes/stopwatch.tscn" id="13_aa27s"]
+[ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://scenes/stopwatchh.tscn" id="14_340en"]
+[ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/target.png" id="15_30fb1"]
+[ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="17_ohstr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
+size = Vector2(2353, 162.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltk5f"]
+size = Vector2(98, 1218)
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_x4hkb")
+
+[node name="portalspaawner2" parent="." instance=ExtResource("2_i4dj7")]
+y_sort_enabled = true
+
+[node name="fruit spawner" parent="." instance=ExtResource("3_q3svv")]
+
+[node name="joystick" parent="." instance=ExtResource("4_b0ri0")]
+position = Vector2(1800, 856)
+
+[node name="quit" type="TextureButton" parent="."]
+offset_left = 1831.0
+offset_top = 11.0
+offset_right = 1885.0
+offset_bottom = 81.0
+texture_normal = ExtResource("5_r2i3s")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_7o8he")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-64, 200)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(8, -8)
+
+[node name="collisionshapeg1" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1160, 1040)
+shape = SubResource("RectangleShape2D_nbggj")
+
+[node name="collisionshapeg2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1136, -48)
+shape = SubResource("RectangleShape2D_nbggj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-39, 599)
+shape = SubResource("RectangleShape2D_ltk5f")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2288, 568)
+shape = SubResource("RectangleShape2D_ltk5f")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -8.0
+offset_top = 1088.0
+offset_right = 2288.0
+offset_bottom = 1128.0
+
+[node name="enemy spawner" parent="." instance=ExtResource("7_pcrvf")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CoinUI" parent="CanvasLayer" instance=ExtResource("9_b2tif")]
+visible = false
+anchors_preset = -1
+anchor_bottom = 0.012
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 64.0
+offset_bottom = 56.224
+script = null
+
+[node name="FruitUI" parent="CanvasLayer" instance=ExtResource("10_es2e6")]
+visible = false
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 48.0
+
+[node name="health" parent="CanvasLayer" instance=ExtResource("11_6rkgs")]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 48.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1816.0
+offset_top = 64.0
+offset_right = 1896.0
+offset_bottom = 128.0
+texture_normal = ExtResource("12_6abby")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="stopwatch" parent="." instance=ExtResource("13_aa27s")]
+
+[node name="stopwatchh" parent="." instance=ExtResource("14_340en")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1768, 80)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("15_30fb1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1768, 120)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("15_30fb1")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1656.0
+offset_top = 64.0
+offset_right = 1775.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "3 MIN"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 1656.0
+offset_top = 104.0
+offset_right = 1775.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "10
+"
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(1704, 120)
+scale = Vector2(0.281246, 0.28125)
+texture = ExtResource("17_ohstr")
+
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

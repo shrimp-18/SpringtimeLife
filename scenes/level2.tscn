@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://bqg4202gtivyb"]
+[gd_scene load_steps=18 format=3 uid="uid://bqg4202gtivyb"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_y42od"]
-[ext_resource type="PackedScene" uid="uid://ditlm5ij3cfct" path="res://scenes/fruit_spawner.tscn" id="2_34p3x"]
 [ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_upu0j"]
 [ext_resource type="PackedScene" uid="uid://6jul5lslq26x" path="res://scenes/joystick.tscn" id="3_v1smt"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="4_vvi20"]
@@ -28,8 +27,6 @@ script = ExtResource("1_y42od")
 
 [node name="portalspaawner2" parent="." instance=ExtResource("2_upu0j")]
 y_sort_enabled = true
-
-[node name="fruit spawner" parent="." instance=ExtResource("2_34p3x")]
 
 [node name="joystick" parent="." instance=ExtResource("3_v1smt")]
 position = Vector2(1800, 856)
