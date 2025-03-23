@@ -38,6 +38,8 @@ func _ready():
 	print("coins :", GameController.total_coins)
 	print("fruits :",GameController.total_fruits)
 	load_date()
+	get_tree().get_root().find_child("CoinUi", true, false).visible = false
+	get_tree().get_root().find_child("FruitUi", true, false).visible = false
  
 
 # Function to quit the game

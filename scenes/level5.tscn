@@ -1,22 +1,22 @@
-[gd_scene load_steps=20 format=3 uid="uid://csq68s7qe71ei"]
+[gd_scene load_steps=20 format=3 uid="uid://b18sf75ycr3xp"]
 
-[ext_resource type="Script" path="res://scenes/level_4.gd" id="1_mnr2o"]
-[ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_nkmbi"]
-[ext_resource type="PackedScene" uid="uid://ditlm5ij3cfct" path="res://scenes/fruit_spawner.tscn" id="3_egc82"]
-[ext_resource type="PackedScene" uid="uid://6jul5lslq26x" path="res://scenes/joystick.tscn" id="4_8mkuh"]
-[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="5_4dikm"]
-[ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="6_tkaqq"]
-[ext_resource type="PackedScene" uid="uid://wb3j2j5v1xce" path="res://scenes/enemy_spawner.tscn" id="7_nlf6l"]
-[ext_resource type="PackedScene" uid="uid://dm2jxipdat3gc" path="res://scenes/coin_spawner.tscn" id="8_gj78p"]
-[ext_resource type="PackedScene" uid="uid://cv7fyfcon0873" path="res://scenes/coin_ui.tscn" id="9_k6bia"]
-[ext_resource type="PackedScene" uid="uid://b61yq0rbx6ehd" path="res://scenes/fruit_ui.tscn" id="10_0g71j"]
-[ext_resource type="PackedScene" uid="uid://dglm1f84e6v3l" path="res://scenes/healthui.tscn" id="11_4dehm"]
-[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="12_ah4xh"]
-[ext_resource type="PackedScene" uid="uid://dtbd6xmkcej2v" path="res://scenes/stopwatch.tscn" id="13_31wy7"]
-[ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://scenes/stopwatchh.tscn" id="14_m1c8u"]
-[ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/target.png" id="15_v7cc1"]
-[ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="16_63c0x"]
-[ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="17_0usdn"]
+[ext_resource type="Script" path="res://scripts/level_2.gd" id="1_e11jd"]
+[ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_gcjro"]
+[ext_resource type="PackedScene" uid="uid://ditlm5ij3cfct" path="res://scenes/fruit_spawner.tscn" id="3_8r0xr"]
+[ext_resource type="PackedScene" uid="uid://6jul5lslq26x" path="res://scenes/joystick.tscn" id="4_w7d0w"]
+[ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="5_owm3g"]
+[ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="6_75qyq"]
+[ext_resource type="PackedScene" uid="uid://wb3j2j5v1xce" path="res://scenes/enemy_spawner.tscn" id="7_axflq"]
+[ext_resource type="PackedScene" uid="uid://dm2jxipdat3gc" path="res://scenes/coin_spawner.tscn" id="8_q663j"]
+[ext_resource type="PackedScene" uid="uid://cv7fyfcon0873" path="res://scenes/coin_ui.tscn" id="9_343y6"]
+[ext_resource type="PackedScene" uid="uid://b61yq0rbx6ehd" path="res://scenes/fruit_ui.tscn" id="10_jcysr"]
+[ext_resource type="PackedScene" uid="uid://dglm1f84e6v3l" path="res://scenes/healthui.tscn" id="11_sy2hg"]
+[ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="12_mhn3g"]
+[ext_resource type="PackedScene" uid="uid://dtbd6xmkcej2v" path="res://scenes/stopwatch.tscn" id="13_ilot2"]
+[ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://scenes/stopwatchh.tscn" id="14_2m4dc"]
+[ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/target.png" id="15_w2k0e"]
+[ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="16_jtxf3"]
+[ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="17_lcgxk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
 size = Vector2(2353, 162.5)
@@ -25,14 +25,14 @@ size = Vector2(2353, 162.5)
 size = Vector2(98, 1218)
 
 [node name="game" type="Node2D"]
-script = ExtResource("1_mnr2o")
+script = ExtResource("1_e11jd")
 
-[node name="portalspaawner2" parent="." instance=ExtResource("2_nkmbi")]
+[node name="portalspaawner2" parent="." instance=ExtResource("2_gcjro")]
 y_sort_enabled = true
 
-[node name="fruit spawner" parent="." instance=ExtResource("3_egc82")]
+[node name="fruit spawner" parent="." instance=ExtResource("3_8r0xr")]
 
-[node name="joystick" parent="." instance=ExtResource("4_8mkuh")]
+[node name="joystick" parent="." instance=ExtResource("4_w7d0w")]
 position = Vector2(1800, 856)
 
 [node name="quit" type="TextureButton" parent="."]
@@ -40,11 +40,11 @@ offset_left = 1831.0
 offset_top = 11.0
 offset_right = 1885.0
 offset_bottom = 81.0
-texture_normal = ExtResource("5_4dikm")
+texture_normal = ExtResource("5_owm3g")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("6_tkaqq")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_75qyq")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(-64, 200)
@@ -74,13 +74,13 @@ offset_top = 1088.0
 offset_right = 2288.0
 offset_bottom = 1128.0
 
-[node name="enemy spawner" parent="." instance=ExtResource("7_nlf6l")]
+[node name="enemy spawner" parent="." instance=ExtResource("7_axflq")]
 
-[node name="coin_spawner" parent="." instance=ExtResource("8_gj78p")]
+[node name="coin_spawner" parent="." instance=ExtResource("8_q663j")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="CoinUI" parent="CanvasLayer" instance=ExtResource("9_k6bia")]
+[node name="CoinUI" parent="CanvasLayer" instance=ExtResource("9_343y6")]
 visible = false
 anchors_preset = -1
 anchor_bottom = 0.012
@@ -90,14 +90,14 @@ offset_right = 64.0
 offset_bottom = 56.224
 script = null
 
-[node name="FruitUI" parent="CanvasLayer" instance=ExtResource("10_0g71j")]
+[node name="FruitUI" parent="CanvasLayer" instance=ExtResource("10_jcysr")]
 visible = false
 offset_left = 16.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 48.0
 
-[node name="health" parent="CanvasLayer" instance=ExtResource("11_4dehm")]
+[node name="health" parent="CanvasLayer" instance=ExtResource("11_sy2hg")]
 offset_left = 16.0
 offset_top = 8.0
 offset_right = 56.0
@@ -108,28 +108,28 @@ offset_left = 1816.0
 offset_top = 64.0
 offset_right = 1896.0
 offset_bottom = 128.0
-texture_normal = ExtResource("12_ah4xh")
+texture_normal = ExtResource("12_mhn3g")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="stopwatch" parent="." instance=ExtResource("13_31wy7")]
+[node name="stopwatch" parent="." instance=ExtResource("13_ilot2")]
 
-[node name="stopwatchh" parent="." instance=ExtResource("14_m1c8u")]
+[node name="stopwatchh" parent="." instance=ExtResource("14_2m4dc")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1768, 80)
 scale = Vector2(0.375, 0.375)
-texture = ExtResource("15_v7cc1")
+texture = ExtResource("15_w2k0e")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(1768, 120)
 scale = Vector2(0.375, 0.375)
-texture = ExtResource("15_v7cc1")
+texture = ExtResource("15_w2k0e")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
 position = Vector2(1768, 160)
 scale = Vector2(0.375, 0.375)
-texture = ExtResource("15_v7cc1")
+texture = ExtResource("15_w2k0e")
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 1656.0
@@ -147,7 +147,7 @@ offset_right = 1775.0
 offset_bottom = 153.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
-text = "30"
+text = "60"
 
 [node name="Label4" type="Label" parent="."]
 offset_left = 1656.0
@@ -162,12 +162,12 @@ text = "10
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(1704, 120)
 scale = Vector2(1.68749, 1.6875)
-texture = ExtResource("16_63c0x")
+texture = ExtResource("16_jtxf3")
 
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(1704, 160)
 scale = Vector2(0.281246, 0.28125)
-texture = ExtResource("17_0usdn")
+texture = ExtResource("17_lcgxk")
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

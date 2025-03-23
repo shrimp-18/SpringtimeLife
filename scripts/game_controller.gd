@@ -2,12 +2,12 @@ extends Node
 
 var total_coins: int = 0
 var total_fruits: int = 0
-var total_health: int = 100
+var total_health: int = 125
 var selected_player_index: int = 0
 var selected_player_index1: int = 0
 var selected_background_index:int =0
 var level_coins: int = 0  
-
+var level_fruits:int=0
 const save_path = "user://savegame.dat"
 
 func _ready():
@@ -49,7 +49,9 @@ func load_data():
 
 func reset_level_coins():
 	level_coins = 0
+	level_fruits=0
 	EventController.emit_signal("coin_collected", level_coins)
+	EventController.emit_signal("fruit_collected",level_fruits)
 
 
 func coin_collected(value: int):
@@ -61,8 +63,9 @@ func coin_collected(value: int):
 
 func fruit_collected(value: int):
 	total_fruits += value
+	level_fruits+=value
 	print(total_fruits)
-	EventController.emit_signal("fruit_collected", total_fruits)
+	EventController.emit_signal("fruit_collected", level_fruits)
 	save_data()
 
 func health_depleted(value: int):
