@@ -9,6 +9,13 @@ var total_fruits = 0
 
 # Load data when the scene is ready
 func _ready():
+	match GameController.selected_background_index:
+		0:
+			GlobalParallaxBackground.visible=true
+			ParallaxBackgroundd.visible=false
+		1:
+			ParallaxBackgroundd.visible=true
+			GlobalParallaxBackground.visible=false
 	GameController.reset_level_coins()  
 	total_coins = GameController.total_coins
 	total_fruits = GameController.total_fruits

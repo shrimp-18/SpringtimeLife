@@ -4,7 +4,13 @@ extends Node2D
 
 func _ready():
 	carousel.player_selected.connect(_on_player_selected)
-	
+	match GameController.selected_background_index:
+		0:
+			GlobalParallaxBackground.visible=true
+			ParallaxBackgroundd.visible=false
+		1:
+			ParallaxBackgroundd.visible=true
+			GlobalParallaxBackground.visible=false
 
 func _on_player_selected(index):
 	print("Player selected in Avatar Selection:", index)

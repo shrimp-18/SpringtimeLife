@@ -101,3 +101,10 @@ func select_background():
 
 func _on_texture_button_2_pressed() -> void:
 	select_background()
+	match GameController.selected_background_index:
+		0:
+			GlobalParallaxBackground.visible=true
+			ParallaxBackgroundd.visible=false
+		1:
+			ParallaxBackgroundd.visible=true
+			GlobalParallaxBackground.visible=false

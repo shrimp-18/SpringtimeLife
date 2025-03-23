@@ -1,11 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://bqg4202gtivyb"]
+[gd_scene load_steps=19 format=3 uid="uid://bqg4202gtivyb"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_y42od"]
 [ext_resource type="PackedScene" uid="uid://ditlm5ij3cfct" path="res://scenes/fruit_spawner.tscn" id="2_34p3x"]
 [ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_upu0j"]
 [ext_resource type="PackedScene" uid="uid://6jul5lslq26x" path="res://scenes/joystick.tscn" id="3_v1smt"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="4_vvi20"]
-[ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="5_7ac34"]
 [ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="6_xsio5"]
 [ext_resource type="PackedScene" uid="uid://wb3j2j5v1xce" path="res://scenes/enemy_spawner.tscn" id="7_0rrdn"]
 [ext_resource type="PackedScene" uid="uid://dm2jxipdat3gc" path="res://scenes/coin_spawner.tscn" id="8_0xgir"]
@@ -43,8 +42,6 @@ offset_bottom = 81.0
 texture_normal = ExtResource("4_vvi20")
 ignore_texture_size = true
 stretch_mode = 5
-
-[node name="BG" parent="." instance=ExtResource("5_7ac34")]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_xsio5")]
 z_index = 1

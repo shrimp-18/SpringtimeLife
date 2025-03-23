@@ -3,7 +3,13 @@ extends Node2D
 
 func _ready():
 	bgcarousel.background_selected.connect(_on_bg_selected)
-	
+	match GameController.selected_background_index:
+		0:
+			GlobalParallaxBackground.visible=true
+			ParallaxBackgroundd.visible=false
+		1:
+			ParallaxBackgroundd.visible=true
+			GlobalParallaxBackground.visible=false
 
 func _on_bg_selected(index):
 	print("Background selected in Store:", index)
