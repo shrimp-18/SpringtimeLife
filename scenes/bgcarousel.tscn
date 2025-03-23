@@ -17,9 +17,6 @@ offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pjtqn")
-card_scale = null
-card_current_scale = null
-scroll_duration = null
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 2

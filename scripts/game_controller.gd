@@ -5,12 +5,13 @@ var total_fruits: int = 0
 var total_health: int = 100
 var selected_player_index: int = 0
 var selected_player_index1: int = 0
-
-var level_coins: int = 0  # Resets at the start of each level
+var selected_background_index:int =0
+var level_coins: int = 0  
 
 const save_path = "user://savegame.dat"
 
 func _ready():
+	load_selected_background()
 	load_data()
 	load_selected_player()
 	reset_level_coins() 
@@ -21,6 +22,12 @@ func save_data():
 	file.store_var(total_fruits)
 	file.store_var(total_health)
 	file.close()
+	
+func load_selected_background():
+	if FileAccess.file_exists("user://selected_background.save"):
+		var file=FileAccess.open("user://selected_background.save",FileAccess.READ)
+		selected_background_index=file.get_var()
+		file.close()
 
 func load_selected_player():
 	if FileAccess.file_exists("user://selected_player.save"):
