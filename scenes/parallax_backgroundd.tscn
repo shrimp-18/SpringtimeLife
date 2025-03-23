@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/parallax_background.gd" id="1_0ih47"]
 [ext_resource type="Script" path="res://scripts/parallax_layer.gd" id="2_4umuc"]
-[ext_resource type="Texture2D" uid="uid://lywu02s2ga5e" path="res://game assets/bg2/bg2/clouds1.png" id="3_ia1th"]
+[ext_resource type="Texture2D" uid="uid://yq8itmjv4fcc" path="res://game assets/bg2/clouds1.png" id="3_d0itm"]
 [ext_resource type="Texture2D" uid="uid://hdn2swnntqo5" path="res://game assets/bg2/mid1.png" id="4_jw2vb"]
 [ext_resource type="Texture2D" uid="uid://blpqj51nwej0m" path="res://game assets/bg2/base1.png" id="5_2iw8y"]
 
@@ -18,7 +18,7 @@ scrolling_speed = 50.0
 [node name="1-sky" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(6, 4)
 scale = Vector2(15.6375, 11)
-texture = ExtResource("3_ia1th")
+texture = ExtResource("3_d0itm")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
@@ -28,6 +28,7 @@ script = ExtResource("2_4umuc")
 scrolling_speed = 90.0
 
 [node name="2-clouds" type="Sprite2D" parent="ParallaxLayer2"]
+visible = false
 modulate = Color(1, 1, 1, 0.831373)
 position = Vector2(-6, 96)
 scale = Vector2(12.0375, 10.9556)

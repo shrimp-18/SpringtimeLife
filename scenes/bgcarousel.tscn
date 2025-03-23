@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://31igyuknsynm"]
+[gd_scene load_steps=6 format=3 uid="uid://31igyuknsynm"]
 
 [ext_resource type="Script" path="res://scripts/scrollcontainer.gd" id="1_pjtqn"]
 [ext_resource type="Texture2D" uid="uid://cpdnsyjo8ku3e" path="res://game assets/Untitled design (6).png" id="2_4p8d7"]
-[ext_resource type="Texture2D" uid="uid://jpvvvgyxhqkn" path="res://game assets/Untitled design (7).png" id="3_6v6el"]
-[ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="5_ru1qt"]
+[ext_resource type="Texture2D" uid="uid://c255bcaf813am" path="res://scenes/Untitled design (10).png" id="3_cjxtg"]
+[ext_resource type="Texture2D" uid="uid://bcwjb2f4f3vh6" path="res://game assets/Untitled design (8).png" id="4_e0i8s"]
+[ext_resource type="Texture2D" uid="uid://ijj3n14s4vg" path="res://scenes/Untitled design (9).png" id="5_qhr0o"]
 
 [node name="ScrollContainer" type="ScrollContainer"]
 clip_contents = false
@@ -46,10 +47,18 @@ stretch_mode = 5
 
 [node name="CardMenu2" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_6v6el")
+texture = ExtResource("3_cjxtg")
 stretch_mode = 5
 
-[node name="BG" parent="." instance=ExtResource("5_ru1qt")]
+[node name="CardMenu3" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_e0i8s")
+stretch_mode = 5
+
+[node name="CardMenu4" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_qhr0o")
+stretch_mode = 5
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="focus_entered" from="CenterContainer/MarginContainer/HBoxContainer/CardMenu1" to="." method="_on_card_menu_1_focus_entered"]

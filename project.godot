@@ -23,6 +23,8 @@ AudioStreamPlayer2d="*res://scenes/audio_stream_player_2d.tscn"
 CoinUi="*res://scenes/coin_ui.tscn"
 GlobalParallaxBackground="*res://scenes/parallax_background.tscn"
 ParallaxBackgroundd="*res://scenes/parallax_backgroundd.tscn"
+ParallaxBackground3="*res://scenes/parallax_background3.tscn"
+ParallaxBackground4="*res://scenes/parallax_background4.tscn"
 
 [input]
 

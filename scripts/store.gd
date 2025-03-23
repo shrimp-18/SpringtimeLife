@@ -7,9 +7,23 @@ func _ready():
 		0:
 			GlobalParallaxBackground.visible=true
 			ParallaxBackgroundd.visible=false
+			ParallaxBackground3.visible=false
+			ParallaxBackground4.visible=false
 		1:
 			ParallaxBackgroundd.visible=true
 			GlobalParallaxBackground.visible=false
+			ParallaxBackground3.visible=false
+			ParallaxBackground4.visible=false
+		2:
+			ParallaxBackground3.visible=true
+			ParallaxBackgroundd.visible=false
+			GlobalParallaxBackground.visible=false
+			ParallaxBackground4.visible=false
+		3:
+			ParallaxBackgroundd.visible=false
+			GlobalParallaxBackground.visible=false
+			ParallaxBackground3.visible=false
+			ParallaxBackground4.visible=true
 
 func _on_bg_selected(index):
 	print("Background selected in Store:", index)
