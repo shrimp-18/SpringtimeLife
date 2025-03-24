@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://31igyuknsynm"]
+[gd_scene load_steps=9 format=3 uid="uid://31igyuknsynm"]
 
 [ext_resource type="Script" path="res://scripts/scrollcontainer.gd" id="1_pjtqn"]
 [ext_resource type="Texture2D" uid="uid://cpdnsyjo8ku3e" path="res://game assets/Untitled design (6).png" id="2_4p8d7"]
 [ext_resource type="Texture2D" uid="uid://c255bcaf813am" path="res://scenes/Untitled design (10).png" id="3_cjxtg"]
 [ext_resource type="Texture2D" uid="uid://bcwjb2f4f3vh6" path="res://game assets/Untitled design (8).png" id="4_e0i8s"]
-[ext_resource type="Texture2D" uid="uid://ijj3n14s4vg" path="res://scenes/Untitled design (9).png" id="5_qhr0o"]
+[ext_resource type="Texture2D" uid="uid://lni5ig2d2i04" path="res://scenes/Untitled design (11).png" id="5_mcag0"]
+[ext_resource type="Texture2D" uid="uid://dsi2rw72iyuds" path="res://scenes/lock1.png" id="6_sbst6"]
+[ext_resource type="Texture2D" uid="uid://bscgvessvd5xo" path="res://scenes/lock2.png" id="7_a14rw"]
+[ext_resource type="Texture2D" uid="uid://de8vls8ygh10j" path="res://scenes/lock3.png" id="8_xeh1t"]
 
 [node name="ScrollContainer" type="ScrollContainer"]
 clip_contents = false
@@ -57,8 +60,53 @@ stretch_mode = 5
 
 [node name="CardMenu4" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("5_qhr0o")
+texture = ExtResource("5_mcag0")
 stretch_mode = 5
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer2"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+mouse_filter = 2
+theme_override_constants/margin_left = 1920
+theme_override_constants/margin_right = 1920
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer2/MarginContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+mouse_filter = 2
+theme_override_constants/separation = 100
+
+[node name="CardMenu1" type="TextureRect" parent="CenterContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_4p8d7")
+stretch_mode = 5
+
+[node name="CardMenu2" type="TextureRect" parent="CenterContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_sbst6")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="CardMenu3" type="TextureRect" parent="CenterContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_a14rw")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="CardMenu4" type="TextureRect" parent="CenterContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_xeh1t")
+expand_mode = 3
+stretch_mode = 3
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="focus_entered" from="CenterContainer/MarginContainer/HBoxContainer/CardMenu1" to="." method="_on_card_menu_1_focus_entered"]
+[connection signal="focus_entered" from="CenterContainer2/MarginContainer/HBoxContainer/CardMenu1" to="." method="_on_card_menu_1_focus_entered"]

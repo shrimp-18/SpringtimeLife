@@ -23,6 +23,8 @@ func _ready():
 			anim.play("pixie2")
 		2:
 			anim.play("pixie3")
+		3:
+			anim.play("pixie4")
 
 
 

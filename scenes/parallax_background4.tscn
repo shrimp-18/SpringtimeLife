@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/parallax_background.gd" id="1_5lfym"]
 [ext_resource type="Script" path="res://scripts/parallax_layer.gd" id="2_ite85"]
-[ext_resource type="Texture2D" uid="uid://rhmhstolv5jj" path="res://game assets/bg4/clouds1.png" id="3_ghflx"]
-[ext_resource type="Texture2D" uid="uid://bvjtod5t26apw" path="res://game assets/bg4/base1.png" id="4_33xny"]
+[ext_resource type="Texture2D" uid="uid://ceutc6svnrvnc" path="res://scenes/bg4/clouds1.png" id="3_nm4q6"]
+[ext_resource type="Texture2D" uid="uid://dc4x1a5gwwxkn" path="res://scenes/bg4/base1.png" id="4_hidkl"]
 
 [node name="BG" type="ParallaxBackground"]
 script = ExtResource("1_5lfym")
@@ -16,8 +16,8 @@ scrolling_speed = 50.0
 
 [node name="1-sky" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(6, 2)
-scale = Vector2(12.05, 10.4667)
-texture = ExtResource("3_ghflx")
+scale = Vector2(14.9125, 9.6)
+texture = ExtResource("3_nm4q6")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
@@ -40,4 +40,96 @@ scrolling_speed = 210.0
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
 position = Vector2(1000, 339)
 scale = Vector2(12.55, 13.7778)
-texture = ExtResource("4_33xny")
+texture = ExtResource("4_hidkl")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(260, -90)
+amount = 50
+lifetime = 5.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(-200, 980)
+scale_amount_min = 0.0
+scale_amount_max = 25.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(456, -110)
+amount = 50
+lifetime = 5.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(-250, 980)
+scale_amount_min = 0.0
+scale_amount_max = 25.0
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(982, -124)
+amount = 50
+lifetime = 5.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(-100, 980)
+scale_amount_min = 0.0
+scale_amount_max = 25.0
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(1240, -104)
+amount = 50
+lifetime = 5.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(-100, 980)
+scale_amount_min = 0.0
+scale_amount_max = 25.0
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(1474, -170)
+amount = 50
+lifetime = 5.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(-100, 980)
+scale_amount_min = 0.0
+scale_amount_max = 25.0
+
+[node name="CPUParticles2D7" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(1632, -116)
+amount = 50
+lifetime = 5.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(-100, 980)
+scale_amount_min = 0.0
+scale_amount_max = 25.0
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="Node2D/CPUParticles2D7"]
+position = Vector2(-856, 18)
+amount = 50
+lifetime = 5.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(-300, 980)
+scale_amount_min = 0.0
+scale_amount_max = 25.0
+
+[node name="CPUParticles2D8" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(1910, -108)
+amount = 50
+lifetime = 5.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(-200, 980)
+scale_amount_min = 0.0
+scale_amount_max = 25.0
+
+[node name="CPUParticles2D9" type="CPUParticles2D" parent="Node2D"]
+position = Vector2(2128, -114)
+amount = 50
+lifetime = 5.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(-100, 980)
+scale_amount_min = 0.0
+scale_amount_max = 25.0

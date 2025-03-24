@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://db6m1sfd8rk84"]
+[gd_scene load_steps=47 format=3 uid="uid://db6m1sfd8rk84"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_4apfe"]
 [ext_resource type="Texture2D" uid="uid://dlotbpb55dq4v" path="res://game assets/randomassets/Free Smoke Fx  Pixel 06.png" id="2_id4aa"]
@@ -12,8 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://b4scw2c1cqawn" path="res://game assets/pixie3/pixie3-3.png" id="11_jw032"]
 [ext_resource type="Texture2D" uid="uid://cbcsopkak6p87" path="res://game assets/pixie/pixie1.png" id="12_nsw22"]
 [ext_resource type="Texture2D" uid="uid://etue0xfj2wdf" path="res://game assets/pixie/pixie2.png" id="13_mka0h"]
+[ext_resource type="Texture2D" uid="uid://d4mepaari54dg" path="res://scenes/tinkerbell/pixie3.png" id="13_ol45i"]
 [ext_resource type="Texture2D" uid="uid://dnhp6tolpdpl8" path="res://game assets/pixie/pixie3.png" id="14_1gefu"]
+[ext_resource type="Texture2D" uid="uid://dbtpvogplo2q6" path="res://scenes/tinkerbell/pixie4.png" id="14_5q8rf"]
 [ext_resource type="Texture2D" uid="uid://dsn4moyn2qn23" path="res://game assets/pixiehurt/pixiehurt1.png" id="15_6xe4p"]
+[ext_resource type="Texture2D" uid="uid://b143duiwax2v7" path="res://scenes/tinkerbell/pixie5.png" id="15_hdfhx"]
 [ext_resource type="Texture2D" uid="uid://030jm04bwu8b" path="res://game assets/pixiehurt/pixiehurt2.png" id="16_yw62k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x58uy"]
@@ -94,6 +97,18 @@ region = Rect2(0, 0, 64, 75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_coqpb"]
 atlas = ExtResource("11_jw032")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoavj"]
+atlas = ExtResource("13_ol45i")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5uqk"]
+atlas = ExtResource("14_5q8rf")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wv2a"]
+atlas = ExtResource("15_hdfhx")
 region = Rect2(0, 0, 64, 75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o1jhr"]
@@ -188,6 +203,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_aoavj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5uqk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wv2a")
+}],
+"loop": true,
+"name": &"pixie4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_o1jhr")
 }, {
 "duration": 1.0,
@@ -200,11 +229,11 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ks570"]
 radius = 32.0
-height = 128.0
+height = 96.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w47mc"]
-radius = 48.0
-height = 144.0
+radius = 32.0
+height = 96.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_4apfe")
@@ -216,12 +245,10 @@ position = Vector2(136, 88)
 position = Vector2(152, 88)
 scale = Vector2(1.3623, 1.38953)
 sprite_frames = SubResource("SpriteFrames_5usm0")
-animation = &"pixie3"
-frame = 1
-frame_progress = 0.544423
+animation = &"pixie4"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(160, 80)
+position = Vector2(160, 88)
 shape = SubResource("CapsuleShape2D_ks570")
 
 [node name="healthbar" parent="." instance=ExtResource("10_8u04y")]
@@ -235,7 +262,7 @@ value = 100.0
 [node name="player" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(152, 80)
+position = Vector2(160, 88)
 shape = SubResource("CapsuleShape2D_w47mc")
 
 [connection signal="body_entered" from="player" to="." method="_on_player_body_entered"]
