@@ -115,8 +115,8 @@ func _on_texture_button_2_pressed() -> void:
 			ParallaxBackground3.visible=false
 			ParallaxBackground4.visible=false
 		1:
-			if(GameController.total_coins >= 150 and cardmenu2.texture==style2):
-				GameController.total_coins=GameController.total_coins-150
+			if(GameController.total_coins >=0 and cardmenu2.texture==style2):
+				GameController.total_coins= GameController.total_coins-150
 				coin_label.text=str(GameController.total_coins)
 				audio.play()
 				cardmenu2.texture=blank
@@ -131,6 +131,7 @@ func _on_texture_button_2_pressed() -> void:
 				coin_label.text=str(GameController.total_coins)
 				audio.play()
 				cardmenu3.texture=blank
+				
 				ParallaxBackground3.visible=true
 				ParallaxBackgroundd.visible=false
 				GlobalParallaxBackground.visible=false
@@ -141,6 +142,7 @@ func _on_texture_button_2_pressed() -> void:
 				coin_label.text=str(GameController.total_coins)
 				audio.play()
 				cardmenu4.texture=blank
+				
 				ParallaxBackgroundd.visible=false
 				GlobalParallaxBackground.visible=false
 				ParallaxBackground3.visible=false
