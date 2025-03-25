@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b61yq0rbx6ehd"]
+[gd_scene load_steps=4 format=3 uid="uid://b61yq0rbx6ehd"]
 
 [ext_resource type="Script" path="res://scripts/fruit_ui.gd" id="1_1xfy2"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="1_cvv6i"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="3_mdy12"]
 
 [node name="FruitUI" type="Control"]
 layout_mode = 3
@@ -13,17 +14,18 @@ script = ExtResource("1_1xfy2")
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_top = 64.0
-offset_right = 48.0
-offset_bottom = 112.0
+offset_right = 72.0
+offset_bottom = 128.0
 texture = ExtResource("1_cvv6i")
 expand_mode = 1
 
 [node name="FruitLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 56.0
-offset_right = 104.0
-offset_bottom = 111.0
+offset_left = 80.0
+offset_top = 72.0
+offset_right = 128.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("3_mdy12")
+theme_override_font_sizes/font_size = 50
 text = "0"

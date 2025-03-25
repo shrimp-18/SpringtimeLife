@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bqg4202gtivyb"]
+[gd_scene load_steps=21 format=3 uid="uid://bqg4202gtivyb"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_y42od"]
 [ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_upu0j"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="12_5rlwd"]
 [ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://scenes/stopwatchh.tscn" id="13_kfogt"]
 [ext_resource type="PackedScene" uid="uid://dtbd6xmkcej2v" path="res://scenes/stopwatch.tscn" id="14_ex3dn"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="15_d4lnm"]
 [ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/target.png" id="16_6lpo6"]
 [ext_resource type="Texture2D" uid="uid://cfumcashv6x8e" path="res://scenes/Untitled design (13).png" id="16_nanha"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="17_amb31"]
@@ -32,15 +33,6 @@ y_sort_enabled = true
 
 [node name="joystick" parent="." instance=ExtResource("3_v1smt")]
 position = Vector2(1800, 856)
-
-[node name="quit" type="TextureButton" parent="."]
-offset_left = 1831.0
-offset_top = 11.0
-offset_right = 1885.0
-offset_bottom = 81.0
-texture_normal = ExtResource("4_vvi20")
-ignore_texture_size = true
-stretch_mode = 5
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_xsio5")]
 z_index = 1
@@ -113,6 +105,10 @@ stretch_mode = 5
 [node name="stopwatch" parent="." instance=ExtResource("14_ex3dn")]
 
 [node name="stopwatchh" parent="." instance=ExtResource("13_kfogt")]
+offset_left = -8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 8.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1768, 80)
@@ -125,26 +121,28 @@ scale = Vector2(0.375, 0.375)
 texture = ExtResource("16_6lpo6")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 1656.0
+offset_left = 1640.0
 offset_top = 64.0
-offset_right = 1775.0
+offset_right = 1759.0
 offset_bottom = 113.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("15_d4lnm")
+theme_override_font_sizes/font_size = 30
 text = "3 MIN"
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 1656.0
+offset_left = 1640.0
 offset_top = 104.0
-offset_right = 1775.0
+offset_right = 1759.0
 offset_bottom = 153.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("15_d4lnm")
+theme_override_font_sizes/font_size = 30
 text = "30"
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(1696, 120)
-scale = Vector2(1.68749, 1.6875)
+position = Vector2(1720, 120)
+scale = Vector2(2.34375, 2.34375)
 texture = ExtResource("17_amb31")
 
 [node name="soundd" type="TextureButton" parent="."]
@@ -158,6 +156,15 @@ texture_disabled = ExtResource("17_cljm2")
 ignore_texture_size = true
 stretch_mode = 5
 
-[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[node name="quit" type="TextureButton" parent="."]
+offset_left = 1824.0
+offset_top = -32.0
+offset_right = 1888.0
+offset_bottom = 112.0
+texture_normal = ExtResource("4_vvi20")
+ignore_texture_size = true
+stretch_mode = 5
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="soundd" to="." method="_on_soundd_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

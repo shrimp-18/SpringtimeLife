@@ -9,7 +9,7 @@ script = ExtResource("1_4u0yf")
 position = Vector2(1728, 520)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 140.0
+wait_time = 5.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cv7fyfcon0873"]
+[gd_scene load_steps=4 format=3 uid="uid://cv7fyfcon0873"]
 
 [ext_resource type="Script" path="res://scripts/coin_ui.gd" id="1_i8sh1"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="2_hag8h"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="3_camdk"]
 
 [node name="CoinUI" type="Control"]
 layout_mode = 3
@@ -12,16 +13,16 @@ script = ExtResource("1_i8sh1")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 48.0
+offset_bottom = 48.0
 texture = ExtResource("2_hag8h")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 48.0
-offset_top = -8.0
-offset_right = 88.0
-offset_bottom = 47.0
+offset_left = 56.0
+offset_right = 96.0
+offset_bottom = 55.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("3_camdk")
+theme_override_font_sizes/font_size = 50
 text = "0"
