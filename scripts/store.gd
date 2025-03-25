@@ -1,7 +1,14 @@
 extends Node2D
 @onready var bgcarousel=$ScrollContainer
+@onready var coin_label=$Label
+var total_coins
 
 func _ready():
+	total_coins = GameController.total_coins
+	
+	
+	
+	coin_label.text = str(GameController.total_coins)
 	bgcarousel.background_selected.connect(_on_bg_selected)
 	match GameController.selected_background_index:
 		0:

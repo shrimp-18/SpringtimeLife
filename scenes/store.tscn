@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://co2xp4iwrtdg8"]
+[gd_scene load_steps=11 format=3 uid="uid://co2xp4iwrtdg8"]
 
 [ext_resource type="Script" path="res://scripts/store.gd" id="1_7yea7"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="1_sxm5j"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://31igyuknsynm" path="res://scenes/bgcarousel.tscn" id="6_xy881"]
 [ext_resource type="Texture2D" uid="uid://dv87fv5e3gktv" path="res://game assets/randomassets/tick.png" id="7_rlh5b"]
 [ext_resource type="Texture2D" uid="uid://bsx7fiylmf1cl" path="res://game assets/randomassets/tick2.png" id="8_41tu5"]
+[ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="10_h628f"]
+[ext_resource type="AudioStream" uid="uid://d1a1wcoms6q5s" path="res://scenes/mixkit-gold-coin-prize-1999.wav" id="10_mam70"]
 
 [node name="store" type="Node2D"]
 script = ExtResource("1_7yea7")
@@ -51,6 +53,23 @@ offset_bottom = 89.0
 texture_normal = ExtResource("1_sxm5j")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+offset_left = 911.0
+offset_top = 140.0
+offset_right = 1122.0
+offset_bottom = 261.0
+theme_override_font_sizes/font_size = 40
+text = "100"
+
+[node name="Sprite2D" type="Sprite2D" parent="Label"]
+position = Vector2(-34, 30)
+scale = Vector2(3.75, 4)
+texture = ExtResource("10_h628f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_mam70")
+volume_db = 24.0
 
 [connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="TextureButton2" to="ScrollContainer" method="_on_texture_button_2_pressed"]

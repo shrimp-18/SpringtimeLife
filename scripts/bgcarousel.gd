@@ -1,10 +1,17 @@
 extends ScrollContainer
-
-
+@onready var coin_label=$"../Label"
+@onready var audio=$"../AudioStreamPlayer2D"
 @export_range(0.1, 10, 0.4) var card_scale: float = 1
 @export_range(0.1, 10, 0.4) var card_current_scale: float = 1.1
 @export_range(0.1, 10, 0.4) var scroll_duration: float = 0.2
-
+@onready var cardmenu1=$CenterContainer2/MarginContainer/HBoxContainer/CardMenu1
+@onready var cardmenu2=$CenterContainer2/MarginContainer/HBoxContainer/CardMenu2
+@onready var cardmenu3=$CenterContainer2/MarginContainer/HBoxContainer/CardMenu3
+@onready var cardmenu4=$CenterContainer2/MarginContainer/HBoxContainer/CardMenu4
+var blank=preload("res://scenes/blank.png")
+var style2=preload("res://scenes/Untitled design (10).png")
+var style3=preload("res://game assets/Untitled design (8).png")
+var style4=preload("res://scenes/Untitled design (11).png")
 var card_current_index: int = 0
 var card_x_positions: Array = []
 var selected_background_index: int = 0  # Stores selected player index
@@ -108,17 +115,33 @@ func _on_texture_button_2_pressed() -> void:
 			ParallaxBackground3.visible=false
 			ParallaxBackground4.visible=false
 		1:
-			ParallaxBackgroundd.visible=true
-			GlobalParallaxBackground.visible=false
-			ParallaxBackground3.visible=false
-			ParallaxBackground4.visible=false
+			if(GameController.total_coins >= 150 and cardmenu2.texture==style2):
+				GameController.total_coins=GameController.total_coins-150
+				coin_label.text=str(GameController.total_coins)
+				audio.play()
+				cardmenu2.texture=blank
+				
+				ParallaxBackgroundd.visible=true
+				GlobalParallaxBackground.visible=false
+				ParallaxBackground3.visible=false
+				ParallaxBackground4.visible=false
 		2:
-			ParallaxBackground3.visible=true
-			ParallaxBackgroundd.visible=false
-			GlobalParallaxBackground.visible=false
-			ParallaxBackground4.visible=false
+			if(GameController.total_coins>=200 and cardmenu3.texture==style3):
+				GameController.total_coins=GameController.total_coins-200
+				coin_label.text=str(GameController.total_coins)
+				audio.play()
+				cardmenu3.texture=blank
+				ParallaxBackground3.visible=true
+				ParallaxBackgroundd.visible=false
+				GlobalParallaxBackground.visible=false
+				ParallaxBackground4.visible=false
 		3:
-			ParallaxBackgroundd.visible=false
-			GlobalParallaxBackground.visible=false
-			ParallaxBackground3.visible=false
-			ParallaxBackground4.visible=true
+			if(GameController.total_coins>=300 and cardmenu4.texture==style4):
+				GameController.total_coins =GameController.total_coins-300 
+				coin_label.text=str(GameController.total_coins)
+				audio.play()
+				cardmenu4.texture=blank
+				ParallaxBackgroundd.visible=false
+				GlobalParallaxBackground.visible=false
+				ParallaxBackground3.visible=false
+				ParallaxBackground4.visible=true
