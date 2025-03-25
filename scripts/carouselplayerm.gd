@@ -3,11 +3,13 @@ extends ScrollContainer
 @export_range(0.1, 10, 0.4) var card_scale: float = 1
 @export_range(0.1, 10, 0.4) var card_current_scale: float = 1.1
 @export_range(0.1, 10, 0.4) var scroll_duration: float = 0.2
-
+@onready var spmenu=$CenterContainer2/MarginContainer/HBoxContainer/CardMenu4
 var card_current_index: int = 0
 var card_x_positions: Array = []
 var selected_player_index1: int = 0  # Stores selected player index
-
+var lock=preload("res://scenes/lockscreen.png")
+@onready var sound=$"../AudioStreamPlayer2D"
+@onready var labell=$"../Label"
 @onready var margin_r: int = $CenterContainer/MarginContainer.get("theme_override_constants/margin_right")
 @onready var card_space: int = $CenterContainer/MarginContainer/HBoxContainer.get("theme_override_constants/separation")
 @onready var card_nodes: Array = $CenterContainer/MarginContainer/HBoxContainer.get_children()
@@ -96,3 +98,16 @@ func select_player():
 	GameController.selected_player_index = card_current_index
 	print("Selected Player:", GameController.selected_player_index1)
 	emit_signal("player_selected", card_current_index)  # Use correct signal name
+
+
+func _on_texture_button_pressed() -> void:
+	select_player()
+	match GameController.selected_player_index:
+		3:
+			if(GameController.total_fruits>=50 and spmenu.texture==lock):
+				GameController.total_fruits=GameController.total_fruits-50
+				spmenu.visible=false
+				labell.text=str(GameController.total_fruits)
+				select_player()
+				GameController.save_data()
+				sound.play()

@@ -1,9 +1,10 @@
 extends Node2D
 @onready var carousel =$ScrollContainer
 @onready var carouselm=$ScrollContainer2
-
+@onready var fruitlabel=$Label
 func _ready():
 	carousel.player_selected.connect(_on_player_selected)
+	fruitlabel.text=str(GameController.total_fruits)
 	match GameController.selected_background_index:
 		0:
 			GlobalParallaxBackground.visible=true
@@ -46,8 +47,7 @@ func _on_male_pressed() -> void:
 func _on_female_pressed() -> void:
 	carouselm.visible = false
 	carousel.visible = true
-
+	
 
 func _on_texture_button_pressed() -> void:
 	carousel.select_player()
-	

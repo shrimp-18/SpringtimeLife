@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcxx7ill464rg"]
+[gd_scene load_steps=8 format=3 uid="uid://dcxx7ill464rg"]
 
 [ext_resource type="Script" path="res://scripts/carouselplayerm.gd" id="1_3kgj1"]
 [ext_resource type="Texture2D" uid="uid://o6l1wkglv3hq" path="res://game assets/pixie1/pixie1.png" id="2_4hdwh"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cym4lt6jhhhpk" path="res://game assets/pixie3/pixie3-1.png" id="4_xy7de"]
 [ext_resource type="Texture2D" uid="uid://d4mepaari54dg" path="res://scenes/tinkerbell/pixie3.png" id="5_j2fx0"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="5_rspgl"]
+[ext_resource type="Texture2D" uid="uid://c122yxm5cjf4t" path="res://scenes/lockscreen.png" id="6_u6vaj"]
 
 [node name="ScrollContainer" type="ScrollContainer"]
 clip_contents = false
@@ -62,6 +63,51 @@ stretch_mode = 5
 [node name="CardMenu4" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("5_j2fx0")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer2"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+mouse_filter = 2
+theme_override_constants/margin_left = 1920
+theme_override_constants/margin_right = 1920
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer2/MarginContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+mouse_filter = 2
+theme_override_constants/separation = 100
+
+[node name="CardMenu1" type="TextureRect" parent="CenterContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_4hdwh")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CardMenu2" type="TextureRect" parent="CenterContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_jmj7t")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CardMenu3" type="TextureRect" parent="CenterContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_xy7de")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CardMenu4" type="TextureRect" parent="CenterContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_u6vaj")
 expand_mode = 2
 stretch_mode = 5
 

@@ -5,6 +5,9 @@ var total_fruits:int
 var cutscene_scene = preload("res://scenes/beginning.tscn")
 @onready var coin_label=$coinlabel
 @onready var fruit_label=$"fruit label"
+@onready var sb=$soundd
+var sound=preload("res://scenes/Untitled design (13).png")
+var mute=preload("res://scenes/Untitled design (14).png")
 func _ready():
 	match GameController.selected_background_index:
 		0:
@@ -53,8 +56,6 @@ func _on_avatar_pressed():
 	get_tree().change_scene_to_file("res://scenes/avatarscn.tscn")
 
 
-func _on_texture_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/store.tscn")
 
 
 func _on_house_pressed():
@@ -81,3 +82,16 @@ func _on_heart_pressed() -> void:
 		get_tree().change_scene_to_file("res://scenes/beginning.tscn")
 	else:
 		print("SceneTree is null!")
+
+
+func _on_soundd_pressed() -> void:
+	if(sb.texture_normal==sound):
+		sb.texture_normal=mute
+		AudioStreamPlayer2d.stop()
+	else :
+		sb.texture_normal=sound
+		AudioStreamPlayer2d.play()
+
+
+func _on_store_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/store.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://okb2q4c6yu0j"]
+[gd_scene load_steps=16 format=3 uid="uid://okb2q4c6yu0j"]
 
 [ext_resource type="Script" path="res://scripts/home.gd" id="1_6c28v"]
 [ext_resource type="Texture2D" uid="uid://b618m337d6yes" path="res://game assets/randomassets/play.png" id="4_ubvtr"]
@@ -9,8 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://cjktkm0w33441" path="res://game assets/randomassets/Untitled_design__1_-removebg-preview.png" id="7_tw84q"]
 [ext_resource type="Texture2D" uid="uid://8dt8piwmxeo7" path="res://game assets/randomassets/fai.png" id="8_a1s13"]
 [ext_resource type="Texture2D" uid="uid://bco15fwrj157e" path="res://game assets/randomassets/gift.png" id="10_67od1"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="12_tsst7"]
+[ext_resource type="Texture2D" uid="uid://cfumcashv6x8e" path="res://scenes/Untitled design (13).png" id="13_1edno"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="13_24s85"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="14_6nrpr"]
+[ext_resource type="Texture2D" uid="uid://drvmdnxl51jee" path="res://scenes/Untitled design (14).png" id="14_yluhm"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mw5cr"]
 load_path = "res://.godot/imported/pngtree-pixel-art-play-button-png-image_14902519-removebg-preview.png-588ffa063ba6b5ef222ba219807e2f75.ctex"
@@ -79,22 +82,40 @@ scale = Vector2(0.554688, 0.554688)
 texture = ExtResource("14_6nrpr")
 
 [node name="coinlabel" type="Label" parent="."]
-offset_left = 86.0
-offset_top = 3.0
-offset_right = 154.0
-offset_bottom = 58.0
+offset_left = 83.0
+offset_top = 11.0
+offset_right = 151.0
+offset_bottom = 66.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("12_tsst7")
+theme_override_font_sizes/font_size = 50
+text = "100"
 
 [node name="fruit label" type="Label" parent="."]
-offset_left = 86.0
-offset_top = 69.0
-offset_right = 154.0
-offset_bottom = 124.0
+offset_left = 85.0
+offset_top = 76.0
+offset_right = 153.0
+offset_bottom = 131.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("12_tsst7")
+theme_override_font_sizes/font_size = 50
+text = "100"
+
+[node name="soundd" type="TextureButton" parent="."]
+offset_left = 17.0
+offset_top = 875.0
+offset_right = 118.0
+offset_bottom = 987.0
+texture_normal = ExtResource("13_1edno")
+texture_pressed = ExtResource("14_yluhm")
+texture_disabled = ExtResource("14_yluhm")
+ignore_texture_size = true
+stretch_mode = 5
 
 [connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="avatar" to="." method="_on_avatar_pressed"]
 [connection signal="pressed" from="store" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="store" to="." method="_on_store_pressed"]
+[connection signal="pressed" from="soundd" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="soundd" to="." method="_on_soundd_pressed"]

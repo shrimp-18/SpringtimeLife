@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ubtv7mdi4bu1"]
+[gd_scene load_steps=15 format=3 uid="uid://ubtv7mdi4bu1"]
 
 [ext_resource type="Script" path="res://scripts/avatarscn.gd" id="1_5i1hy"]
 [ext_resource type="PackedScene" uid="uid://dcxx7ill464rg" path="res://scenes/carouselplayer.tscn" id="1_8ve0j"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://gmgfj28v56hr" path="res://game assets/randomassets/male1.png" id="9_bkfbr"]
 [ext_resource type="Texture2D" uid="uid://d0ufrq6ypbx5q" path="res://game assets/female1.png" id="11_f0jte"]
 [ext_resource type="PackedScene" uid="uid://c3j1btfjpvqaa" path="res://scenes/carouselplayermale.tscn" id="12_nflgb"]
+[ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="13_kuomk"]
+[ext_resource type="AudioStream" uid="uid://d1a1wcoms6q5s" path="res://scenes/mixkit-gold-coin-prize-1999.wav" id="14_784nd"]
 
 [node name="avatarscn" type="Node2D"]
 script = ExtResource("1_5i1hy")
@@ -86,8 +88,26 @@ texture_hover = ExtResource("11_f0jte")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="Label" type="Label" parent="."]
+offset_left = 922.0
+offset_top = 138.0
+offset_right = 1160.0
+offset_bottom = 271.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "100"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(887, 163)
+scale = Vector2(0.554688, 0.554688)
+texture = ExtResource("13_kuomk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_784nd")
+
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="ScrollContainer" method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="male" to="." method="_on_male_pressed"]
 [connection signal="pressed" from="female" to="." method="_on_female_pressed"]
