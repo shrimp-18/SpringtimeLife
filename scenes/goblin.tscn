@@ -1,10 +1,11 @@
-[gd_scene load_steps=34 format=3 uid="uid://bifdgnytnhi7w"]
+[gd_scene load_steps=35 format=3 uid="uid://bifdgnytnhi7w"]
 
 [ext_resource type="Script" path="res://scripts/goblin.gd" id="1_f6ihx"]
 [ext_resource type="Texture2D" uid="uid://yu0xrumqgceh" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="1_qcotg"]
 [ext_resource type="Texture2D" uid="uid://b8cd5d63xp4cs" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="2_vebgn"]
 [ext_resource type="Texture2D" uid="uid://dd1ffo82smdj2" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="3_lvjyt"]
 [ext_resource type="Texture2D" uid="uid://cvsg82pvk7ch5" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="4_mfwwq"]
+[ext_resource type="AudioStream" uid="uid://c7igocuusptje" path="res://scenes/mixkit-fast-blow-2144.wav" id="6_5ek0a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsro7"]
 atlas = ExtResource("1_qcotg")
@@ -232,5 +233,9 @@ shape = SubResource("CapsuleShape2D_onirg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="goblinn"]
 position = Vector2(154, 101)
 shape = SubResource("CapsuleShape2D_yk8hv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_5ek0a")
+volume_db = 20.0
 
 [connection signal="body_entered" from="goblinn" to="." method="_on_goblinn_body_entered"]

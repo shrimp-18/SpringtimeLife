@@ -1,7 +1,7 @@
 
 class_name Goblin extends CharacterBody2D
 @onready var anim=get_node("AnimatedSprite2D")
-
+@onready var hit=$AudioStreamPlayer2D
 @export var value:int=25
 
 const speed=500
@@ -24,12 +24,14 @@ func health_depleted(value):
 
 func _on_goblinn_body_entered(body: Node2D) -> void:
 	if body is Player:
-
-		
-		GameController.health_depleted(value)
-		
-		await get_tree().create_timer(1).timeout
-		
-		self.queue_free()
-		
+		if(GameController.total_health !=25):
+			hit.play()
+			GameController.health_depleted(value)
+			await get_tree().create_timer(1).timeout
+			self.queue_free()
+		else:
+			hit.play()
+			self.queue_free()
+			get_tree().change_scene_to_file("res://scenes/home.tscn")
+			GameController.total_health=125
 		
