@@ -10,7 +10,7 @@ var health_max=100
 var health_min=0
 var attack_type :String
 var current_attack :bool
-var speed=400
+var speed=200
 const speedd=100
 
 
@@ -29,8 +29,8 @@ func _ready():
 
 
 const maxspeed=10000
-const accln=10000
-const friction=20
+const accln=15999
+const friction=8
 
 var input=Vector2.ZERO
 

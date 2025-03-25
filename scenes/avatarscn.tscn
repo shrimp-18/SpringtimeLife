@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ubtv7mdi4bu1"]
+[gd_scene load_steps=18 format=3 uid="uid://ubtv7mdi4bu1"]
 
 [ext_resource type="Script" path="res://scripts/avatarscn.gd" id="1_5i1hy"]
 [ext_resource type="PackedScene" uid="uid://dcxx7ill464rg" path="res://scenes/carouselplayer.tscn" id="1_8ve0j"]
@@ -12,16 +12,19 @@
 [ext_resource type="Texture2D" uid="uid://gmgfj28v56hr" path="res://game assets/randomassets/male1.png" id="9_bkfbr"]
 [ext_resource type="Texture2D" uid="uid://d0ufrq6ypbx5q" path="res://game assets/female1.png" id="11_f0jte"]
 [ext_resource type="PackedScene" uid="uid://c3j1btfjpvqaa" path="res://scenes/carouselplayermale.tscn" id="12_nflgb"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="13_ipr1q"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="13_kuomk"]
 [ext_resource type="AudioStream" uid="uid://d1a1wcoms6q5s" path="res://scenes/mixkit-gold-coin-prize-1999.wav" id="14_784nd"]
+[ext_resource type="Texture2D" uid="uid://cfumcashv6x8e" path="res://scenes/Untitled design (13).png" id="15_wxj0l"]
+[ext_resource type="Texture2D" uid="uid://drvmdnxl51jee" path="res://scenes/Untitled design (14).png" id="16_xg0k4"]
 
 [node name="avatarscn" type="Node2D"]
 script = ExtResource("1_5i1hy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.27, 0.27, 0.27, 0.329412)
-position = Vector2(961.5, 527)
-scale = Vector2(6.2, 3.6)
+modulate = Color(0.27, 0.27, 0.27, 0.258824)
+position = Vector2(991.25, 563)
+scale = Vector2(8.91333, 5.09333)
 texture = ExtResource("2_nvbtf")
 
 [node name="ScrollContainer2" parent="." instance=ExtResource("12_nflgb")]
@@ -51,10 +54,10 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 806.0
-offset_top = 811.0
-offset_right = 1051.0
-offset_bottom = 939.0
+offset_left = 814.0
+offset_top = 770.0
+offset_right = 1055.0
+offset_bottom = 923.0
 texture_normal = ExtResource("5_cdlce")
 texture_hover = ExtResource("6_ioa6g")
 stretch_mode = 5
@@ -89,12 +92,13 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="."]
-offset_left = 922.0
-offset_top = 138.0
-offset_right = 1160.0
-offset_bottom = 271.0
+offset_left = 930.0
+offset_top = 142.0
+offset_right = 1168.0
+offset_bottom = 275.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("13_ipr1q")
+theme_override_font_sizes/font_size = 50
 text = "100"
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
@@ -105,9 +109,21 @@ texture = ExtResource("13_kuomk")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_784nd")
 
+[node name="soundd" type="TextureButton" parent="."]
+offset_left = 17.0
+offset_top = 875.0
+offset_right = 118.0
+offset_bottom = 987.0
+texture_normal = ExtResource("15_wxj0l")
+texture_pressed = ExtResource("16_xg0k4")
+texture_disabled = ExtResource("16_xg0k4")
+ignore_texture_size = true
+stretch_mode = 5
+
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButton" to="ScrollContainer" method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="male" to="." method="_on_male_pressed"]
 [connection signal="pressed" from="female" to="." method="_on_female_pressed"]
+[connection signal="pressed" from="soundd" to="." method="_on_soundd_pressed"]

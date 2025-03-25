@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bqg4202gtivyb"]
+[gd_scene load_steps=20 format=3 uid="uid://bqg4202gtivyb"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_y42od"]
 [ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_upu0j"]
@@ -14,7 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://scenes/stopwatchh.tscn" id="13_kfogt"]
 [ext_resource type="PackedScene" uid="uid://dtbd6xmkcej2v" path="res://scenes/stopwatch.tscn" id="14_ex3dn"]
 [ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/target.png" id="16_6lpo6"]
+[ext_resource type="Texture2D" uid="uid://cfumcashv6x8e" path="res://scenes/Untitled design (13).png" id="16_nanha"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="17_amb31"]
+[ext_resource type="Texture2D" uid="uid://drvmdnxl51jee" path="res://scenes/Untitled design (14).png" id="17_cljm2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
 size = Vector2(2353, 162.5)
@@ -94,10 +96,10 @@ offset_right = 56.0
 offset_bottom = 48.0
 
 [node name="health" parent="CanvasLayer" instance=ExtResource("11_12xfd")]
-offset_left = 16.0
-offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 48.0
+offset_left = 104.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 56.0
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 1816.0
@@ -145,5 +147,17 @@ position = Vector2(1696, 120)
 scale = Vector2(1.68749, 1.6875)
 texture = ExtResource("17_amb31")
 
+[node name="soundd" type="TextureButton" parent="."]
+offset_left = 16.0
+offset_top = 840.0
+offset_right = 117.0
+offset_bottom = 952.0
+texture_normal = ExtResource("16_nanha")
+texture_pressed = ExtResource("17_cljm2")
+texture_disabled = ExtResource("17_cljm2")
+ignore_texture_size = true
+stretch_mode = 5
+
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="soundd" to="." method="_on_soundd_pressed"]

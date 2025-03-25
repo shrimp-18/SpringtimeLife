@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://co2xp4iwrtdg8"]
+[gd_scene load_steps=15 format=3 uid="uid://co2xp4iwrtdg8"]
 
 [ext_resource type="Script" path="res://scripts/store.gd" id="1_7yea7"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="1_sxm5j"]
@@ -8,16 +8,20 @@
 [ext_resource type="PackedScene" uid="uid://31igyuknsynm" path="res://scenes/bgcarousel.tscn" id="6_xy881"]
 [ext_resource type="Texture2D" uid="uid://dv87fv5e3gktv" path="res://game assets/randomassets/tick.png" id="7_rlh5b"]
 [ext_resource type="Texture2D" uid="uid://bsx7fiylmf1cl" path="res://game assets/randomassets/tick2.png" id="8_41tu5"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="9_utxhf"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="10_h628f"]
 [ext_resource type="AudioStream" uid="uid://d1a1wcoms6q5s" path="res://scenes/mixkit-gold-coin-prize-1999.wav" id="10_mam70"]
+[ext_resource type="Texture2D" uid="uid://cfumcashv6x8e" path="res://scenes/Untitled design (13).png" id="12_qha4f"]
+[ext_resource type="Texture2D" uid="uid://drvmdnxl51jee" path="res://scenes/Untitled design (14).png" id="13_ls0ih"]
+[ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="14_ml2rg"]
 
 [node name="store" type="Node2D"]
 script = ExtResource("1_7yea7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.278431)
-position = Vector2(960, 506)
-scale = Vector2(5.96333, 3.47444)
+position = Vector2(980, 559)
+scale = Vector2(8.87944, 5.10166)
 texture = ExtResource("5_6bprk")
 
 [node name="ScrollContainer" parent="." instance=ExtResource("6_xy881")]
@@ -28,12 +32,13 @@ offset_bottom = 1082.0
 script = ExtResource("4_oeahg")
 
 [node name="TextureButton2" type="TextureButton" parent="."]
-offset_left = 817.0
-offset_top = 759.0
-offset_right = 1062.0
-offset_bottom = 887.0
+offset_left = 844.0
+offset_top = 772.0
+offset_right = 1057.0
+offset_bottom = 925.0
 texture_normal = ExtResource("7_rlh5b")
 texture_hover = ExtResource("8_41tu5")
+ignore_texture_size = true
 stretch_mode = 5
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -55,15 +60,17 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="."]
-offset_left = 911.0
-offset_top = 140.0
-offset_right = 1122.0
-offset_bottom = 261.0
-theme_override_font_sizes/font_size = 40
+offset_left = 907.0
+offset_top = 150.0
+offset_right = 1118.0
+offset_bottom = 271.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_utxhf")
+theme_override_font_sizes/font_size = 50
 text = "100"
 
-[node name="Sprite2D" type="Sprite2D" parent="Label"]
-position = Vector2(-34, 30)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(877, 170)
 scale = Vector2(3.75, 4)
 texture = ExtResource("10_h628f")
 
@@ -71,7 +78,21 @@ texture = ExtResource("10_h628f")
 stream = ExtResource("10_mam70")
 volume_db = 24.0
 
+[node name="soundd" type="TextureButton" parent="."]
+offset_left = 17.0
+offset_top = 875.0
+offset_right = 118.0
+offset_bottom = 987.0
+texture_normal = ExtResource("12_qha4f")
+texture_pressed = ExtResource("13_ls0ih")
+texture_disabled = ExtResource("13_ls0ih")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BG" parent="." instance=ExtResource("14_ml2rg")]
+
 [connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="TextureButton2" to="ScrollContainer" method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="soundd" to="." method="_on_soundd_pressed"]

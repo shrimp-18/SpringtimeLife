@@ -1,5 +1,7 @@
 extends Node2D
-
+@onready var sb=$soundd
+var sound=preload("res://scenes/Untitled design (13).png")
+var mute=preload("res://scenes/Untitled design (14).png")
 # Save path for the data file
 var save_path = "user://savegame.dat"
 
@@ -75,3 +77,12 @@ func load_date():
 # Button function to save data
 func _on_texture_button_2_pressed() -> void:
 	save()
+
+
+func _on_soundd_pressed() -> void:
+	if(sb.texture_normal==sound):
+		sb.texture_normal=mute
+		AudioStreamPlayer2d.stop()
+	else :
+		sb.texture_normal=sound
+		AudioStreamPlayer2d.play()

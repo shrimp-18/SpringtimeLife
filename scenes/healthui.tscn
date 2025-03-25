@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dglm1f84e6v3l"]
+[gd_scene load_steps=14 format=3 uid="uid://dglm1f84e6v3l"]
 
 [ext_resource type="Script" path="res://scripts/healthui.gd" id="1_i7bt0"]
 [ext_resource type="Texture2D" uid="uid://dg1tbqu2ju53m" path="res://game assets/health/health.png" id="1_x653t"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpmlq3gmu13rh" path="res://game assets/health/health5.png" id="4_awlmk"]
 [ext_resource type="Texture2D" uid="uid://dmnyftcv0iiq0" path="res://game assets/health/health3.png" id="5_jduba"]
 [ext_resource type="Texture2D" uid="uid://cl174lix04qcf" path="res://game assets/health/health4.png" id="6_ahaak"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="7_pltsd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pkyi2"]
 atlas = ExtResource("1_x653t")
@@ -86,9 +87,10 @@ animation = &"health1"
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 208.0
-offset_top = 880.0
+offset_top = 888.0
 offset_right = 276.0
-offset_bottom = 935.0
+offset_bottom = 943.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_pltsd")
 theme_override_font_sizes/font_size = 40
 text = "100"
