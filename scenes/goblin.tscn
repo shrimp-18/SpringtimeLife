@@ -147,7 +147,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"die",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -202,7 +202,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"hit",
-"speed": 9.0
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onirg"]
@@ -221,7 +221,7 @@ position = Vector2(163.25, 103.5)
 scale = Vector2(2.11666, 2.08667)
 sprite_frames = SubResource("SpriteFrames_30b6e")
 animation = &"hit"
-frame_progress = 0.977367
+frame_progress = 0.767944
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

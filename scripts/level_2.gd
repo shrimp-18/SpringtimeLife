@@ -87,3 +87,7 @@ func _on_soundd_pressed() -> void:
 	else :
 		sb.texture_normal=sound
 		AudioStreamPlayer2d.play()
+		
+func _on_bombb_pressed() -> void:
+	EventController.spawn_bomb.emit()
+	print("bomb pressed!!")

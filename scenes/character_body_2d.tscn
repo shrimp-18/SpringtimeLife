@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://db6m1sfd8rk84"]
+[gd_scene load_steps=49 format=3 uid="uid://db6m1sfd8rk84"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_4apfe"]
 [ext_resource type="Texture2D" uid="uid://dlotbpb55dq4v" path="res://game assets/randomassets/Free Smoke Fx  Pixel 06.png" id="2_id4aa"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://dsn4moyn2qn23" path="res://game assets/pixiehurt/pixiehurt1.png" id="15_6xe4p"]
 [ext_resource type="Texture2D" uid="uid://b143duiwax2v7" path="res://scenes/tinkerbell/pixie5.png" id="15_hdfhx"]
 [ext_resource type="Texture2D" uid="uid://030jm04bwu8b" path="res://game assets/pixiehurt/pixiehurt2.png" id="16_yw62k"]
+[ext_resource type="Texture2D" uid="uid://bx3mb0t1dyhev" path="res://scenes/wand.png" id="19_cg3f7"]
+[ext_resource type="PackedScene" uid="uid://ds2x55jbg8lkc" path="res://bomb.tscn" id="20_dqo2i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x58uy"]
 atlas = ExtResource("2_id4aa")
@@ -237,6 +239,7 @@ height = 96.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_4apfe")
+bomb_scene = ExtResource("20_dqo2i")
 
 [node name="trail" parent="." instance=ExtResource("2_xjkfg")]
 position = Vector2(136, 88)
@@ -264,5 +267,13 @@ value = 100.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(160, 88)
 shape = SubResource("CapsuleShape2D_w47mc")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(208, 96)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(-8, 8)
+scale = Vector2(0.46875, 0.4375)
+texture = ExtResource("19_cg3f7")
 
 [connection signal="body_entered" from="player" to="." method="_on_player_body_entered"]

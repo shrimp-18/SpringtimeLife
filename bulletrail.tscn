@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dan3887ixyule"]
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+amount = 20
+gravity = Vector2(-1000, 0)
+scale_amount_min = 0.0
+scale_amount_max = 8.0

@@ -49,7 +49,7 @@ func _on_quit_pressed():
 
 
 func _on_playb_pressed():
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file("res://scenes/level5.tscn")
 
 
 func _on_avatar_pressed():

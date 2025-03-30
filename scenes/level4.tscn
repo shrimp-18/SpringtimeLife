@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://csq68s7qe71ei"]
+[gd_scene load_steps=21 format=3 uid="uid://csq68s7qe71ei"]
 
 [ext_resource type="Script" path="res://scenes/level_4.gd" id="1_mnr2o"]
 [ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_nkmbi"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://scenes/stopwatchh.tscn" id="14_m1c8u"]
 [ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/target.png" id="15_v7cc1"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="16_63c0x"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="16_i03c4"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="17_0usdn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
@@ -132,41 +133,44 @@ scale = Vector2(0.375, 0.375)
 texture = ExtResource("15_v7cc1")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 1656.0
-offset_top = 64.0
-offset_right = 1775.0
-offset_bottom = 113.0
+offset_left = 1649.0
+offset_top = 61.0
+offset_right = 1768.0
+offset_bottom = 110.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("16_i03c4")
+theme_override_font_sizes/font_size = 30
 text = "3 MIN"
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 1656.0
-offset_top = 104.0
-offset_right = 1775.0
-offset_bottom = 153.0
+offset_left = 1649.0
+offset_top = 108.0
+offset_right = 1768.0
+offset_bottom = 157.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("16_i03c4")
+theme_override_font_sizes/font_size = 30
 text = "30"
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 1656.0
-offset_top = 144.0
-offset_right = 1775.0
-offset_bottom = 193.0
+offset_left = 1650.0
+offset_top = 148.0
+offset_right = 1769.0
+offset_bottom = 197.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("16_i03c4")
+theme_override_font_sizes/font_size = 30
 text = "10
 "
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(1704, 120)
-scale = Vector2(1.68749, 1.6875)
+position = Vector2(1702, 121)
+scale = Vector2(2.28125, 2.28125)
 texture = ExtResource("16_63c0x")
 
 [node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(1704, 160)
-scale = Vector2(0.281246, 0.28125)
+position = Vector2(1702, 165)
+scale = Vector2(0.328123, 0.351563)
 texture = ExtResource("17_0usdn")
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

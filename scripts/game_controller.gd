@@ -8,6 +8,7 @@ var selected_player_index1: int = 0
 var selected_background_index:int =0
 var level_coins: int = 0  
 var level_fruits:int=0
+var goblin_health:int=4
 const save_path = "user://savegame.dat"
 
 func _ready():

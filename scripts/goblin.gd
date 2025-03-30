@@ -23,11 +23,19 @@ func health_depleted(value):
 
 
 func _on_goblinn_body_entered(body: Node2D) -> void:
+	if body == null or not is_instance_valid(body):
+		return
+	if body is Bomb:
+		GameController.goblin_health=GameController.goblin_health-2
+		if(GameController.goblin_health<=0):
+			anim.play("die")
+			await get_tree().create_timer(0.3).timeout
+			self.queue_free()
 	if body is Player:
 		if(GameController.total_health !=25):
-			hit.play()
+			anim.play("hit")
 			GameController.health_depleted(value)
-			await get_tree().create_timer(1).timeout
+			await get_tree().create_timer(0.4).timeout
 			self.queue_free()
 		else:
 			hit.play()

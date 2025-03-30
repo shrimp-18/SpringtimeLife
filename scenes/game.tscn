@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://q7irwsqi3cf5"]
+[gd_scene load_steps=22 format=3 uid="uid://q7irwsqi3cf5"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_scoie"]
 [ext_resource type="PackedScene" uid="uid://wb3j2j5v1xce" path="res://scenes/enemy_spawner.tscn" id="2_dotc4"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bs7ldflqpmvsf" path="res://game assets/randomassets/save.png" id="16_kjs2j"]
 [ext_resource type="PackedScene" uid="uid://dglm1f84e6v3l" path="res://scenes/healthui.tscn" id="17_eiekw"]
 [ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/target.png" id="17_k643l"]
+[ext_resource type="Texture2D" uid="uid://bw5rcoibbbov4" path="res://scenes/Untitled design (15).png" id="19_lwf3e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
 size = Vector2(2353, 162.5)
@@ -131,6 +132,7 @@ theme_override_font_sizes/font_size = 30
 text = "3 MIN"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1752, 88)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("17_k643l")
@@ -149,7 +151,20 @@ texture_normal = ExtResource("3_u3my8")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="bombb" type="TextureButton" parent="."]
+visible = false
+offset_left = 1560.0
+offset_top = 824.0
+offset_right = 1661.0
+offset_bottom = 936.0
+texture_normal = ExtResource("19_lwf3e")
+ignore_texture_size = true
+stretch_mode = 5
+
 [connection signal="pressed" from="soundd" to="." method="_on_soundd_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="bombb" to="." method="_on_soundd_2_pressed"]
+[connection signal="pressed" from="bombb" to="." method="_on_bombb_pressed"]
+[connection signal="pressed" from="bombb" to="." method="_on_soundd_pressed"]

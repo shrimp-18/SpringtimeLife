@@ -18,4 +18,6 @@ func _on_body_entered(body):
 		elif(get_tree().current_scene.scene_file_path=="res://scenes/level4.tscn" and GameController.level_coins>=30 and GameController.level_fruits>=10):
 			get_tree().change_scene_to_file("res://scenes/level5.tscn")
 			GameController.total_health=125
+		elif(get_tree().current_scene.scene_file_path=="res://scenes/level5.tscn" and GameController.level_coins>=90 and GameController.total_fruits>=20):
+			GameController.total_health=125
 			

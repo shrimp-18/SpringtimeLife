@@ -1,9 +1,9 @@
 class_name Player extends CharacterBody2D
 @onready var anim=get_node("AnimatedSprite2D")
 @onready var joystick: Node2D = $"../joystick"
-
+var bullet_path=preload("res://bullet.tscn")
 @onready var animation_player = $AnimatedSprite2D
-
+@export var bomb_scene: PackedScene
 
 var health=100
 var health_max=100
@@ -15,7 +15,7 @@ const speedd=100
 
 
 func _ready():
-	
+	EventController.spawn_bomb.connect(_spawn_bomb)
 	match GameController.selected_player_index:
 		0:
 			anim.play("pixie")
@@ -25,9 +25,20 @@ func _ready():
 			anim.play("pixie3")
 		3:
 			anim.play("pixie4")
-
-
-
+func _spawn_bomb():
+	
+	if bomb_scene:
+		var bomb_instance = bomb_scene.instantiate()
+		bomb_instance.position = global_position + Vector2(180,50)
+		get_parent().add_child(bomb_instance)
+		
+	
+#func fire():
+	#var bullet=bullet_path.instantiate()
+	#bullet.dir=rotation
+	##bullet.pos=$Node2D.global_position
+	#bullet.rota=global_rotation
+	#get_parent().add_child(bullet)
 const maxspeed=10000
 const accln=15999
 const friction=8
@@ -35,6 +46,7 @@ const friction=8
 var input=Vector2.ZERO
 
 func _physics_process(delta):
+	
 	
 	var direction = joystick.posVector
 	if direction:
