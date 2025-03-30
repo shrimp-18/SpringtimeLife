@@ -1,7 +1,7 @@
 class_name Player extends CharacterBody2D
 @onready var anim=get_node("AnimatedSprite2D")
 @onready var joystick: Node2D = $"../joystick"
-var bullet_path=preload("res://bullet.tscn")
+var bullet_path=preload("res://scenes/bullet.tscn")
 @onready var animation_player = $AnimatedSprite2D
 @export var bomb_scene: PackedScene
 

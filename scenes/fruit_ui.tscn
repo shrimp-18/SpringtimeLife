@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/fruit_ui.gd" id="1_1xfy2"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="1_cvv6i"]
-[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="3_mdy12"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://game assets/font/editundo.ttf" id="3_mdy12"]
 
 [node name="FruitUI" type="Control"]
 layout_mode = 3

@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://csq68s7qe71ei"]
 
-[ext_resource type="Script" path="res://scenes/level_4.gd" id="1_mnr2o"]
+[ext_resource type="Script" path="res://scripts/level_4.gd" id="1_mnr2o"]
 [ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_nkmbi"]
 [ext_resource type="PackedScene" uid="uid://ditlm5ij3cfct" path="res://scenes/fruit_spawner.tscn" id="3_egc82"]
 [ext_resource type="PackedScene" uid="uid://6jul5lslq26x" path="res://scenes/joystick.tscn" id="4_8mkuh"]
@@ -14,9 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="12_ah4xh"]
 [ext_resource type="PackedScene" uid="uid://dtbd6xmkcej2v" path="res://scenes/stopwatch.tscn" id="13_31wy7"]
 [ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://scenes/stopwatchh.tscn" id="14_m1c8u"]
-[ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/target.png" id="15_v7cc1"]
+[ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/randomassets/target.png" id="15_v7cc1"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="16_63c0x"]
-[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="16_i03c4"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://game assets/font/editundo.ttf" id="16_i03c4"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="17_0usdn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]

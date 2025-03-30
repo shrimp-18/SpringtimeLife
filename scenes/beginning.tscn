@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/beginning.gd" id="1_6uqxp"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="1_eeb6o"]
-[ext_resource type="Texture2D" uid="uid://bcxkomrmjsfe2" path="res://game assets/springtimelife.png" id="2_fhs4g"]
-[ext_resource type="Texture2D" uid="uid://b4elkdxq72n3e" path="res://game assets/lifee.png" id="3_7us7x"]
+[ext_resource type="Texture2D" uid="uid://bcxkomrmjsfe2" path="res://game assets/randomassets/springtimelife.png" id="2_fhs4g"]
+[ext_resource type="Texture2D" uid="uid://b4elkdxq72n3e" path="res://game assets/randomassets/lifee.png" id="3_7us7x"]
 [ext_resource type="Script" path="res://scripts/path_follow_2d (2).gd" id="4_c27xi"]
 [ext_resource type="PackedScene" uid="uid://db6m1sfd8rk84" path="res://scenes/character_body_2d.tscn" id="4_e4krx"]
 [ext_resource type="Texture2D" uid="uid://cbcsopkak6p87" path="res://game assets/pixie/pixie1.png" id="5_drmce"]

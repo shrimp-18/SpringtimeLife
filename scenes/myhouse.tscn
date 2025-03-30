@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=4 uid="uid://dvx205n21jt18"]
 
-[ext_resource type="Texture2D" uid="uid://8jc11xjyhduy" path="res://game assets/bgg.png" id="1_btjc2"]
+[ext_resource type="Texture2D" uid="uid://8jc11xjyhduy" path="res://game assets/randomassets/bgg.png" id="1_btjc2"]
 [ext_resource type="Script" path="res://scripts/myhouse.gd" id="1_x0fc8"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="2_jeks1"]
 [ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="4_m2vpm"]

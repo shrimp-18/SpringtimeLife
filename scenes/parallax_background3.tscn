@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/parallax_background.gd" id="1_i7g70"]
 [ext_resource type="Script" path="res://scripts/parallax_layer.gd" id="2_p8jwm"]
-[ext_resource type="Texture2D" uid="uid://dqngmh3rg648r" path="res://scenes/bg3/bg3/clouds.png" id="3_ogxpb"]
+[ext_resource type="Texture2D" uid="uid://dqngmh3rg648r" path="res://game assets/bg3 (2)/clouds.png" id="3_ogxpb"]
 [ext_resource type="Texture2D" uid="uid://bl1y2lgeqhkui" path="res://game assets/bg3/base1.png" id="5_bp355"]
 
 [node name="BG" type="ParallaxBackground"]

@@ -14,10 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://cn71hrgntcwpu" path="res://scenes/stopwatchh.tscn" id="15_eboa4"]
 [ext_resource type="PackedScene" uid="uid://cv7fyfcon0873" path="res://scenes/coin_ui.tscn" id="15_rwulu"]
 [ext_resource type="PackedScene" uid="uid://b61yq0rbx6ehd" path="res://scenes/fruit_ui.tscn" id="16_8usug"]
-[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="16_43io0"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://game assets/font/editundo.ttf" id="16_43io0"]
 [ext_resource type="Texture2D" uid="uid://bs7ldflqpmvsf" path="res://game assets/randomassets/save.png" id="16_kjs2j"]
 [ext_resource type="PackedScene" uid="uid://dglm1f84e6v3l" path="res://scenes/healthui.tscn" id="17_eiekw"]
-[ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/target.png" id="17_k643l"]
+[ext_resource type="Texture2D" uid="uid://t4m7a2rr4tq0" path="res://game assets/randomassets/target.png" id="17_k643l"]
 [ext_resource type="Texture2D" uid="uid://bw5rcoibbbov4" path="res://scenes/Untitled design (15).png" id="19_lwf3e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]

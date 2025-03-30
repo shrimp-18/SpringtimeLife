@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/coin_ui.gd" id="1_i8sh1"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="2_hag8h"]
-[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="3_camdk"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://game assets/font/editundo.ttf" id="3_camdk"]
 
 [node name="CoinUI" type="Control"]
 layout_mode = 3

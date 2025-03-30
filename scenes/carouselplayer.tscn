@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://o6l1wkglv3hq" path="res://game assets/pixie1/pixie1.png" id="2_4hdwh"]
 [ext_resource type="Texture2D" uid="uid://jm1i8u2n7cb3" path="res://game assets/pixie2/pixie2-Recovered1.png" id="3_jmj7t"]
 [ext_resource type="Texture2D" uid="uid://cym4lt6jhhhpk" path="res://game assets/pixie3/pixie3-1.png" id="4_xy7de"]
-[ext_resource type="Texture2D" uid="uid://d4mepaari54dg" path="res://scenes/tinkerbell/pixie3.png" id="5_j2fx0"]
+[ext_resource type="Texture2D" uid="uid://d4mepaari54dg" path="res://game assets/tinkerbell/pixie3.png" id="5_j2fx0"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="5_rspgl"]
 [ext_resource type="Texture2D" uid="uid://c122yxm5cjf4t" path="res://scenes/lockscreen.png" id="6_u6vaj"]
 

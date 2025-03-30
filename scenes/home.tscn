@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cjktkm0w33441" path="res://game assets/randomassets/Untitled_design__1_-removebg-preview.png" id="7_tw84q"]
 [ext_resource type="Texture2D" uid="uid://8dt8piwmxeo7" path="res://game assets/randomassets/fai.png" id="8_a1s13"]
 [ext_resource type="Texture2D" uid="uid://bco15fwrj157e" path="res://game assets/randomassets/gift.png" id="10_67od1"]
-[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://scenes/font/editundo.ttf" id="12_tsst7"]
+[ext_resource type="FontFile" uid="uid://we2mlgcipndx" path="res://game assets/font/editundo.ttf" id="12_tsst7"]
 [ext_resource type="Texture2D" uid="uid://cfumcashv6x8e" path="res://scenes/Untitled design (13).png" id="13_1edno"]
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="13_24s85"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="14_6nrpr"]

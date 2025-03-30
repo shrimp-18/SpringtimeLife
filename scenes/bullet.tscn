@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3m077w3uvisv"]
+
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_s7cvc"]
+[ext_resource type="PackedScene" uid="uid://dan3887ixyule" path="res://scenes/bulletrail.tscn" id="2_7w2va"]
+[ext_resource type="Texture2D" uid="uid://4h6jqtt0v8bw" path="res://game assets/bullet.png" id="3_o4r4j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j31hi"]
+radius = 8.0
+height = 32.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(160, 88)
+script = ExtResource("1_s7cvc")
+
+[node name="CPUParticles2D" parent="." instance=ExtResource("2_7w2va")]
+scale = Vector2(1.1, 1.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, -2.74181e-06)
+scale = Vector2(0.9375, 1.0625)
+texture = ExtResource("3_o4r4j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_j31hi")

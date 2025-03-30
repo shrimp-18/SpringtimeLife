@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/parallax_background.gd" id="1_3lv4p"]
 [ext_resource type="Script" path="res://scripts/parallax_layer.gd" id="1_jy1v3"]
-[ext_resource type="Texture2D" uid="uid://bupulvfqf1uqp" path="res://game assets/clouds.png" id="2_tnegg"]
-[ext_resource type="Texture2D" uid="uid://bqdq760tu2vib" path="res://game assets/mid2.png" id="3_ftlxq"]
-[ext_resource type="Texture2D" uid="uid://brbdub54qh8ou" path="res://game assets/base1.png" id="5_g3en4"]
+[ext_resource type="Texture2D" uid="uid://bupulvfqf1uqp" path="res://game assets/randomassets/clouds.png" id="2_tnegg"]
+[ext_resource type="Texture2D" uid="uid://bqdq760tu2vib" path="res://game assets/randomassets/mid2.png" id="3_ftlxq"]
+[ext_resource type="Texture2D" uid="uid://brbdub54qh8ou" path="res://game assets/randomassets/base1.png" id="5_g3en4"]
 
 [node name="BG" type="ParallaxBackground"]
 script = ExtResource("1_3lv4p")
