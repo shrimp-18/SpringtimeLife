@@ -37,12 +37,11 @@ func _ready():
 	total_coins = GameController.total_coins
 	total_fruits = GameController.total_fruits
 	print(GameController)
-	print("coins :", GameController.total_coins)
-	print("fruits :",GameController.total_fruits)
+	
 	load_date()
 	get_tree().get_root().find_child("CoinUi", true, false).visible = true
 	
-	get_tree().get_root().find_child("FruitUi", true, false).visible = false
+	get_tree().get_root().find_child("FruitUi", true, false).visible = true
  
 
 # Function to quit the game

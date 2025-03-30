@@ -31,7 +31,7 @@ func _on_goblinn_body_entered(body: Node2D) -> void:
 			anim.play("die")
 			await get_tree().create_timer(0.3).timeout
 			self.queue_free()
-	if body is Player:
+	elif body is Player:
 		if(GameController.total_health !=25):
 			anim.play("hit")
 			GameController.health_depleted(value)

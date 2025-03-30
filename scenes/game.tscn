@@ -165,6 +165,6 @@ stretch_mode = 5
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="bombb" to="." method="_on_soundd_2_pressed"]
-[connection signal="pressed" from="bombb" to="." method="_on_bombb_pressed"]
 [connection signal="pressed" from="bombb" to="." method="_on_soundd_pressed"]
+[connection signal="pressed" from="bombb" to="." method="_on_bombb_pressed"]
+[connection signal="pressed" from="bombb" to="." method="_on_soundd_2_pressed"]
