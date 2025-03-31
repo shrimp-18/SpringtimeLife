@@ -6,9 +6,45 @@ var cutscene_scene = preload("res://scenes/beginning.tscn")
 @onready var coin_label=$coinlabel
 @onready var fruit_label=$"fruit label"
 @onready var sb=$soundd
+@onready var level1=$level1
+@onready var level2=$level2
+@onready var level3=$level3
+@onready var level4=$level4
+@onready var level5=$level5
 var sound=preload("res://scenes/Untitled design (13).png")
 var mute=preload("res://scenes/Untitled design (14).png")
 func _ready():
+	match GameController.leveln:
+		1:
+			level1.visible=true
+			level2.visible=false
+			level3.visible=false
+			level4.visible=false
+			level5.visible=false
+		2:
+			level1.visible=true
+			level2.visible=true
+			level3.visible=false
+			level4.visible=false
+			level5.visible=false
+		3:
+			level1.visible=true
+			level2.visible=true
+			level3.visible=true
+			level4.visible=false
+			level5.visible=false
+		4:
+			level1.visible=true
+			level2.visible=true
+			level3.visible=true
+			level4.visible=true
+			level5.visible=false
+		5:
+			level1.visible=true
+			level2.visible=true
+			level3.visible=true
+			level4.visible=true
+			level5.visible=true
 	match GameController.selected_background_index:
 		0:
 			GlobalParallaxBackground.visible=true
@@ -49,8 +85,12 @@ func _on_quit_pressed():
 
 
 func _on_playb_pressed():
-	get_tree().change_scene_to_file("res://scenes/level5.tscn")
-
+	if(GameController.leveln==1):
+		get_tree().change_scene_to_file("res://scenes/game.tscn")
+	elif(GameController.leveln==2):
+		get_tree().change_scene_to_file("res://scenes/level2.tscn")
+	elif(GameController.leveln==3):
+		get_tree().change_scene_to_file("res://scenes/level3.tscn")
 
 func _on_avatar_pressed():
 	get_tree().change_scene_to_file("res://scenes/avatarscn.tscn")
@@ -95,3 +135,22 @@ func _on_soundd_pressed() -> void:
 
 func _on_store_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/store.tscn")
+
+
+func _on_level_1_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
+
+func _on_level_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level2.tscn")
+
+
+func _on_level_3_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level3.tscn")
+
+
+func _on_level_4_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level4.tscn")
+
+
+func _on_level_5_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level5.tscn")

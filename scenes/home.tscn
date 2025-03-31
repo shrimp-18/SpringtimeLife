@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://okb2q4c6yu0j"]
+[gd_scene load_steps=21 format=3 uid="uid://okb2q4c6yu0j"]
 
 [ext_resource type="Script" path="res://scripts/home.gd" id="1_6c28v"]
 [ext_resource type="Texture2D" uid="uid://b618m337d6yes" path="res://game assets/randomassets/play.png" id="4_ubvtr"]
@@ -14,6 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="13_24s85"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="14_6nrpr"]
 [ext_resource type="Texture2D" uid="uid://drvmdnxl51jee" path="res://scenes/Untitled design (14).png" id="14_yluhm"]
+[ext_resource type="Texture2D" uid="uid://ctrowv55ycqi5" path="res://game assets/levels/level1.png" id="15_rak3u"]
+[ext_resource type="Texture2D" uid="uid://c2al5pptrbi2d" path="res://game assets/levels/level2.png" id="16_37cfn"]
+[ext_resource type="Texture2D" uid="uid://d0alfk6mkf1d" path="res://game assets/levels/level3.png" id="17_rdvkh"]
+[ext_resource type="Texture2D" uid="uid://d3cj86f1judt3" path="res://game assets/levels/level4.png" id="18_c0864"]
+[ext_resource type="Texture2D" uid="uid://bl0qygiqt31vw" path="res://game assets/levels/level5.png" id="19_u2mts"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mw5cr"]
 load_path = "res://.godot/imported/pngtree-pixel-art-play-button-png-image_14902519-removebg-preview.png-588ffa063ba6b5ef222ba219807e2f75.ctex"
@@ -112,6 +117,51 @@ texture_disabled = ExtResource("14_yluhm")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="level1" type="TextureButton" parent="."]
+offset_left = 22.0
+offset_top = 186.0
+offset_right = 119.0
+offset_bottom = 283.0
+texture_normal = ExtResource("15_rak3u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="level2" type="TextureButton" parent="."]
+offset_left = 23.0
+offset_top = 272.0
+offset_right = 120.0
+offset_bottom = 379.0
+texture_normal = ExtResource("16_37cfn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="level3" type="TextureButton" parent="."]
+offset_left = 20.0
+offset_top = 364.0
+offset_right = 120.0
+offset_bottom = 469.0
+texture_normal = ExtResource("17_rdvkh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="level4" type="TextureButton" parent="."]
+offset_left = 23.0
+offset_top = 457.0
+offset_right = 121.0
+offset_bottom = 560.0
+texture_normal = ExtResource("18_c0864")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="level5" type="TextureButton" parent="."]
+offset_left = 23.0
+offset_top = 548.0
+offset_right = 123.0
+offset_bottom = 653.0
+texture_normal = ExtResource("19_u2mts")
+ignore_texture_size = true
+stretch_mode = 5
+
 [connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="avatar" to="." method="_on_avatar_pressed"]
@@ -119,3 +169,8 @@ stretch_mode = 5
 [connection signal="pressed" from="store" to="." method="_on_store_pressed"]
 [connection signal="pressed" from="soundd" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="soundd" to="." method="_on_soundd_pressed"]
+[connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="level5" to="." method="_on_level_5_pressed"]

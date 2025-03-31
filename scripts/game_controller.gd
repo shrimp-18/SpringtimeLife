@@ -10,8 +10,9 @@ var level_coins: int = 0
 var level_fruits:int=0
 var goblin_health:int=4
 const save_path = "user://savegame.dat"
-
+var leveln:int=1
 func _ready():
+	print("level",leveln)
 	load_selected_background()
 	load_data()
 	load_selected_player()
@@ -22,6 +23,7 @@ func save_data():
 	file.store_var(total_coins)
 	file.store_var(total_fruits)
 	file.store_var(total_health)
+	file.store_var(leveln)
 	file.close()
 	
 func load_selected_background():
@@ -42,6 +44,7 @@ func load_data():
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		total_coins = file.get_var()
 		total_fruits = file.get_var()
+		#leveln=file.get_var()
 		file.close()
 		EventController.emit_signal("coin_collected", total_coins)
 		EventController.emit_signal("fruit_collected", total_fruits)
@@ -58,7 +61,7 @@ func reset_level_coins():
 func coin_collected(value: int):
 	total_coins += value
 	level_coins += value
-	print("Total:", total_coins, "Level:", level_coins)
+	
 	EventController.emit_signal("coin_collected", level_coins)
 	save_data()
 
