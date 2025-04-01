@@ -163,10 +163,11 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="avatar" to="." method="_on_avatar_pressed"]
-[connection signal="pressed" from="store" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="store" to="." method="_on_store_pressed"]
+[connection signal="pressed" from="store" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="soundd" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="soundd" to="." method="_on_soundd_pressed"]
 [connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]

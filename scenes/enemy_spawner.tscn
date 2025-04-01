@@ -3,13 +3,25 @@
 [sub_resource type="GDScript" id="GDScript_ao4n7"]
 resource_name = "enemyspawner"
 script/source = "extends Node2D
-
+@onready var timer=$Timer
 @onready var game= get_node(\"/root/game\")
 
 var goblinscn :=preload(\"res://scenes/goblin.tscn\")
 var spawnpts:= []
 
 func _ready():
+	if(GameController.leveln==1):
+		timer.wait_time=0.5
+	elif(GameController.leveln==2):
+		timer.wait_time=0.75
+	elif(GameController.leveln==3):
+		timer.wait_time=0.6
+	elif(GameController.leveln==4):
+		timer.wait_time=0.6
+	elif(GameController.leveln==5):
+		timer.wait_time=1
+	elif(GameController.leveln==6):
+		timer.wait_time=0.75
 	for i in get_children():
 		if i is Marker2D:
 			spawnpts.append(i)
@@ -48,6 +60,30 @@ position = Vector2(1648, 496)
 
 [node name="Marker2D7" type="Marker2D" parent="."]
 position = Vector2(1632, 688)
+
+[node name="Marker2D9" type="Marker2D" parent="."]
+position = Vector2(1626, 146)
+
+[node name="Marker2D10" type="Marker2D" parent="."]
+position = Vector2(1594, 98)
+
+[node name="Marker2D11" type="Marker2D" parent="."]
+position = Vector2(1618, 362)
+
+[node name="Marker2D12" type="Marker2D" parent="."]
+position = Vector2(1674, 490)
+
+[node name="Marker2D13" type="Marker2D" parent="."]
+position = Vector2(1658, 682)
+
+[node name="Marker2D14" type="Marker2D" parent="."]
+position = Vector2(1642, 226)
+
+[node name="Marker2D15" type="Marker2D" parent="."]
+position = Vector2(1610, 578)
+
+[node name="Marker2D16" type="Marker2D" parent="."]
+position = Vector2(1594, 770)
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

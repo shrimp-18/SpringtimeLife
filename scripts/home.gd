@@ -2,6 +2,7 @@ extends Node2D
 var save_path = "user://savegame.dat"
 var total_coins:int
 var total_fruits:int
+
 var cutscene_scene = preload("res://scenes/beginning.tscn")
 @onready var coin_label=$coinlabel
 @onready var fruit_label=$"fruit label"
@@ -70,9 +71,7 @@ func _ready():
 			
 	total_coins = GameController.total_coins
 	total_fruits = GameController.total_fruits
-	print(GameController)
-	print("coins :", GameController.total_coins)
-	print("fruits :",GameController.total_fruits)
+	
 	load_date()
 	coin_label.text = str(GameController.total_coins)
 	fruit_label.text = str(GameController.total_fruits)
@@ -154,3 +153,7 @@ func _on_level_4_pressed() -> void:
 
 func _on_level_5_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level5.tscn")
+
+
+func _on_settings_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/beginning.tscn")

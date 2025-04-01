@@ -143,7 +143,7 @@ func _on_texture_button_2_pressed() -> void:
 				coin_label.text=str(GameController.total_coins)
 				audio.play()
 				cardmenu4.texture=blank
-				GameController.save_datal()
+				GameController.save_data()
 				ParallaxBackgroundd.visible=false
 				GlobalParallaxBackground.visible=false
 				ParallaxBackground3.visible=false

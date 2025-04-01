@@ -138,8 +138,7 @@ offset_bottom = 153.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_b848q")
 theme_override_font_sizes/font_size = 30
-text = "10
-"
+text = "50"
 
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(1680, 120)

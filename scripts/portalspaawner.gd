@@ -1,6 +1,5 @@
 extends Node2D
-
-
+@onready var game_timer=$Timer
 
 @onready var game= get_node("/root/game")
 
