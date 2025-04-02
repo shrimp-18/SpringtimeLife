@@ -132,7 +132,6 @@ theme_override_font_sizes/font_size = 30
 text = "3 MIN"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1752, 88)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("17_k643l")

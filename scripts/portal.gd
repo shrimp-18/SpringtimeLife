@@ -8,14 +8,12 @@ func _ready():
 func _on_body_entered(body):
 	
 	if body is Player:
-		if $Timer.time_left <= 20.0 and $Timer.time_left > 0:
+		
 			if get_tree().current_scene.scene_file_path == "res://scenes/game.tscn":
 				get_tree().change_scene_to_file("res://scenes/level2.tscn")
 				GameController.total_health=125
 				if(GameController.leveln==1):
 					GameController.leveln=2
-				
-				
 			elif (get_tree().current_scene.scene_file_path=="res://scenes/level2.tscn" )and(GameController.level_coins>=120) :
 				get_tree().change_scene_to_file("res://scenes/level3.tscn")
 				if(GameController.leveln==2):
