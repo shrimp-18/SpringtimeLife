@@ -27,7 +27,15 @@ func _ready():
 			anim.play("pixie3")
 		3:
 			anim.play("pixie4")
-
+	match GameController.selected_player_index1:
+		0:
+			anim.play("male1")
+		1:
+			anim.play("male2")
+		2:
+			anim.play("male3")
+		3:
+			anim.play("peterpan")
 func _spawn_bomb():
 	if bomb_scene:
 		var bomb_instance = bomb_scene.instantiate()
