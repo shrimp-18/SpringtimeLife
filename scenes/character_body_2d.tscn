@@ -1,22 +1,34 @@
-[gd_scene load_steps=49 format=3 uid="uid://db6m1sfd8rk84"]
+[gd_scene load_steps=73 format=3 uid="uid://db6m1sfd8rk84"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_4apfe"]
 [ext_resource type="Texture2D" uid="uid://dlotbpb55dq4v" path="res://game assets/randomassets/Free Smoke Fx  Pixel 06.png" id="2_id4aa"]
 [ext_resource type="PackedScene" uid="uid://brdds3ofrvlvi" path="res://scenes/trail.tscn" id="2_xjkfg"]
+[ext_resource type="Texture2D" uid="uid://d3bsfk3nb0lq1" path="res://game assets/malepixie1/pixie1.png" id="5_nbf7l"]
 [ext_resource type="Texture2D" uid="uid://jm1i8u2n7cb3" path="res://game assets/pixie2/pixie2-Recovered1.png" id="6_l88es"]
+[ext_resource type="Texture2D" uid="uid://c0pkxjeulubtp" path="res://game assets/malepixie1/pixie2.png" id="6_pl1pv"]
+[ext_resource type="Texture2D" uid="uid://dccap8xdajggu" path="res://game assets/malepixie1/pixie3.png" id="7_6v7sa"]
 [ext_resource type="Texture2D" uid="uid://0wsxnc17t3vn" path="res://game assets/pixie2/pixie2-Recovered2.png" id="7_omajp"]
 [ext_resource type="Texture2D" uid="uid://d3oynmawu1gw6" path="res://game assets/pixie2/pixie2-Recovered3.png" id="8_7kund"]
+[ext_resource type="Texture2D" uid="uid://2tcqxip5m27o" path="res://game assets/malepixie2/pixie1.png" id="8_a162o"]
 [ext_resource type="Texture2D" uid="uid://cym4lt6jhhhpk" path="res://game assets/pixie3/pixie3-1.png" id="9_152ny"]
+[ext_resource type="Texture2D" uid="uid://bi03big47rq4o" path="res://game assets/malepixie2/pixie2.png" id="9_iin4u"]
 [ext_resource type="PackedScene" uid="uid://2u60yfhka64a" path="res://scenes/healthbar.tscn" id="10_8u04y"]
 [ext_resource type="Texture2D" uid="uid://b2k5ul7vgjnqc" path="res://game assets/pixie3/pixie3-2.png" id="10_o6lvv"]
+[ext_resource type="Texture2D" uid="uid://dpma1hiqlov61" path="res://game assets/malepixie2/pixie3.png" id="10_xx12b"]
+[ext_resource type="Texture2D" uid="uid://bw8p17o0g13g0" path="res://game assets/malepixie3/pixie1.png" id="11_ep8er"]
 [ext_resource type="Texture2D" uid="uid://b4scw2c1cqawn" path="res://game assets/pixie3/pixie3-3.png" id="11_jw032"]
 [ext_resource type="Texture2D" uid="uid://cbcsopkak6p87" path="res://game assets/pixie/pixie1.png" id="12_nsw22"]
+[ext_resource type="Texture2D" uid="uid://8yisx4ks8ipq" path="res://game assets/malepixie3/pixie2.png" id="12_wemsb"]
+[ext_resource type="Texture2D" uid="uid://dna3aberb6il6" path="res://game assets/malepixie3/pixie3.png" id="13_h2d78"]
 [ext_resource type="Texture2D" uid="uid://etue0xfj2wdf" path="res://game assets/pixie/pixie2.png" id="13_mka0h"]
 [ext_resource type="Texture2D" uid="uid://d4mepaari54dg" path="res://game assets/tinkerbell/pixie3.png" id="13_ol45i"]
 [ext_resource type="Texture2D" uid="uid://dnhp6tolpdpl8" path="res://game assets/pixie/pixie3.png" id="14_1gefu"]
+[ext_resource type="Texture2D" uid="uid://buxedntdupylj" path="res://scenes/peterpan/pixie1.png" id="14_4ckn4"]
 [ext_resource type="Texture2D" uid="uid://dbtpvogplo2q6" path="res://game assets/tinkerbell/pixie4.png" id="14_5q8rf"]
 [ext_resource type="Texture2D" uid="uid://dsn4moyn2qn23" path="res://game assets/pixiehurt/pixiehurt1.png" id="15_6xe4p"]
+[ext_resource type="Texture2D" uid="uid://b6yy8ypjrgx1l" path="res://scenes/peterpan/pixie2.png" id="15_es7r1"]
 [ext_resource type="Texture2D" uid="uid://b143duiwax2v7" path="res://game assets/tinkerbell/pixie5.png" id="15_hdfhx"]
+[ext_resource type="Texture2D" uid="uid://m05w5yom0c7t" path="res://scenes/peterpan/pixie3.png" id="16_u1qwo"]
 [ext_resource type="Texture2D" uid="uid://030jm04bwu8b" path="res://game assets/pixiehurt/pixiehurt2.png" id="16_yw62k"]
 [ext_resource type="Texture2D" uid="uid://bx3mb0t1dyhev" path="res://game assets/wand.png" id="19_cg3f7"]
 [ext_resource type="PackedScene" uid="uid://ds2x55jbg8lkc" path="res://scenes/bomb.tscn" id="20_dqo2i"]
@@ -64,6 +76,54 @@ region = Rect2(576, 325, 64, 65)
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ngit"]
 atlas = ExtResource("2_id4aa")
 region = Rect2(640, 325, 64, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mskmx"]
+atlas = ExtResource("5_nbf7l")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56bhx"]
+atlas = ExtResource("6_pl1pv")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53g63"]
+atlas = ExtResource("7_6v7sa")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5gkl"]
+atlas = ExtResource("8_a162o")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg1jg"]
+atlas = ExtResource("9_iin4u")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh76k"]
+atlas = ExtResource("10_xx12b")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swwqh"]
+atlas = ExtResource("11_ep8er")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr5u3"]
+atlas = ExtResource("12_wemsb")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1qya"]
+atlas = ExtResource("13_h2d78")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xuar"]
+atlas = ExtResource("14_4ckn4")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x44i"]
+atlas = ExtResource("15_es7r1")
+region = Rect2(0, 0, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1p6q"]
+atlas = ExtResource("16_u1qwo")
+region = Rect2(0, 0, 64, 75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y48au"]
 atlas = ExtResource("12_nsw22")
@@ -163,6 +223,62 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_mskmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56bhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53g63")
+}],
+"loop": true,
+"name": &"male1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5gkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg1jg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh76k")
+}],
+"loop": true,
+"name": &"male2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swwqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr5u3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1qya")
+}],
+"loop": true,
+"name": &"male3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xuar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0x44i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1p6q")
+}],
+"loop": true,
+"name": &"perterpan",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_y48au")
 }, {
 "duration": 1.0,
@@ -248,7 +364,7 @@ position = Vector2(136, 88)
 position = Vector2(152, 88)
 scale = Vector2(1.3623, 1.38953)
 sprite_frames = SubResource("SpriteFrames_5usm0")
-animation = &"pixie4"
+animation = &"perterpan"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(160, 88)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://ubtv7mdi4bu1"]
+[gd_scene load_steps=19 format=3 uid="uid://ubtv7mdi4bu1"]
 
 [ext_resource type="Script" path="res://scripts/avatarscn.gd" id="1_5i1hy"]
 [ext_resource type="PackedScene" uid="uid://dcxx7ill464rg" path="res://scenes/carouselplayer.tscn" id="1_8ve0j"]
 [ext_resource type="Texture2D" uid="uid://cciaehfamfaje" path="res://game assets/randomassets/ur_mouse_pad_small_flatlay_square_600x600-removebg-preview.png" id="2_kkg8w"]
 [ext_resource type="Texture2D" uid="uid://s6elu7thks1p" path="res://game assets/randomassets/images.png" id="2_nvbtf"]
+[ext_resource type="Script" path="res://scenes/carouselplayermale.gd" id="4_xv8wx"]
 [ext_resource type="Texture2D" uid="uid://dv87fv5e3gktv" path="res://game assets/randomassets/tick.png" id="5_cdlce"]
 [ext_resource type="Texture2D" uid="uid://dxlrsypo7s4wu" path="res://game assets/randomassets/Untitled_design__2_-removebg-preview.png" id="6_5id3q"]
 [ext_resource type="Texture2D" uid="uid://bsx7fiylmf1cl" path="res://game assets/randomassets/tick2.png" id="6_ioa6g"]
@@ -33,8 +34,9 @@ offset_left = 338.0
 offset_top = 1.0
 offset_right = 2258.0
 offset_bottom = 1081.0
-card_scale = 0.9
-card_current_scale = 1.3
+script = ExtResource("4_xv8wx")
+card_scale = 1.0
+card_current_scale = 1.1
 scroll_duration = 0.2
 
 [node name="ScrollContainer" parent="." instance=ExtResource("1_8ve0j")]

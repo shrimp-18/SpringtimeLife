@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3j1btfjpvqaa"]
+[gd_scene load_steps=7 format=3 uid="uid://c3j1btfjpvqaa"]
 
 [ext_resource type="Script" path="res://scripts/scrollcontainer.gd" id="1_vxmlg"]
 [ext_resource type="Texture2D" uid="uid://d3bsfk3nb0lq1" path="res://game assets/malepixie1/pixie1.png" id="2_e7rh4"]
 [ext_resource type="Texture2D" uid="uid://2tcqxip5m27o" path="res://game assets/malepixie2/pixie1.png" id="3_ehv5m"]
 [ext_resource type="Texture2D" uid="uid://bw8p17o0g13g0" path="res://game assets/malepixie3/pixie1.png" id="4_hioon"]
+[ext_resource type="Texture2D" uid="uid://buxedntdupylj" path="res://scenes/peterpan/pixie1.png" id="5_d6vm7"]
 [ext_resource type="PackedScene" uid="uid://bohhxkodeluj1" path="res://scenes/parallax_background.tscn" id="5_m1y64"]
 
 [node name="ScrollContainer" type="ScrollContainer"]
@@ -18,9 +19,6 @@ offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vxmlg")
-card_scale = null
-card_current_scale = null
-scroll_duration = null
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 2
@@ -58,6 +56,12 @@ stretch_mode = 5
 [node name="CardMenu3" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("4_hioon")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CardMenu4" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_d6vm7")
 expand_mode = 2
 stretch_mode = 5
 
