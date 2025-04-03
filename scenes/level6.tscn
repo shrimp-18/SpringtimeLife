@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dhrjgscwv7cgr"]
+[gd_scene load_steps=23 format=3 uid="uid://dhrjgscwv7cgr"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_acwxj"]
 [ext_resource type="PackedScene" uid="uid://bjqwbox3mc1p5" path="res://scenes/portalspaawner.tscn" id="2_0ac2b"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bip5tkkf74t43" path="res://game assets/Coin/Coin_Still.png" id="17_e8ifn"]
 [ext_resource type="Texture2D" uid="uid://cslp0n6tuxrx" path="res://game assets/randomassets/apple.png" id="18_3rthn"]
 [ext_resource type="Texture2D" uid="uid://bw5rcoibbbov4" path="res://scenes/Untitled design (15).png" id="19_oipuk"]
+[ext_resource type="Texture2D" uid="uid://be72kvmcuh04f" path="res://game assets/Monsters_Creatures_Fantasy/Flying eye/hhe.png" id="19_uvwff"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbggj"]
 size = Vector2(2353, 162.5)
@@ -133,6 +134,11 @@ position = Vector2(1768, 160)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("15_5w58g")
 
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(1768, 198)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("15_5w58g")
+
 [node name="Label2" type="Label" parent="."]
 offset_left = 1650.0
 offset_top = 68.0
@@ -151,7 +157,7 @@ offset_bottom = 156.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("16_dqg45")
 theme_override_font_sizes/font_size = 29
-text = "90"
+text = "60"
 
 [node name="Label4" type="Label" parent="."]
 offset_left = 1654.0
@@ -161,8 +167,17 @@ offset_bottom = 195.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("16_dqg45")
 theme_override_font_sizes/font_size = 30
-text = "30
-"
+text = "10"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 1658.0
+offset_top = 185.0
+offset_right = 1777.0
+offset_bottom = 234.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_dqg45")
+theme_override_font_sizes/font_size = 30
+text = "5"
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(1703, 118)
@@ -173,6 +188,11 @@ texture = ExtResource("17_e8ifn")
 position = Vector2(1700.75, 156.625)
 scale = Vector2(0.363281, 0.396484)
 texture = ExtResource("18_3rthn")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(1787, 204)
+scale = Vector2(1.11207, 1.04912)
+texture = ExtResource("19_uvwff")
 
 [node name="bombb" type="TextureButton" parent="."]
 offset_left = 1560.0

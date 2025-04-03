@@ -90,6 +90,12 @@ func _on_playb_pressed():
 		get_tree().change_scene_to_file("res://scenes/level2.tscn")
 	elif(GameController.leveln==3):
 		get_tree().change_scene_to_file("res://scenes/level3.tscn")
+	elif(GameController.leveln==4):
+		get_tree().change_scene_to_file("res://scenes/level4.tscn")
+	elif(GameController.leveln==5):
+		get_tree().change_scene_to_file("res://scenes/level5.tscn")
+	elif(GameController.leveln==6):
+		get_tree().change_scene_to_file("res://scenes/level6.tscn")
 
 func _on_avatar_pressed():
 	get_tree().change_scene_to_file("res://scenes/avatarscn.tscn")

@@ -133,7 +133,7 @@ texture = ExtResource("3_7us7x")
 curve = SubResource("Curve2D_vqwir")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(178.825, 773.534)
+position = Vector2(178.826, 773.534)
 rotation = -0.428935
 progress = 247.555
 rotates = false
