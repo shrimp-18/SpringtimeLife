@@ -35,9 +35,6 @@ offset_top = 1.0
 offset_right = 2258.0
 offset_bottom = 1081.0
 script = ExtResource("4_xv8wx")
-card_scale = 1.0
-card_current_scale = 1.1
-scroll_duration = 0.2
 
 [node name="ScrollContainer" parent="." instance=ExtResource("1_8ve0j")]
 z_as_relative = false

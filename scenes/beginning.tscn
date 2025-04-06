@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dnhp6tolpdpl8" path="res://game assets/pixie/pixie3.png" id="6_cxi2n"]
 
 [sub_resource type="Animation" id="Animation_akjwd"]
-length = 10.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

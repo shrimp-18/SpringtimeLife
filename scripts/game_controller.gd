@@ -1,5 +1,6 @@
 extends Node
-
+var total_goblin:int=0
+var level_goblin:int=0
 var total_coins: int = 0
 var total_fruits: int = 0
 var total_health: int = 125
@@ -43,19 +44,21 @@ func load_data():
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		total_coins = file.get_var()
 		total_fruits = file.get_var()
-		
+		total_goblin=file.get_var()
 		file.close()
 		EventController.emit_signal("coin_collected", total_coins)
 		EventController.emit_signal("fruit_collected", total_fruits)
+		EventController.emit_signal("goblin_collected",total_goblin)
 
 
 
 func reset_level_coins():
 	level_coins = 0
 	level_fruits=0
+	level_goblin=0
 	EventController.emit_signal("coin_collected", level_coins)
 	EventController.emit_signal("fruit_collected",level_fruits)
-
+	EventController.emit_signal("goblin_collected",level_goblin)
 
 func coin_collected(value: int):
 	total_coins += value
@@ -70,7 +73,11 @@ func fruit_collected(value: int):
 	print(total_fruits)
 	EventController.emit_signal("fruit_collected", level_fruits)
 	save_data()
-
+func goblin_collected(value: int):
+	total_goblin += value
+	level_goblin+=value
+	EventController.emit_signal("goblin_collected", level_goblin)
+	save_data()
 func health_depleted(value: int):
 	total_health -= value
 	EventController.emit_signal("health_depleted", total_health)

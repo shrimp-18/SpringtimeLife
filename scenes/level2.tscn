@@ -32,6 +32,7 @@ script = ExtResource("1_y42od")
 y_sort_enabled = true
 
 [node name="joystick" parent="." instance=ExtResource("3_v1smt")]
+visible = false
 position = Vector2(1800, 856)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_xsio5")]

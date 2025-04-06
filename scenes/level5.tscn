@@ -35,6 +35,7 @@ y_sort_enabled = true
 [node name="fruit spawner" parent="." instance=ExtResource("3_8r0xr")]
 
 [node name="joystick" parent="." instance=ExtResource("4_w7d0w")]
+visible = false
 position = Vector2(1800, 856)
 
 [node name="quit" type="TextureButton" parent="."]
